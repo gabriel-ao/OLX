@@ -52,11 +52,11 @@ public class Cadastro extends javax.swing.JFrame {
         jTextFieldSenha = new javax.swing.JTextField();
         jButtonCadastrar = new javax.swing.JButton();
         jButtonCancelar = new javax.swing.JButton();
-        fundo = new javax.swing.JLabel();
 
         jTextField11.setText("jTextField11");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(1369, 730));
         getContentPane().setLayout(null);
 
         jLabelNomeCompleto.setText("Nome Completo");
@@ -139,10 +139,6 @@ public class Cadastro extends javax.swing.JFrame {
         getContentPane().add(jButtonCancelar);
         jButtonCancelar.setBounds(214, 330, 75, 23);
 
-        fundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/bg verde.jpg"))); // NOI18N
-        getContentPane().add(fundo);
-        fundo.setBounds(4, 0, 390, 370);
-
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -186,7 +182,6 @@ public class Cadastro extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel fundo;
     private javax.swing.JButton jButtonCadastrar;
     private javax.swing.JButton jButtonCancelar;
     private javax.swing.JLabel jLabelBairro;

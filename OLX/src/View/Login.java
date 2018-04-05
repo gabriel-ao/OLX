@@ -36,8 +36,10 @@ public class Login extends javax.swing.JFrame {
         jpfSenha = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(1369, 730));
         getContentPane().setLayout(null);
 
+        jButtonLogar.setBackground(new java.awt.Color(255, 102, 102));
         jButtonLogar.setText("Logar");
         getContentPane().add(jButtonLogar);
         jButtonLogar.setBounds(60, 180, 59, 23);
@@ -50,9 +52,10 @@ public class Login extends javax.swing.JFrame {
         getContentPane().add(jButtonSair);
         jButtonSair.setBounds(250, 180, 51, 23);
 
+        jLabelUsuario.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
         jLabelUsuario.setText("Usuario:");
         getContentPane().add(jLabelUsuario);
-        jLabelUsuario.setBounds(70, 90, 50, 14);
+        jLabelUsuario.setBounds(70, 90, 50, 17);
 
         jLabelSenha.setText("Senha:");
         getContentPane().add(jLabelSenha);
