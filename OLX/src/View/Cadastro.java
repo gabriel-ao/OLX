@@ -139,7 +139,7 @@ public class Cadastro extends javax.swing.JFrame {
         getContentPane().add(jButtonCancelar);
         jButtonCancelar.setBounds(214, 330, 75, 23);
 
-        fundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/bg verde.jpg"))); // NOI18N
+        fundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/bg verde.jpg"))); // NOI18N
         getContentPane().add(fundo);
         fundo.setBounds(4, 0, 390, 370);
 
