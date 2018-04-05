@@ -32,10 +32,8 @@ public class Login extends javax.swing.JFrame {
         jButtonSair = new javax.swing.JButton();
         jLabelUsuario = new javax.swing.JLabel();
         jLabelSenha = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTextPaneUsuario = new javax.swing.JTextPane();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jTextPaneSenha = new javax.swing.JTextPane();
+        jtfUsuario = new javax.swing.JTextField();
+        jpfSenha = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -59,16 +57,10 @@ public class Login extends javax.swing.JFrame {
         jLabelSenha.setText("Senha:");
         getContentPane().add(jLabelSenha);
         jLabelSenha.setBounds(70, 130, 34, 14);
-
-        jScrollPane1.setViewportView(jTextPaneUsuario);
-
-        getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(150, 90, 150, 22);
-
-        jScrollPane2.setViewportView(jTextPaneSenha);
-
-        getContentPane().add(jScrollPane2);
-        jScrollPane2.setBounds(150, 130, 150, 22);
+        getContentPane().add(jtfUsuario);
+        jtfUsuario.setBounds(140, 90, 160, 20);
+        getContentPane().add(jpfSenha);
+        jpfSenha.setBounds(140, 130, 160, 20);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -114,9 +106,7 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JButton jButtonSair;
     private javax.swing.JLabel jLabelSenha;
     private javax.swing.JLabel jLabelUsuario;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextPane jTextPaneSenha;
-    private javax.swing.JTextPane jTextPaneUsuario;
+    private javax.swing.JPasswordField jpfSenha;
+    private javax.swing.JTextField jtfUsuario;
     // End of variables declaration//GEN-END:variables
 }
