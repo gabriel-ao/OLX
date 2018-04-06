@@ -28,9 +28,9 @@ public class Login extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel2 = new javax.swing.JLabel();
-        jButtonLogar = new javax.swing.JButton();
-        jButtonCadastrar = new javax.swing.JButton();
-        jButtonSair = new javax.swing.JButton();
+        btn_Logar = new javax.swing.JButton();
+        btn_Cadastrar = new javax.swing.JButton();
+        btn_Sair = new javax.swing.JButton();
         jLabelUsuario = new javax.swing.JLabel();
         jLabelSenha = new javax.swing.JLabel();
         jtfUsuario = new javax.swing.JTextField();
@@ -46,20 +46,20 @@ public class Login extends javax.swing.JFrame {
         setResizable(false);
         getContentPane().setLayout(null);
 
-        jButtonLogar.setBackground(new java.awt.Color(153, 255, 153));
-        jButtonLogar.setText("Logar");
-        getContentPane().add(jButtonLogar);
-        jButtonLogar.setBounds(30, 240, 100, 25);
+        btn_Logar.setBackground(new java.awt.Color(153, 255, 153));
+        btn_Logar.setText("Logar");
+        getContentPane().add(btn_Logar);
+        btn_Logar.setBounds(30, 240, 100, 23);
 
-        jButtonCadastrar.setBackground(new java.awt.Color(153, 255, 153));
-        jButtonCadastrar.setText("Cadastrar");
-        getContentPane().add(jButtonCadastrar);
-        jButtonCadastrar.setBounds(140, 240, 130, 25);
+        btn_Cadastrar.setBackground(new java.awt.Color(153, 255, 153));
+        btn_Cadastrar.setText("Cadastrar");
+        getContentPane().add(btn_Cadastrar);
+        btn_Cadastrar.setBounds(140, 240, 130, 23);
 
-        jButtonSair.setBackground(new java.awt.Color(153, 255, 153));
-        jButtonSair.setText("Sair");
-        getContentPane().add(jButtonSair);
-        jButtonSair.setBounds(280, 240, 90, 25);
+        btn_Sair.setBackground(new java.awt.Color(153, 255, 153));
+        btn_Sair.setText("Sair");
+        getContentPane().add(btn_Sair);
+        btn_Sair.setBounds(280, 240, 90, 23);
 
         jLabelUsuario.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
         jLabelUsuario.setText("Usuario:");
@@ -68,11 +68,11 @@ public class Login extends javax.swing.JFrame {
 
         jLabelSenha.setText("Senha:");
         getContentPane().add(jLabelSenha);
-        jLabelSenha.setBounds(70, 190, 41, 16);
+        jLabelSenha.setBounds(70, 190, 34, 14);
         getContentPane().add(jtfUsuario);
-        jtfUsuario.setBounds(140, 150, 160, 22);
+        jtfUsuario.setBounds(140, 150, 160, 20);
         getContentPane().add(jpfSenha);
-        jpfSenha.setBounds(140, 190, 160, 22);
+        jpfSenha.setBounds(140, 190, 160, 20);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/olx2.png"))); // NOI18N
         jLabel1.setText("jLabel1");
@@ -118,9 +118,9 @@ public class Login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButtonCadastrar;
-    private javax.swing.JButton jButtonLogar;
-    private javax.swing.JButton jButtonSair;
+    private javax.swing.JButton btn_Cadastrar;
+    private javax.swing.JButton btn_Logar;
+    private javax.swing.JButton btn_Sair;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabelSenha;
