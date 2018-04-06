@@ -39,19 +39,19 @@ public class Cadastro extends javax.swing.JFrame {
         jLabelEmail = new javax.swing.JLabel();
         jLabelUsuario = new javax.swing.JLabel();
         jLabelSenha = new javax.swing.JLabel();
-        jTextFieldNome = new javax.swing.JTextField();
-        jTextFieldData = new javax.swing.JTextField();
-        jTextFieldCPF = new javax.swing.JTextField();
-        jTextFieldRua = new javax.swing.JTextField();
-        jTextFieldCidade = new javax.swing.JTextField();
-        jTextFieldBairro = new javax.swing.JTextField();
-        jTextFieldEstado = new javax.swing.JTextField();
-        jTextFieldTelefone = new javax.swing.JTextField();
-        jTextFieldEmail = new javax.swing.JTextField();
-        jTextFieldUsuario = new javax.swing.JTextField();
-        jTextFieldSenha = new javax.swing.JTextField();
-        jButtonCadastrar = new javax.swing.JButton();
-        jButtonCancelar = new javax.swing.JButton();
+        jtf_Nome = new javax.swing.JTextField();
+        jtf_Data = new javax.swing.JTextField();
+        jtf_CPF = new javax.swing.JTextField();
+        jtf_Rua = new javax.swing.JTextField();
+        jtf_Cidade = new javax.swing.JTextField();
+        jtf_Bairro = new javax.swing.JTextField();
+        jtf_Estado = new javax.swing.JTextField();
+        jtf_Telefone = new javax.swing.JTextField();
+        jtf_Email = new javax.swing.JTextField();
+        jtf_Usuario = new javax.swing.JTextField();
+        jtf_Senha = new javax.swing.JTextField();
+        btn_Cadastrar = new javax.swing.JButton();
+        jtf_Cancelar = new javax.swing.JButton();
 
         jTextField11.setText("jTextField11");
 
@@ -61,90 +61,90 @@ public class Cadastro extends javax.swing.JFrame {
 
         jLabelNomeCompleto.setText("Nome Completo");
         getContentPane().add(jLabelNomeCompleto);
-        jLabelNomeCompleto.setBounds(31, 35, 91, 16);
+        jLabelNomeCompleto.setBounds(31, 35, 75, 14);
 
         jLabelDataDeNascimento.setText("Data de Nascimento");
         getContentPane().add(jLabelDataDeNascimento);
-        jLabelDataDeNascimento.setBounds(10, 61, 114, 16);
+        jLabelDataDeNascimento.setBounds(10, 61, 96, 14);
 
         jLabelCPF.setText("CPF");
         getContentPane().add(jLabelCPF);
-        jLabelCPF.setBounds(87, 87, 22, 16);
+        jLabelCPF.setBounds(87, 87, 19, 14);
 
         jLabelRua.setText("Rua");
         getContentPane().add(jLabelRua);
-        jLabelRua.setBounds(87, 113, 22, 16);
+        jLabelRua.setBounds(87, 113, 19, 14);
 
         jLabelCidade.setText("Cidade");
         getContentPane().add(jLabelCidade);
-        jLabelCidade.setBounds(73, 139, 39, 16);
+        jLabelCidade.setBounds(73, 139, 33, 14);
 
         jLabelBairro.setText("Bairro");
         getContentPane().add(jLabelBairro);
-        jLabelBairro.setBounds(78, 165, 34, 16);
+        jLabelBairro.setBounds(78, 165, 28, 14);
 
         jLabelEstado.setText("Estado");
         getContentPane().add(jLabelEstado);
-        jLabelEstado.setBounds(73, 191, 38, 16);
+        jLabelEstado.setBounds(73, 191, 33, 14);
 
         jLabelTelefone.setText("Telefone");
         getContentPane().add(jLabelTelefone);
-        jLabelTelefone.setBounds(63, 217, 50, 16);
+        jLabelTelefone.setBounds(63, 217, 42, 14);
 
         jLabelEmail.setText("Email");
         getContentPane().add(jLabelEmail);
-        jLabelEmail.setBounds(81, 243, 31, 16);
+        jLabelEmail.setBounds(81, 243, 24, 14);
 
         jLabelUsuario.setText("Usuario");
         getContentPane().add(jLabelUsuario);
-        jLabelUsuario.setBounds(69, 269, 43, 16);
+        jLabelUsuario.setBounds(69, 269, 36, 14);
 
         jLabelSenha.setText("Senha");
         getContentPane().add(jLabelSenha);
-        jLabelSenha.setBounds(75, 295, 36, 16);
+        jLabelSenha.setBounds(75, 295, 30, 14);
 
-        jTextFieldNome.addActionListener(new java.awt.event.ActionListener() {
+        jtf_Nome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldNomeActionPerformed(evt);
+                jtf_NomeActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextFieldNome);
-        jTextFieldNome.setBounds(116, 32, 174, 22);
-        getContentPane().add(jTextFieldData);
-        jTextFieldData.setBounds(116, 58, 174, 22);
-        getContentPane().add(jTextFieldCPF);
-        jTextFieldCPF.setBounds(116, 84, 174, 22);
-        getContentPane().add(jTextFieldRua);
-        jTextFieldRua.setBounds(116, 110, 174, 22);
-        getContentPane().add(jTextFieldCidade);
-        jTextFieldCidade.setBounds(116, 136, 174, 22);
-        getContentPane().add(jTextFieldBairro);
-        jTextFieldBairro.setBounds(116, 162, 174, 22);
-        getContentPane().add(jTextFieldEstado);
-        jTextFieldEstado.setBounds(116, 188, 174, 22);
-        getContentPane().add(jTextFieldTelefone);
-        jTextFieldTelefone.setBounds(115, 214, 175, 22);
-        getContentPane().add(jTextFieldEmail);
-        jTextFieldEmail.setBounds(115, 240, 175, 22);
-        getContentPane().add(jTextFieldUsuario);
-        jTextFieldUsuario.setBounds(115, 266, 175, 22);
-        getContentPane().add(jTextFieldSenha);
-        jTextFieldSenha.setBounds(115, 292, 175, 22);
+        getContentPane().add(jtf_Nome);
+        jtf_Nome.setBounds(116, 32, 174, 20);
+        getContentPane().add(jtf_Data);
+        jtf_Data.setBounds(116, 58, 174, 20);
+        getContentPane().add(jtf_CPF);
+        jtf_CPF.setBounds(116, 84, 174, 20);
+        getContentPane().add(jtf_Rua);
+        jtf_Rua.setBounds(116, 110, 174, 20);
+        getContentPane().add(jtf_Cidade);
+        jtf_Cidade.setBounds(116, 136, 174, 20);
+        getContentPane().add(jtf_Bairro);
+        jtf_Bairro.setBounds(116, 162, 174, 20);
+        getContentPane().add(jtf_Estado);
+        jtf_Estado.setBounds(116, 188, 174, 20);
+        getContentPane().add(jtf_Telefone);
+        jtf_Telefone.setBounds(115, 214, 175, 20);
+        getContentPane().add(jtf_Email);
+        jtf_Email.setBounds(115, 240, 175, 20);
+        getContentPane().add(jtf_Usuario);
+        jtf_Usuario.setBounds(115, 266, 175, 20);
+        getContentPane().add(jtf_Senha);
+        jtf_Senha.setBounds(115, 292, 175, 20);
 
-        jButtonCadastrar.setText("Cadastrar");
-        getContentPane().add(jButtonCadastrar);
-        jButtonCadastrar.setBounds(115, 330, 89, 25);
+        btn_Cadastrar.setText("Cadastrar");
+        getContentPane().add(btn_Cadastrar);
+        btn_Cadastrar.setBounds(115, 330, 81, 23);
 
-        jButtonCancelar.setText("Cancelar");
-        getContentPane().add(jButtonCancelar);
-        jButtonCancelar.setBounds(214, 330, 83, 25);
+        jtf_Cancelar.setText("Cancelar");
+        getContentPane().add(jtf_Cancelar);
+        jtf_Cancelar.setBounds(214, 330, 75, 23);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextFieldNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldNomeActionPerformed
+    private void jtf_NomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtf_NomeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldNomeActionPerformed
+    }//GEN-LAST:event_jtf_NomeActionPerformed
 
     /**
      * @param args the command line arguments
@@ -182,8 +182,7 @@ public class Cadastro extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButtonCadastrar;
-    private javax.swing.JButton jButtonCancelar;
+    private javax.swing.JButton btn_Cadastrar;
     private javax.swing.JLabel jLabelBairro;
     private javax.swing.JLabel jLabelCPF;
     private javax.swing.JLabel jLabelCidade;
@@ -196,16 +195,17 @@ public class Cadastro extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelTelefone;
     private javax.swing.JLabel jLabelUsuario;
     private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextFieldBairro;
-    private javax.swing.JTextField jTextFieldCPF;
-    private javax.swing.JTextField jTextFieldCidade;
-    private javax.swing.JTextField jTextFieldData;
-    private javax.swing.JTextField jTextFieldEmail;
-    private javax.swing.JTextField jTextFieldEstado;
-    private javax.swing.JTextField jTextFieldNome;
-    private javax.swing.JTextField jTextFieldRua;
-    private javax.swing.JTextField jTextFieldSenha;
-    private javax.swing.JTextField jTextFieldTelefone;
-    private javax.swing.JTextField jTextFieldUsuario;
+    private javax.swing.JTextField jtf_Bairro;
+    private javax.swing.JTextField jtf_CPF;
+    private javax.swing.JButton jtf_Cancelar;
+    private javax.swing.JTextField jtf_Cidade;
+    private javax.swing.JTextField jtf_Data;
+    private javax.swing.JTextField jtf_Email;
+    private javax.swing.JTextField jtf_Estado;
+    private javax.swing.JTextField jtf_Nome;
+    private javax.swing.JTextField jtf_Rua;
+    private javax.swing.JTextField jtf_Senha;
+    private javax.swing.JTextField jtf_Telefone;
+    private javax.swing.JTextField jtf_Usuario;
     // End of variables declaration//GEN-END:variables
 }
