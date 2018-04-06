@@ -36,34 +36,39 @@ public class Login extends javax.swing.JFrame {
         jpfSenha = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1369, 730));
+        setBackground(new java.awt.Color(255, 255, 255));
+        setMinimumSize(new java.awt.Dimension(395, 300));
+        setPreferredSize(new java.awt.Dimension(395, 300));
+        setResizable(false);
         getContentPane().setLayout(null);
 
-        jButtonLogar.setBackground(new java.awt.Color(255, 102, 102));
+        jButtonLogar.setBackground(new java.awt.Color(153, 255, 153));
         jButtonLogar.setText("Logar");
         getContentPane().add(jButtonLogar);
-        jButtonLogar.setBounds(60, 180, 59, 23);
+        jButtonLogar.setBounds(30, 240, 100, 23);
 
+        jButtonCadastrar.setBackground(new java.awt.Color(153, 255, 153));
         jButtonCadastrar.setText("Cadastrar");
         getContentPane().add(jButtonCadastrar);
-        jButtonCadastrar.setBounds(140, 180, 100, 23);
+        jButtonCadastrar.setBounds(140, 240, 130, 23);
 
+        jButtonSair.setBackground(new java.awt.Color(153, 255, 153));
         jButtonSair.setText("Sair");
         getContentPane().add(jButtonSair);
-        jButtonSair.setBounds(250, 180, 51, 23);
+        jButtonSair.setBounds(280, 240, 90, 23);
 
         jLabelUsuario.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
         jLabelUsuario.setText("Usuario:");
         getContentPane().add(jLabelUsuario);
-        jLabelUsuario.setBounds(70, 90, 50, 17);
+        jLabelUsuario.setBounds(70, 150, 50, 17);
 
         jLabelSenha.setText("Senha:");
         getContentPane().add(jLabelSenha);
-        jLabelSenha.setBounds(70, 130, 34, 14);
+        jLabelSenha.setBounds(70, 190, 34, 14);
         getContentPane().add(jtfUsuario);
-        jtfUsuario.setBounds(140, 90, 160, 20);
+        jtfUsuario.setBounds(140, 150, 160, 20);
         getContentPane().add(jpfSenha);
-        jpfSenha.setBounds(140, 130, 160, 20);
+        jpfSenha.setBounds(140, 190, 160, 20);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
