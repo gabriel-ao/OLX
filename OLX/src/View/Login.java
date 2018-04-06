@@ -35,7 +35,7 @@ public class Login extends javax.swing.JFrame {
         jLabelSenha = new javax.swing.JLabel();
         jtfUsuario = new javax.swing.JTextField();
         jpfSenha = new javax.swing.JPasswordField();
-        jLabel3 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         jLabel2.setText("jLabel2");
 
@@ -49,17 +49,17 @@ public class Login extends javax.swing.JFrame {
         jButtonLogar.setBackground(new java.awt.Color(153, 255, 153));
         jButtonLogar.setText("Logar");
         getContentPane().add(jButtonLogar);
-        jButtonLogar.setBounds(30, 240, 100, 23);
+        jButtonLogar.setBounds(30, 240, 100, 25);
 
         jButtonCadastrar.setBackground(new java.awt.Color(153, 255, 153));
         jButtonCadastrar.setText("Cadastrar");
         getContentPane().add(jButtonCadastrar);
-        jButtonCadastrar.setBounds(140, 240, 130, 23);
+        jButtonCadastrar.setBounds(140, 240, 130, 25);
 
         jButtonSair.setBackground(new java.awt.Color(153, 255, 153));
         jButtonSair.setText("Sair");
         getContentPane().add(jButtonSair);
-        jButtonSair.setBounds(280, 240, 90, 23);
+        jButtonSair.setBounds(280, 240, 90, 25);
 
         jLabelUsuario.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
         jLabelUsuario.setText("Usuario:");
@@ -68,15 +68,16 @@ public class Login extends javax.swing.JFrame {
 
         jLabelSenha.setText("Senha:");
         getContentPane().add(jLabelSenha);
-        jLabelSenha.setBounds(70, 190, 34, 14);
+        jLabelSenha.setBounds(70, 190, 41, 16);
         getContentPane().add(jtfUsuario);
-        jtfUsuario.setBounds(140, 150, 160, 20);
+        jtfUsuario.setBounds(140, 150, 160, 22);
         getContentPane().add(jpfSenha);
-        jpfSenha.setBounds(140, 190, 160, 20);
+        jpfSenha.setBounds(140, 190, 160, 22);
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/olx2.png"))); // NOI18N
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(100, 10, 200, 150);
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/olx2.png"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(100, 20, 200, 130);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -120,8 +121,8 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JButton jButtonCadastrar;
     private javax.swing.JButton jButtonLogar;
     private javax.swing.JButton jButtonSair;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabelSenha;
     private javax.swing.JLabel jLabelUsuario;
     private javax.swing.JPasswordField jpfSenha;
