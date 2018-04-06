@@ -49,17 +49,17 @@ public class Login extends javax.swing.JFrame {
         jButtonLogar.setBackground(new java.awt.Color(153, 255, 153));
         jButtonLogar.setText("Logar");
         getContentPane().add(jButtonLogar);
-        jButtonLogar.setBounds(30, 240, 100, 25);
+        jButtonLogar.setBounds(30, 240, 100, 23);
 
         jButtonCadastrar.setBackground(new java.awt.Color(153, 255, 153));
         jButtonCadastrar.setText("Cadastrar");
         getContentPane().add(jButtonCadastrar);
-        jButtonCadastrar.setBounds(140, 240, 130, 25);
+        jButtonCadastrar.setBounds(140, 240, 130, 23);
 
         jButtonSair.setBackground(new java.awt.Color(153, 255, 153));
         jButtonSair.setText("Sair");
         getContentPane().add(jButtonSair);
-        jButtonSair.setBounds(280, 240, 90, 25);
+        jButtonSair.setBounds(280, 240, 90, 23);
 
         jLabelUsuario.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
         jLabelUsuario.setText("Usuario:");
@@ -68,16 +68,15 @@ public class Login extends javax.swing.JFrame {
 
         jLabelSenha.setText("Senha:");
         getContentPane().add(jLabelSenha);
-        jLabelSenha.setBounds(70, 190, 41, 16);
+        jLabelSenha.setBounds(70, 190, 34, 14);
         getContentPane().add(jtfUsuario);
-        jtfUsuario.setBounds(140, 150, 160, 22);
+        jtfUsuario.setBounds(140, 150, 160, 20);
         getContentPane().add(jpfSenha);
-        jpfSenha.setBounds(140, 190, 160, 22);
+        jpfSenha.setBounds(140, 190, 160, 20);
 
-        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\Augusto Kalel\\Desktop\\olx imagens\\olx2.png")); // NOI18N
-        jLabel3.setText("jLabel3");
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/olx2.png"))); // NOI18N
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(100, 0, 200, 150);
+        jLabel3.setBounds(100, 10, 200, 150);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
