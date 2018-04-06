@@ -27,6 +27,7 @@ public class Login extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel2 = new javax.swing.JLabel();
         jButtonLogar = new javax.swing.JButton();
         jButtonCadastrar = new javax.swing.JButton();
         jButtonSair = new javax.swing.JButton();
@@ -34,28 +35,31 @@ public class Login extends javax.swing.JFrame {
         jLabelSenha = new javax.swing.JLabel();
         jtfUsuario = new javax.swing.JTextField();
         jpfSenha = new javax.swing.JPasswordField();
+        jLabel3 = new javax.swing.JLabel();
+
+        jLabel2.setText("jLabel2");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
-        setMinimumSize(new java.awt.Dimension(395, 300));
-        setPreferredSize(new java.awt.Dimension(395, 300));
+        setMinimumSize(new java.awt.Dimension(395, 291));
+        setPreferredSize(new java.awt.Dimension(395, 291));
         setResizable(false);
         getContentPane().setLayout(null);
 
         jButtonLogar.setBackground(new java.awt.Color(153, 255, 153));
         jButtonLogar.setText("Logar");
         getContentPane().add(jButtonLogar);
-        jButtonLogar.setBounds(30, 240, 100, 23);
+        jButtonLogar.setBounds(30, 240, 100, 25);
 
         jButtonCadastrar.setBackground(new java.awt.Color(153, 255, 153));
         jButtonCadastrar.setText("Cadastrar");
         getContentPane().add(jButtonCadastrar);
-        jButtonCadastrar.setBounds(140, 240, 130, 23);
+        jButtonCadastrar.setBounds(140, 240, 130, 25);
 
         jButtonSair.setBackground(new java.awt.Color(153, 255, 153));
         jButtonSair.setText("Sair");
         getContentPane().add(jButtonSair);
-        jButtonSair.setBounds(280, 240, 90, 23);
+        jButtonSair.setBounds(280, 240, 90, 25);
 
         jLabelUsuario.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
         jLabelUsuario.setText("Usuario:");
@@ -64,11 +68,16 @@ public class Login extends javax.swing.JFrame {
 
         jLabelSenha.setText("Senha:");
         getContentPane().add(jLabelSenha);
-        jLabelSenha.setBounds(70, 190, 34, 14);
+        jLabelSenha.setBounds(70, 190, 41, 16);
         getContentPane().add(jtfUsuario);
-        jtfUsuario.setBounds(140, 150, 160, 20);
+        jtfUsuario.setBounds(140, 150, 160, 22);
         getContentPane().add(jpfSenha);
-        jpfSenha.setBounds(140, 190, 160, 20);
+        jpfSenha.setBounds(140, 190, 160, 22);
+
+        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\Augusto Kalel\\Desktop\\olx imagens\\olx2.png")); // NOI18N
+        jLabel3.setText("jLabel3");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(100, 0, 200, 150);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -112,6 +121,8 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JButton jButtonCadastrar;
     private javax.swing.JButton jButtonLogar;
     private javax.swing.JButton jButtonSair;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabelSenha;
     private javax.swing.JLabel jLabelUsuario;
     private javax.swing.JPasswordField jpfSenha;
