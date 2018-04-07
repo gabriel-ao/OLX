@@ -61,47 +61,47 @@ public class Cadastro extends javax.swing.JFrame {
 
         jLabelNomeCompleto.setText("Nome Completo");
         getContentPane().add(jLabelNomeCompleto);
-        jLabelNomeCompleto.setBounds(31, 35, 75, 14);
+        jLabelNomeCompleto.setBounds(31, 35, 91, 16);
 
         jLabelDataDeNascimento.setText("Data de Nascimento");
         getContentPane().add(jLabelDataDeNascimento);
-        jLabelDataDeNascimento.setBounds(10, 61, 96, 14);
+        jLabelDataDeNascimento.setBounds(10, 61, 114, 16);
 
         jLabelCPF.setText("CPF");
         getContentPane().add(jLabelCPF);
-        jLabelCPF.setBounds(87, 87, 19, 14);
+        jLabelCPF.setBounds(87, 87, 22, 16);
 
         jLabelRua.setText("Rua");
         getContentPane().add(jLabelRua);
-        jLabelRua.setBounds(87, 113, 19, 14);
+        jLabelRua.setBounds(87, 113, 22, 16);
 
         jLabelCidade.setText("Cidade");
         getContentPane().add(jLabelCidade);
-        jLabelCidade.setBounds(73, 139, 33, 14);
+        jLabelCidade.setBounds(73, 139, 39, 16);
 
         jLabelBairro.setText("Bairro");
         getContentPane().add(jLabelBairro);
-        jLabelBairro.setBounds(78, 165, 28, 14);
+        jLabelBairro.setBounds(78, 165, 34, 16);
 
         jLabelEstado.setText("Estado");
         getContentPane().add(jLabelEstado);
-        jLabelEstado.setBounds(73, 191, 33, 14);
+        jLabelEstado.setBounds(73, 191, 38, 16);
 
         jLabelTelefone.setText("Telefone");
         getContentPane().add(jLabelTelefone);
-        jLabelTelefone.setBounds(63, 217, 42, 14);
+        jLabelTelefone.setBounds(63, 217, 50, 16);
 
         jLabelEmail.setText("Email");
         getContentPane().add(jLabelEmail);
-        jLabelEmail.setBounds(81, 243, 24, 14);
+        jLabelEmail.setBounds(81, 243, 31, 16);
 
         jLabelUsuario.setText("Usuario");
         getContentPane().add(jLabelUsuario);
-        jLabelUsuario.setBounds(69, 269, 36, 14);
+        jLabelUsuario.setBounds(69, 269, 43, 16);
 
         jLabelSenha.setText("Senha");
         getContentPane().add(jLabelSenha);
-        jLabelSenha.setBounds(75, 295, 30, 14);
+        jLabelSenha.setBounds(75, 295, 36, 16);
 
         jtf_Nome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -109,35 +109,35 @@ public class Cadastro extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jtf_Nome);
-        jtf_Nome.setBounds(116, 32, 174, 20);
+        jtf_Nome.setBounds(116, 32, 174, 22);
         getContentPane().add(jtf_Data);
-        jtf_Data.setBounds(116, 58, 174, 20);
+        jtf_Data.setBounds(116, 58, 174, 22);
         getContentPane().add(jtf_CPF);
-        jtf_CPF.setBounds(116, 84, 174, 20);
+        jtf_CPF.setBounds(116, 84, 174, 22);
         getContentPane().add(jtf_Rua);
-        jtf_Rua.setBounds(116, 110, 174, 20);
+        jtf_Rua.setBounds(116, 110, 174, 22);
         getContentPane().add(jtf_Cidade);
-        jtf_Cidade.setBounds(116, 136, 174, 20);
+        jtf_Cidade.setBounds(116, 136, 174, 22);
         getContentPane().add(jtf_Bairro);
-        jtf_Bairro.setBounds(116, 162, 174, 20);
+        jtf_Bairro.setBounds(116, 162, 174, 22);
         getContentPane().add(jtf_Estado);
-        jtf_Estado.setBounds(116, 188, 174, 20);
+        jtf_Estado.setBounds(116, 188, 174, 22);
         getContentPane().add(jtf_Telefone);
-        jtf_Telefone.setBounds(115, 214, 175, 20);
+        jtf_Telefone.setBounds(115, 214, 175, 22);
         getContentPane().add(jtf_Email);
-        jtf_Email.setBounds(115, 240, 175, 20);
+        jtf_Email.setBounds(115, 240, 175, 22);
         getContentPane().add(jtf_Usuario);
-        jtf_Usuario.setBounds(115, 266, 175, 20);
+        jtf_Usuario.setBounds(115, 266, 175, 22);
         getContentPane().add(jtf_Senha);
-        jtf_Senha.setBounds(115, 292, 175, 20);
+        jtf_Senha.setBounds(115, 292, 175, 22);
 
         btn_Cadastrar.setText("Cadastrar");
         getContentPane().add(btn_Cadastrar);
-        btn_Cadastrar.setBounds(115, 330, 81, 23);
+        btn_Cadastrar.setBounds(115, 330, 89, 25);
 
         jtf_Cancelar.setText("Cancelar");
         getContentPane().add(jtf_Cancelar);
-        jtf_Cancelar.setBounds(214, 330, 75, 23);
+        jtf_Cancelar.setBounds(214, 330, 83, 25);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
