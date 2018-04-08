@@ -34,12 +34,11 @@ public class Login extends javax.swing.JFrame {
         btn_Sair = new javax.swing.JButton();
         jtfUsuario = new javax.swing.JTextField();
         jpfSenha = new javax.swing.JPasswordField();
-        Logo = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         Botton = new javax.swing.JLabel();
         Usuario = new javax.swing.JLabel();
         Senha = new javax.swing.JLabel();
         Top = new javax.swing.JLabel();
-        fundo_login = new javax.swing.JLabel();
         Fundo = new javax.swing.JLabel();
 
         jLabel2.setText("jLabel2");
@@ -54,14 +53,14 @@ public class Login extends javax.swing.JFrame {
         setResizable(false);
         getContentPane().setLayout(null);
 
-        btn_Logar.setBackground(new java.awt.Color(119, 32, 152));
+        btn_Logar.setBackground(new java.awt.Color(169, 45, 215));
         btn_Logar.setForeground(new java.awt.Color(255, 255, 255));
         btn_Logar.setText("Logar");
         btn_Logar.setBorder(null);
         btn_Logar.setBorderPainted(false);
         btn_Logar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         getContentPane().add(btn_Logar);
-        btn_Logar.setBounds(0, 280, 360, 30);
+        btn_Logar.setBounds(0, 280, 350, 30);
 
         btn_Cadastrar.setBackground(new java.awt.Color(119, 32, 152));
         btn_Cadastrar.setForeground(new java.awt.Color(255, 255, 255));
@@ -99,9 +98,9 @@ public class Login extends javax.swing.JFrame {
         getContentPane().add(jpfSenha);
         jpfSenha.setBounds(70, 220, 230, 30);
 
-        Logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/olx.png"))); // NOI18N
-        getContentPane().add(Logo);
-        Logo.setBounds(100, 30, 140, 130);
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/olx.png"))); // NOI18N
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(100, 30, 135, 140);
 
         Botton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/login topo.png"))); // NOI18N
         Botton.setText("jLabel4");
@@ -124,10 +123,6 @@ public class Login extends javax.swing.JFrame {
         Top.setText("jLabel4");
         getContentPane().add(Top);
         Top.setBounds(0, 0, 360, 25);
-
-        fundo_login.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/login Campos.png"))); // NOI18N
-        getContentPane().add(fundo_login);
-        fundo_login.setBounds(10, 170, 340, 86);
 
         Fundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/login fundo.png"))); // NOI18N
         getContentPane().add(Fundo);
@@ -182,14 +177,13 @@ public class Login extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Botton;
     private javax.swing.JLabel Fundo;
-    private javax.swing.JLabel Logo;
     private javax.swing.JLabel Senha;
     private javax.swing.JLabel Top;
     private javax.swing.JLabel Usuario;
     private javax.swing.JButton btn_Cadastrar;
     private javax.swing.JButton btn_Logar;
     private javax.swing.JButton btn_Sair;
-    private javax.swing.JLabel fundo_login;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPasswordField jpfSenha;
     private javax.swing.JTextField jtfUsuario;

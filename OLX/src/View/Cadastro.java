@@ -61,7 +61,7 @@ public class Cadastro extends javax.swing.JFrame {
 
         jLabelNomeCompleto.setText("Nome Completo");
         getContentPane().add(jLabelNomeCompleto);
-        jLabelNomeCompleto.setBounds(31, 35, 91, 16);
+        jLabelNomeCompleto.setBounds(20, 40, 91, 16);
 
         jLabelDataDeNascimento.setText("Data de Nascimento");
         getContentPane().add(jLabelDataDeNascimento);
@@ -131,6 +131,7 @@ public class Cadastro extends javax.swing.JFrame {
         getContentPane().add(jtf_Senha);
         jtf_Senha.setBounds(115, 292, 175, 22);
 
+        btn_Cadastrar.setBackground(new java.awt.Color(169, 45, 215));
         btn_Cadastrar.setText("Cadastrar");
         getContentPane().add(btn_Cadastrar);
         btn_Cadastrar.setBounds(115, 330, 89, 25);

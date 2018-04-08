@@ -41,7 +41,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="31" y="35" width="-1" height="-1"/>
+          <AbsoluteConstraints x="20" y="40" width="-1" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -227,6 +227,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="btn_Cadastrar">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="d7" green="2d" red="a9" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Cadastrar"/>
       </Properties>
       <Constraints>
