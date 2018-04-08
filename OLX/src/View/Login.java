@@ -5,8 +5,6 @@
  */
 package View;
 
-import java.awt.Color;
-
 /**
  *
  * @author gabri
@@ -18,7 +16,6 @@ public class Login extends javax.swing.JFrame {
      */
     public Login() {
         initComponents();
-        jtfUsuario.setBackground(new Color(0,0,0));
         
     }
 
@@ -37,11 +34,12 @@ public class Login extends javax.swing.JFrame {
         btn_Sair = new javax.swing.JButton();
         jtfUsuario = new javax.swing.JTextField();
         jpfSenha = new javax.swing.JPasswordField();
-        passaword = new javax.swing.JLabel();
-        Login = new javax.swing.JLabel();
         Logo = new javax.swing.JLabel();
         Botton = new javax.swing.JLabel();
+        Usuario = new javax.swing.JLabel();
+        Senha = new javax.swing.JLabel();
         Top = new javax.swing.JLabel();
+        fundo_login = new javax.swing.JLabel();
         Fundo = new javax.swing.JLabel();
 
         jLabel2.setText("jLabel2");
@@ -88,27 +86,18 @@ public class Login extends javax.swing.JFrame {
         getContentPane().add(btn_Sair);
         btn_Sair.setBounds(0, 360, 360, 30);
 
+        jtfUsuario.setText("Entre com seu login aqui!");
         jtfUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jtfUsuarioActionPerformed(evt);
             }
         });
         getContentPane().add(jtfUsuario);
-        jtfUsuario.setBounds(230, 80, 110, 30);
+        jtfUsuario.setBounds(70, 180, 230, 30);
 
         jpfSenha.setText("DIGITE SUA SENHA");
-        jpfSenha.setBorder(null);
         getContentPane().add(jpfSenha);
-        jpfSenha.setBounds(120, 220, 110, 20);
-
-        passaword.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        passaword.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/jtf_pass.png"))); // NOI18N
-        getContentPane().add(passaword);
-        passaword.setBounds(90, 220, 150, 26);
-
-        Login.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/jtf_login.png"))); // NOI18N
-        getContentPane().add(Login);
-        Login.setBounds(90, 180, 152, 26);
+        jpfSenha.setBounds(70, 220, 230, 30);
 
         Logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/olx.png"))); // NOI18N
         getContentPane().add(Logo);
@@ -120,10 +109,25 @@ public class Login extends javax.swing.JFrame {
         Botton.setBounds(0, 400, 360, 25);
         Botton.getAccessibleContext().setAccessibleName("design_topo");
 
+        Usuario.setBackground(new java.awt.Color(255, 255, 255));
+        Usuario.setForeground(new java.awt.Color(255, 255, 255));
+        Usuario.setText("Usuario:");
+        getContentPane().add(Usuario);
+        Usuario.setBounds(20, 190, 50, 16);
+
+        Senha.setForeground(new java.awt.Color(255, 255, 255));
+        Senha.setText("Senha:");
+        getContentPane().add(Senha);
+        Senha.setBounds(20, 230, 41, 16);
+
         Top.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/login topo.png"))); // NOI18N
         Top.setText("jLabel4");
         getContentPane().add(Top);
         Top.setBounds(0, 0, 360, 25);
+
+        fundo_login.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/login Campos.png"))); // NOI18N
+        getContentPane().add(fundo_login);
+        fundo_login.setBounds(10, 170, 340, 86);
 
         Fundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/login fundo.png"))); // NOI18N
         getContentPane().add(Fundo);
@@ -178,15 +182,16 @@ public class Login extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Botton;
     private javax.swing.JLabel Fundo;
-    private javax.swing.JLabel Login;
     private javax.swing.JLabel Logo;
+    private javax.swing.JLabel Senha;
     private javax.swing.JLabel Top;
+    private javax.swing.JLabel Usuario;
     private javax.swing.JButton btn_Cadastrar;
     private javax.swing.JButton btn_Logar;
     private javax.swing.JButton btn_Sair;
+    private javax.swing.JLabel fundo_login;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPasswordField jpfSenha;
     private javax.swing.JTextField jtfUsuario;
-    private javax.swing.JLabel passaword;
     // End of variables declaration//GEN-END:variables
 }
