@@ -60,7 +60,7 @@ public class Login extends javax.swing.JFrame {
         btn_Logar.setBorderPainted(false);
         btn_Logar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         getContentPane().add(btn_Logar);
-        btn_Logar.setBounds(0, 280, 350, 30);
+        btn_Logar.setBounds(0, 280, 340, 30);
 
         btn_Cadastrar.setBackground(new java.awt.Color(119, 32, 152));
         btn_Cadastrar.setForeground(new java.awt.Color(255, 255, 255));
@@ -70,7 +70,7 @@ public class Login extends javax.swing.JFrame {
         btn_Cadastrar.setMaximumSize(new java.awt.Dimension(345, 25));
         btn_Cadastrar.setMinimumSize(new java.awt.Dimension(345, 25));
         getContentPane().add(btn_Cadastrar);
-        btn_Cadastrar.setBounds(0, 320, 360, 30);
+        btn_Cadastrar.setBounds(0, 320, 340, 30);
 
         btn_Sair.setBackground(new java.awt.Color(119, 32, 152));
         btn_Sair.setForeground(new java.awt.Color(255, 255, 255));
@@ -83,20 +83,21 @@ public class Login extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btn_Sair);
-        btn_Sair.setBounds(0, 360, 360, 30);
+        btn_Sair.setBounds(0, 360, 340, 30);
 
         jtfUsuario.setText("Entre com seu login aqui!");
+        jtfUsuario.setBorder(null);
         jtfUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jtfUsuarioActionPerformed(evt);
             }
         });
         getContentPane().add(jtfUsuario);
-        jtfUsuario.setBounds(70, 180, 230, 30);
+        jtfUsuario.setBounds(70, 180, 220, 20);
 
-        jpfSenha.setText("DIGITE SUA SENHA");
+        jpfSenha.setBorder(null);
         getContentPane().add(jpfSenha);
-        jpfSenha.setBounds(70, 220, 230, 30);
+        jpfSenha.setBounds(80, 220, 210, 30);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/olx.png"))); // NOI18N
         getContentPane().add(jLabel1);
@@ -110,14 +111,15 @@ public class Login extends javax.swing.JFrame {
 
         Usuario.setBackground(new java.awt.Color(255, 255, 255));
         Usuario.setForeground(new java.awt.Color(255, 255, 255));
+        Usuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/jtf_login.png"))); // NOI18N
         Usuario.setText("Usuario:");
         getContentPane().add(Usuario);
-        Usuario.setBounds(20, 190, 50, 16);
+        Usuario.setBounds(30, 170, 270, 40);
 
         Senha.setForeground(new java.awt.Color(255, 255, 255));
-        Senha.setText("Senha:");
+        Senha.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/jtf_pass.png"))); // NOI18N
         getContentPane().add(Senha);
-        Senha.setBounds(20, 230, 41, 16);
+        Senha.setBounds(30, 220, 270, 30);
 
         Top.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/login topo.png"))); // NOI18N
         Top.setText("jLabel4");
