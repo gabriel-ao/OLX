@@ -113,12 +113,12 @@ public class Login extends javax.swing.JFrame {
         Usuario.setForeground(new java.awt.Color(255, 255, 255));
         Usuario.setText("Usuario:");
         getContentPane().add(Usuario);
-        Usuario.setBounds(20, 190, 50, 16);
+        Usuario.setBounds(20, 190, 50, 14);
 
         Senha.setForeground(new java.awt.Color(255, 255, 255));
         Senha.setText("Senha:");
         getContentPane().add(Senha);
-        Senha.setBounds(20, 230, 41, 16);
+        Senha.setBounds(20, 230, 34, 14);
 
         Top.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/login topo.png"))); // NOI18N
         Top.setText("jLabel4");
