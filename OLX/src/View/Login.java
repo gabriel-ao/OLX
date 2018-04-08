@@ -59,6 +59,11 @@ public class Login extends javax.swing.JFrame {
         btn_fechar.setBorder(null);
         btn_fechar.setBorderPainted(false);
         btn_fechar.setContentAreaFilled(false);
+        btn_fechar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_fecharActionPerformed(evt);
+            }
+        });
         getContentPane().add(btn_fechar, new org.netbeans.lib.awtextra.AbsoluteConstraints(295, 8, 30, -1));
 
         btn_Logar.setBackground(new java.awt.Color(169, 45, 215));
@@ -67,7 +72,7 @@ public class Login extends javax.swing.JFrame {
         btn_Logar.setBorder(null);
         btn_Logar.setBorderPainted(false);
         btn_Logar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(btn_Logar, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 320, 350, 30));
+        getContentPane().add(btn_Logar, new org.netbeans.lib.awtextra.AbsoluteConstraints(112, 320, 110, 30));
 
         btn_Cadastrar.setBackground(new java.awt.Color(169, 45, 215));
         btn_Cadastrar.setForeground(new java.awt.Color(255, 255, 255));
@@ -76,7 +81,7 @@ public class Login extends javax.swing.JFrame {
         btn_Cadastrar.setBorderPainted(false);
         btn_Cadastrar.setMaximumSize(new java.awt.Dimension(345, 25));
         btn_Cadastrar.setMinimumSize(new java.awt.Dimension(345, 25));
-        getContentPane().add(btn_Cadastrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 450, 360, 30));
+        getContentPane().add(btn_Cadastrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 450, 150, 30));
 
         btn_Sair.setBackground(new java.awt.Color(169, 45, 215));
         btn_Sair.setForeground(new java.awt.Color(255, 255, 255));
@@ -88,7 +93,7 @@ public class Login extends javax.swing.JFrame {
                 btn_SairActionPerformed(evt);
             }
         });
-        getContentPane().add(btn_Sair, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 360, 350, 30));
+        getContentPane().add(btn_Sair, new org.netbeans.lib.awtextra.AbsoluteConstraints(112, 360, 110, 30));
 
         jtfUsuario.setBorder(null);
         jtfUsuario.addActionListener(new java.awt.event.ActionListener() {
@@ -138,8 +143,12 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_jtfUsuarioActionPerformed
 
     private void btn_SairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_SairActionPerformed
-        dispose();
+        System.exit(0);
     }//GEN-LAST:event_btn_SairActionPerformed
+
+    private void btn_fecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_fecharActionPerformed
+        System.exit(0);      
+    }//GEN-LAST:event_btn_fecharActionPerformed
 
     /**
      * @param args the command line arguments
