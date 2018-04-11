@@ -64,7 +64,7 @@ public class Login extends javax.swing.JFrame {
                 btn_fecharActionPerformed(evt);
             }
         });
-        getContentPane().add(btn_fechar, new org.netbeans.lib.awtextra.AbsoluteConstraints(295, 8, 30, -1));
+        getContentPane().add(btn_fechar, new org.netbeans.lib.awtextra.AbsoluteConstraints(295, 6, 30, -1));
 
         btn_Logar.setBackground(new java.awt.Color(169, 45, 215));
         btn_Logar.setForeground(new java.awt.Color(255, 255, 255));
@@ -76,11 +76,16 @@ public class Login extends javax.swing.JFrame {
 
         btn_Cadastrar.setBackground(new java.awt.Color(169, 45, 215));
         btn_Cadastrar.setForeground(new java.awt.Color(255, 255, 255));
-        btn_Cadastrar.setText("Cadastre-se!");
+        btn_Cadastrar.setText("Desapegue agora!");
         btn_Cadastrar.setBorder(null);
         btn_Cadastrar.setBorderPainted(false);
         btn_Cadastrar.setMaximumSize(new java.awt.Dimension(345, 25));
         btn_Cadastrar.setMinimumSize(new java.awt.Dimension(345, 25));
+        btn_Cadastrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_CadastrarActionPerformed(evt);
+            }
+        });
         getContentPane().add(btn_Cadastrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 450, 150, 30));
 
         btn_Sair.setBackground(new java.awt.Color(169, 45, 215));
@@ -108,11 +113,11 @@ public class Login extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Quer desapegar?");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 420, -1, -1));
+        jLabel1.setText("Não possui cadastro?");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 420, -1, -1));
 
         Logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/olx.png"))); // NOI18N
-        getContentPane().add(Logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 50, -1, 140));
+        getContentPane().add(Logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 40, -1, 140));
 
         Botton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/login topo.png"))); // NOI18N
         Botton.setText("jLabel4");
@@ -130,7 +135,7 @@ public class Login extends javax.swing.JFrame {
         getContentPane().add(Senha, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, -1, -1));
 
         Top.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/login topo.png"))); // NOI18N
-        getContentPane().add(Top, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 40));
+        getContentPane().add(Top, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -8, 330, 40));
 
         Fundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/login fundo.png"))); // NOI18N
         getContentPane().add(Fundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 330, 520));
@@ -149,6 +154,10 @@ public class Login extends javax.swing.JFrame {
     private void btn_fecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_fecharActionPerformed
         System.exit(0);      
     }//GEN-LAST:event_btn_fecharActionPerformed
+
+    private void btn_CadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_CadastrarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_CadastrarActionPerformed
 
     /**
      * @param args the command line arguments
