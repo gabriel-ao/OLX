@@ -5,6 +5,7 @@
  */
 package olx;
 
+import View.Cadastro;
 import View.Login;
 
 /**
@@ -18,8 +19,10 @@ public class OLX {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Login login = new Login();
-        login.setVisible(true);
+       // Login login = new Login();
+        Cadastro cadastro = new Cadastro();
+        //login.setVisible(true);
+        cadastro.setVisible(true);
         
         // TODAS AS TELAS TEM TAMANHO PADRÃO DE (1300,730)
     }
