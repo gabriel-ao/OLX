@@ -196,13 +196,13 @@ public class Cadastro extends javax.swing.JFrame {
         btn_Cadastrar.setBorder(null);
         btn_Cadastrar.setContentAreaFilled(false);
         getContentPane().add(btn_Cadastrar);
-        btn_Cadastrar.setBounds(230, 500, 65, 70);
+        btn_Cadastrar.setBounds(390, 540, 65, 70);
 
         jtf_Cancelar.setBackground(new java.awt.Color(242, 242, 242));
-        jtf_Cancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/cancel icon.jpeg"))); // NOI18N
+        jtf_Cancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/cancel icon.png"))); // NOI18N
         jtf_Cancelar.setContentAreaFilled(false);
         getContentPane().add(jtf_Cancelar);
-        jtf_Cancelar.setBounds(540, 500, 97, 70);
+        jtf_Cancelar.setBounds(550, 540, 97, 70);
 
         jDateChooser1.setBackground(new java.awt.Color(242, 242, 242));
         getContentPane().add(jDateChooser1);
@@ -234,7 +234,7 @@ public class Cadastro extends javax.swing.JFrame {
 
         JlBairro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Campo Bairro.png"))); // NOI18N
         getContentPane().add(JlBairro);
-        JlBairro.setBounds(630, 260, 340, 34);
+        JlBairro.setBounds(630, 260, 340, 0);
 
         JlEstado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Campo estado.png"))); // NOI18N
         getContentPane().add(JlEstado);

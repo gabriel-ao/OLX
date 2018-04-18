@@ -39,18 +39,25 @@ public class CardLayout extends javax.swing.JFrame {
         btn_aceitar = new javax.swing.JButton();
         btn_recusar = new javax.swing.JButton();
         Anuncio = new javax.swing.JPanel();
-        jtf_EstadoConservacao = new javax.swing.JTextField();
-        jtf_EstadoQueMoro = new javax.swing.JTextField();
-        jtf_FotoProduto = new javax.swing.JTextField();
-        btn_cadastrar = new javax.swing.JButton();
-        jLabel_Nome = new javax.swing.JLabel();
-        btn_cancelar = new javax.swing.JButton();
+        jl_titulo = new javax.swing.JLabel();
         jLabel_preco = new javax.swing.JLabel();
         jLabel_conservacao = new javax.swing.JLabel();
         jLabel_estadoVenda = new javax.swing.JLabel();
-        jLabel_Imagem = new javax.swing.JLabel();
+        jl_Imagem = new javax.swing.JLabel();
+        jl_img = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jl_campoDescricao = new javax.swing.JLabel();
         jtf_NomeProduto = new javax.swing.JTextField();
         jtf_PrecoProduto = new javax.swing.JTextField();
+        jtf_NomeProduto1 = new javax.swing.JTextField();
+        jRB_Novo = new javax.swing.JRadioButton();
+        jRB_usado = new javax.swing.JRadioButton();
+        jcb_estado = new javax.swing.JComboBox<>();
+        btn_Editar = new javax.swing.JButton();
+        btn_cancelar = new javax.swing.JButton();
+        btn_cadastrar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new java.awt.CardLayout());
@@ -61,7 +68,7 @@ public class CardLayout extends javax.swing.JFrame {
         inicial.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 440, 149, 106));
 
         jLabel2.setText("Exibir anuncio");
-        inicial.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 30, 149, 106));
+        inicial.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 20, 149, 106));
 
         jLabel3.setText("Exibir anuncio");
         inicial.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 140, 149, 106));
@@ -81,11 +88,11 @@ public class CardLayout extends javax.swing.JFrame {
         Venda.setLayout(VendaLayout);
         VendaLayout.setHorizontalGroup(
             VendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGap(0, 1025, Short.MAX_VALUE)
         );
         VendaLayout.setVerticalGroup(
             VendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 546, Short.MAX_VALUE)
+            .addGap(0, 728, Short.MAX_VALUE)
         );
 
         getContentPane().add(Venda, "card2");
@@ -103,12 +110,12 @@ public class CardLayout extends javax.swing.JFrame {
                 .addComponent(btn_aceitar)
                 .addGap(82, 82, 82)
                 .addComponent(btn_recusar)
-                .addContainerGap(93, Short.MAX_VALUE))
+                .addContainerGap(718, Short.MAX_VALUE))
         );
         ReservaLayout.setVerticalGroup(
             ReservaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ReservaLayout.createSequentialGroup()
-                .addContainerGap(455, Short.MAX_VALUE)
+                .addContainerGap(637, Short.MAX_VALUE)
                 .addGroup(ReservaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btn_aceitar)
                     .addComponent(btn_recusar))
@@ -117,86 +124,104 @@ public class CardLayout extends javax.swing.JFrame {
 
         getContentPane().add(Reserva, "card4");
 
-        btn_cadastrar.setText("Cadastrar");
+        Anuncio.setMaximumSize(new java.awt.Dimension(1025, 728));
+        Anuncio.setMinimumSize(new java.awt.Dimension(1025, 728));
+        Anuncio.setLayout(null);
 
-        jLabel_Nome.setText("Nome do produto");
+        jl_titulo.setText("Titulo:");
+        Anuncio.add(jl_titulo);
+        jl_titulo.setBounds(340, 120, 30, 14);
+
+        jLabel_preco.setText("Preço do produto:");
+        Anuncio.add(jLabel_preco);
+        jLabel_preco.setBounds(300, 400, 87, 14);
+
+        jLabel_conservacao.setText("O produto é");
+        Anuncio.add(jLabel_conservacao);
+        jLabel_conservacao.setBounds(310, 480, 58, 14);
+
+        jLabel_estadoVenda.setText("Estado:");
+        Anuncio.add(jLabel_estadoVenda);
+        jLabel_estadoVenda.setBounds(650, 400, 37, 14);
+
+        jl_Imagem.setText("Foto do produto");
+        Anuncio.add(jl_Imagem);
+        jl_Imagem.setBounds(32, 468, 78, 14);
+
+        jl_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Campo Foto.png"))); // NOI18N
+        Anuncio.add(jl_img);
+        jl_img.setBounds(10, 96, 284, 355);
+
+        jLabel6.setText("Descrição:");
+        Anuncio.add(jLabel6);
+        jLabel6.setBounds(320, 170, 50, 14);
+
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Campo Senha.png"))); // NOI18N
+        Anuncio.add(jLabel7);
+        jLabel7.setBounds(390, 400, 220, 34);
+
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Campo Titulo.png"))); // NOI18N
+        Anuncio.add(jLabel9);
+        jLabel9.setBounds(390, 100, 378, 34);
+
+        jl_campoDescricao.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Campo descricao.png"))); // NOI18N
+        Anuncio.add(jl_campoDescricao);
+        jl_campoDescricao.setBounds(390, 150, 380, 220);
+
+        jtf_NomeProduto.setBackground(new java.awt.Color(242, 242, 242));
+        jtf_NomeProduto.setBorder(null);
+        Anuncio.add(jtf_NomeProduto);
+        jtf_NomeProduto.setBounds(400, 110, 360, 14);
+
+        jtf_PrecoProduto.setEditable(false);
+        jtf_PrecoProduto.setBorder(null);
+        jtf_PrecoProduto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtf_PrecoProdutoActionPerformed(evt);
+            }
+        });
+        Anuncio.add(jtf_PrecoProduto);
+        jtf_PrecoProduto.setBounds(400, 410, 200, 20);
+
+        jtf_NomeProduto1.setBackground(new java.awt.Color(242, 242, 242));
+        jtf_NomeProduto1.setBorder(null);
+        Anuncio.add(jtf_NomeProduto1);
+        jtf_NomeProduto1.setBounds(400, 160, 360, 200);
+
+        jRB_Novo.setText("Novo");
+        Anuncio.add(jRB_Novo);
+        jRB_Novo.setBounds(380, 480, 51, 23);
+
+        jRB_usado.setText("usado");
+        Anuncio.add(jRB_usado);
+        jRB_usado.setBounds(380, 500, 55, 23);
+
+        jcb_estado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        Anuncio.add(jcb_estado);
+        jcb_estado.setBounds(700, 400, 56, 20);
+
+        btn_Editar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Edit icon.png"))); // NOI18N
+        btn_Editar.setContentAreaFilled(false);
+        Anuncio.add(btn_Editar);
+        btn_Editar.setBounds(209, 604, 97, 73);
 
         btn_cancelar.setText("Cancelar");
+        Anuncio.add(btn_cancelar);
+        btn_cancelar.setBounds(341, 654, 75, 23);
 
-        jLabel_preco.setText("Preço do produto");
-
-        jLabel_conservacao.setText("Estado de conservação");
-
-        jLabel_estadoVenda.setText("Estado que moro");
-
-        jLabel_Imagem.setText("Foto do produto");
-
-        javax.swing.GroupLayout AnuncioLayout = new javax.swing.GroupLayout(Anuncio);
-        Anuncio.setLayout(AnuncioLayout);
-        AnuncioLayout.setHorizontalGroup(
-            AnuncioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(AnuncioLayout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addGroup(AnuncioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(AnuncioLayout.createSequentialGroup()
-                        .addGroup(AnuncioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel_estadoVenda)
-                            .addComponent(jLabel_Nome)
-                            .addComponent(jLabel_preco)
-                            .addComponent(jLabel_conservacao))
-                        .addGap(18, 18, 18)
-                        .addGroup(AnuncioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jtf_NomeProduto)
-                            .addComponent(jtf_PrecoProduto)
-                            .addComponent(jtf_EstadoConservacao)
-                            .addComponent(jtf_EstadoQueMoro, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(AnuncioLayout.createSequentialGroup()
-                        .addGap(29, 29, 29)
-                        .addComponent(jLabel_Imagem)
-                        .addGap(18, 18, 18)
-                        .addComponent(jtf_FotoProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(AnuncioLayout.createSequentialGroup()
-                        .addGap(42, 42, 42)
-                        .addComponent(btn_cadastrar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btn_cancelar)
-                        .addGap(30, 30, 30)))
-                .addGap(35, 35, 35))
-        );
-        AnuncioLayout.setVerticalGroup(
-            AnuncioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(AnuncioLayout.createSequentialGroup()
-                .addGap(45, 45, 45)
-                .addGroup(AnuncioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel_Imagem)
-                    .addComponent(jtf_FotoProduto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(AnuncioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel_Nome)
-                    .addComponent(jtf_NomeProduto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(AnuncioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel_preco)
-                    .addComponent(jtf_PrecoProduto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(AnuncioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel_conservacao)
-                    .addComponent(jtf_EstadoConservacao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(AnuncioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel_estadoVenda)
-                    .addComponent(jtf_EstadoQueMoro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(23, 23, 23)
-                .addGroup(AnuncioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btn_cadastrar)
-                    .addComponent(btn_cancelar))
-                .addContainerGap(283, Short.MAX_VALUE))
-        );
+        btn_cadastrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Save icon.png"))); // NOI18N
+        btn_cadastrar.setContentAreaFilled(false);
+        Anuncio.add(btn_cadastrar);
+        btn_cadastrar.setBounds(446, 604, 97, 73);
 
         getContentPane().add(Anuncio, "card5");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jtf_PrecoProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtf_PrecoProdutoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtf_PrecoProdutoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -239,6 +264,7 @@ public class CardLayout extends javax.swing.JFrame {
     private javax.swing.JPanel Reserva;
     private javax.swing.JPanel Venda;
     private javax.swing.JButton ___;
+    private javax.swing.JButton btn_Editar;
     private javax.swing.JButton btn_aceitar;
     private javax.swing.JButton btn_cadastrar;
     private javax.swing.JButton btn_cancelar;
@@ -249,15 +275,21 @@ public class CardLayout extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel_Imagem;
-    private javax.swing.JLabel jLabel_Nome;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel jLabel_conservacao;
     private javax.swing.JLabel jLabel_estadoVenda;
     private javax.swing.JLabel jLabel_preco;
-    private javax.swing.JTextField jtf_EstadoConservacao;
-    private javax.swing.JTextField jtf_EstadoQueMoro;
-    private javax.swing.JTextField jtf_FotoProduto;
+    private javax.swing.JRadioButton jRB_Novo;
+    private javax.swing.JRadioButton jRB_usado;
+    private javax.swing.JComboBox<String> jcb_estado;
+    private javax.swing.JLabel jl_Imagem;
+    private javax.swing.JLabel jl_campoDescricao;
+    private javax.swing.JLabel jl_img;
+    private javax.swing.JLabel jl_titulo;
     private javax.swing.JTextField jtf_NomeProduto;
+    private javax.swing.JTextField jtf_NomeProduto1;
     private javax.swing.JTextField jtf_PrecoProduto;
     // End of variables declaration//GEN-END:variables
 }

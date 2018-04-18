@@ -365,7 +365,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="230" y="500" width="-1" height="70"/>
+          <AbsoluteConstraints x="390" y="540" width="-1" height="70"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -375,13 +375,13 @@
           <Color blue="f2" green="f2" red="f2" type="rgb"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/img/cancel icon.jpeg"/>
+          <Image iconType="3" name="/img/cancel icon.png"/>
         </Property>
         <Property name="contentAreaFilled" type="boolean" value="false"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="540" y="500" width="-1" height="70"/>
+          <AbsoluteConstraints x="550" y="540" width="-1" height="70"/>
         </Constraint>
       </Constraints>
     </Component>
