@@ -27,13 +27,6 @@ public class CardLayout extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        inicial = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        ___ = new javax.swing.JButton();
         Venda = new javax.swing.JPanel();
         Reserva = new javax.swing.JPanel();
         btn_aceitar = new javax.swing.JButton();
@@ -58,31 +51,19 @@ public class CardLayout extends javax.swing.JFrame {
         btn_Editar = new javax.swing.JButton();
         btn_cancelar = new javax.swing.JButton();
         btn_cadastrar = new javax.swing.JButton();
+        inicial = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        ___ = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new java.awt.CardLayout());
-
-        inicial.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel1.setText("Exibir anuncio");
-        inicial.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 440, 149, 106));
-
-        jLabel2.setText("Exibir anuncio");
-        inicial.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 20, 149, 106));
-
-        jLabel3.setText("Exibir anuncio");
-        inicial.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 140, 149, 106));
-
-        jLabel4.setText("Exibir anuncio");
-        inicial.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 240, 149, 106));
-
-        jLabel5.setText("Exibir anuncio");
-        inicial.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 340, 149, 106));
-
-        ___.setText("___");
-        inicial.add(___, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 60));
-
-        getContentPane().add(inicial, "card3");
+        setMaximumSize(new java.awt.Dimension(1369, 730));
+        setMinimumSize(new java.awt.Dimension(1369, 730));
+        setPreferredSize(new java.awt.Dimension(1369, 730));
+        getContentPane().setLayout(null);
 
         javax.swing.GroupLayout VendaLayout = new javax.swing.GroupLayout(Venda);
         Venda.setLayout(VendaLayout);
@@ -95,7 +76,8 @@ public class CardLayout extends javax.swing.JFrame {
             .addGap(0, 728, Short.MAX_VALUE)
         );
 
-        getContentPane().add(Venda, "card2");
+        getContentPane().add(Venda);
+        Venda.setBounds(0, 0, 1025, 728);
 
         btn_aceitar.setText("Aceitar");
 
@@ -122,7 +104,8 @@ public class CardLayout extends javax.swing.JFrame {
                 .addGap(68, 68, 68))
         );
 
-        getContentPane().add(Reserva, "card4");
+        getContentPane().add(Reserva);
+        Reserva.setBounds(0, 0, 1025, 728);
 
         Anuncio.setMaximumSize(new java.awt.Dimension(1025, 728));
         Anuncio.setMinimumSize(new java.awt.Dimension(1025, 728));
@@ -214,7 +197,31 @@ public class CardLayout extends javax.swing.JFrame {
         Anuncio.add(btn_cadastrar);
         btn_cadastrar.setBounds(446, 604, 97, 73);
 
-        getContentPane().add(Anuncio, "card5");
+        getContentPane().add(Anuncio);
+        Anuncio.setBounds(0, 0, 1025, 728);
+
+        inicial.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setText("Exibir anuncio");
+        inicial.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 440, 149, 106));
+
+        jLabel2.setText("Exibir anuncio");
+        inicial.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 30, 149, 106));
+
+        jLabel3.setText("Exibir anuncio");
+        inicial.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 140, 149, 106));
+
+        jLabel4.setText("Exibir anuncio");
+        inicial.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 240, 149, 106));
+
+        jLabel5.setText("Exibir anuncio");
+        inicial.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 340, 149, 106));
+
+        ___.setText("___");
+        inicial.add(___, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 60));
+
+        getContentPane().add(inicial);
+        inicial.setBounds(0, 0, 1025, 728);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
