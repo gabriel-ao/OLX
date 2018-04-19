@@ -139,7 +139,9 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_fecharActionPerformed
 
     private void btn_CadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_CadastrarActionPerformed
-        // TODO add your handling code here:
+        Cadastro cadastro = new Cadastro ();
+        cadastro.setVisible(true);
+        dispose();  
     }//GEN-LAST:event_btn_CadastrarActionPerformed
 
     /**
