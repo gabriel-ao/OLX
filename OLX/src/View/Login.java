@@ -32,7 +32,6 @@ public class Login extends javax.swing.JFrame {
         btn_fechar = new javax.swing.JButton();
         btn_Logar = new javax.swing.JButton();
         btn_Cadastrar = new javax.swing.JButton();
-        btn_Sair = new javax.swing.JButton();
         jtfUsuario = new javax.swing.JTextField();
         jpfSenha = new javax.swing.JPasswordField();
         jLabel1 = new javax.swing.JLabel();
@@ -55,7 +54,7 @@ public class Login extends javax.swing.JFrame {
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btn_fechar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/close button.png"))); // NOI18N
+        btn_fechar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Botao fechar.png"))); // NOI18N
         btn_fechar.setBorder(null);
         btn_fechar.setBorderPainted(false);
         btn_fechar.setContentAreaFilled(false);
@@ -64,7 +63,7 @@ public class Login extends javax.swing.JFrame {
                 btn_fecharActionPerformed(evt);
             }
         });
-        getContentPane().add(btn_fechar, new org.netbeans.lib.awtextra.AbsoluteConstraints(295, 6, 30, -1));
+        getContentPane().add(btn_fechar, new org.netbeans.lib.awtextra.AbsoluteConstraints(265, 6, 60, -1));
 
         btn_Logar.setBackground(new java.awt.Color(169, 45, 215));
         btn_Logar.setForeground(new java.awt.Color(255, 255, 255));
@@ -72,7 +71,7 @@ public class Login extends javax.swing.JFrame {
         btn_Logar.setBorder(null);
         btn_Logar.setBorderPainted(false);
         btn_Logar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(btn_Logar, new org.netbeans.lib.awtextra.AbsoluteConstraints(112, 320, 110, 30));
+        getContentPane().add(btn_Logar, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 360, 110, 30));
 
         btn_Cadastrar.setBackground(new java.awt.Color(169, 45, 215));
         btn_Cadastrar.setForeground(new java.awt.Color(255, 255, 255));
@@ -87,18 +86,6 @@ public class Login extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btn_Cadastrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 450, 150, 30));
-
-        btn_Sair.setBackground(new java.awt.Color(169, 45, 215));
-        btn_Sair.setForeground(new java.awt.Color(255, 255, 255));
-        btn_Sair.setText("Sair");
-        btn_Sair.setBorder(null);
-        btn_Sair.setBorderPainted(false);
-        btn_Sair.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_SairActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btn_Sair, new org.netbeans.lib.awtextra.AbsoluteConstraints(112, 360, 110, 30));
 
         jtfUsuario.setBorder(null);
         jtfUsuario.addActionListener(new java.awt.event.ActionListener() {
@@ -117,7 +104,7 @@ public class Login extends javax.swing.JFrame {
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 420, -1, -1));
 
         Logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/olx.png"))); // NOI18N
-        getContentPane().add(Logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 40, -1, 140));
+        getContentPane().add(Logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 50, -1, 140));
 
         Botton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/login topo.png"))); // NOI18N
         Botton.setText("jLabel4");
@@ -135,10 +122,10 @@ public class Login extends javax.swing.JFrame {
         getContentPane().add(Senha, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, -1, -1));
 
         Top.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/login topo.png"))); // NOI18N
-        getContentPane().add(Top, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -8, 330, 40));
+        getContentPane().add(Top, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -8, 330, 70));
 
         Fundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/login fundo.png"))); // NOI18N
-        getContentPane().add(Fundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 330, 520));
+        getContentPane().add(Fundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -30, 330, 520));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -146,10 +133,6 @@ public class Login extends javax.swing.JFrame {
     private void jtfUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfUsuarioActionPerformed
         jtfUsuario.setText("");
     }//GEN-LAST:event_jtfUsuarioActionPerformed
-
-    private void btn_SairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_SairActionPerformed
-        System.exit(0);
-    }//GEN-LAST:event_btn_SairActionPerformed
 
     private void btn_fecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_fecharActionPerformed
         System.exit(0);      
@@ -203,7 +186,6 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel Usuario;
     private javax.swing.JButton btn_Cadastrar;
     private javax.swing.JButton btn_Logar;
-    private javax.swing.JButton btn_Sair;
     private javax.swing.JButton btn_fechar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

@@ -6,7 +6,7 @@
 package olx;
 
 import View.Cadastro;
-import View.CardLayout;
+import View.Principal;
 import View.Login;
 
 /**
@@ -20,12 +20,15 @@ public class OLX {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-       // Login login = new Login();
-        //Cadastro cadastro = new Cadastro();
+        
+        //Login login = new Login();
         //login.setVisible(true);
+        
+        
+        //Cadastro cadastro = new Cadastro();
         //cadastro.setVisible(true);
         
-        CardLayout cd = new CardLayout();
+        Principal cd = new Principal();
         cd.setVisible(true);
         
         
