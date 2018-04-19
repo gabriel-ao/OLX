@@ -27,208 +27,219 @@ public class CardLayout extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        Venda = new javax.swing.JPanel();
-        Reserva = new javax.swing.JPanel();
-        btn_aceitar = new javax.swing.JButton();
-        btn_recusar = new javax.swing.JButton();
-        Anuncio = new javax.swing.JPanel();
-        jl_titulo = new javax.swing.JLabel();
-        jLabel_preco = new javax.swing.JLabel();
-        jLabel_conservacao = new javax.swing.JLabel();
-        jLabel_estadoVenda = new javax.swing.JLabel();
-        jl_Imagem = new javax.swing.JLabel();
-        jl_img = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jl_campoDescricao = new javax.swing.JLabel();
-        jtf_NomeProduto = new javax.swing.JTextField();
-        jtf_PrecoProduto = new javax.swing.JTextField();
-        jtf_NomeProduto1 = new javax.swing.JTextField();
-        jRB_Novo = new javax.swing.JRadioButton();
-        jRB_usado = new javax.swing.JRadioButton();
-        jcb_estado = new javax.swing.JComboBox<>();
-        btn_Editar = new javax.swing.JButton();
-        btn_cancelar = new javax.swing.JButton();
-        btn_cadastrar = new javax.swing.JButton();
-        inicial = new javax.swing.JPanel();
+        bt_fechar = new javax.swing.JButton();
+        BarraTop = new javax.swing.JLabel();
+        Logo = new javax.swing.JLabel();
+        nomeUser = new javax.swing.JLabel();
+        bt_meuCadastro = new javax.swing.JButton();
+        bt_desapegar = new javax.swing.JButton();
+        bt_meusPedidos = new javax.swing.JButton();
+        bt_meusAnuncios = new javax.swing.JButton();
+        bt_sair = new javax.swing.JButton();
+        Fundo = new javax.swing.JLabel();
+        Cadastro = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        jtf_titulo = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
+        jl_valor = new javax.swing.JLabel();
+        jtf_valor = new javax.swing.JTextField();
+        jl_condicaoProduto = new javax.swing.JLabel();
+        jrb_Novo = new javax.swing.JRadioButton();
+        jrb_Usado = new javax.swing.JRadioButton();
+        jButton1 = new javax.swing.JButton();
+        btn_edit = new javax.swing.JButton();
+        btn_save = new javax.swing.JButton();
+        jTextField1 = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        ___ = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(1369, 730));
         setMinimumSize(new java.awt.Dimension(1369, 730));
+        setUndecorated(true);
         setPreferredSize(new java.awt.Dimension(1369, 730));
         getContentPane().setLayout(null);
 
-        javax.swing.GroupLayout VendaLayout = new javax.swing.GroupLayout(Venda);
-        Venda.setLayout(VendaLayout);
-        VendaLayout.setHorizontalGroup(
-            VendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1025, Short.MAX_VALUE)
-        );
-        VendaLayout.setVerticalGroup(
-            VendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 728, Short.MAX_VALUE)
-        );
-
-        getContentPane().add(Venda);
-        Venda.setBounds(0, 0, 1025, 728);
-
-        btn_aceitar.setText("Aceitar");
-
-        btn_recusar.setText("Recusar");
-
-        javax.swing.GroupLayout ReservaLayout = new javax.swing.GroupLayout(Reserva);
-        Reserva.setLayout(ReservaLayout);
-        ReservaLayout.setHorizontalGroup(
-            ReservaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(ReservaLayout.createSequentialGroup()
-                .addGap(87, 87, 87)
-                .addComponent(btn_aceitar)
-                .addGap(82, 82, 82)
-                .addComponent(btn_recusar)
-                .addContainerGap(718, Short.MAX_VALUE))
-        );
-        ReservaLayout.setVerticalGroup(
-            ReservaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ReservaLayout.createSequentialGroup()
-                .addContainerGap(637, Short.MAX_VALUE)
-                .addGroup(ReservaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btn_aceitar)
-                    .addComponent(btn_recusar))
-                .addGap(68, 68, 68))
-        );
-
-        getContentPane().add(Reserva);
-        Reserva.setBounds(0, 0, 1025, 728);
-
-        Anuncio.setMaximumSize(new java.awt.Dimension(1025, 728));
-        Anuncio.setMinimumSize(new java.awt.Dimension(1025, 728));
-        Anuncio.setLayout(null);
-
-        jl_titulo.setText("Titulo:");
-        Anuncio.add(jl_titulo);
-        jl_titulo.setBounds(340, 120, 30, 14);
-
-        jLabel_preco.setText("Preço do produto:");
-        Anuncio.add(jLabel_preco);
-        jLabel_preco.setBounds(300, 400, 87, 14);
-
-        jLabel_conservacao.setText("O produto é");
-        Anuncio.add(jLabel_conservacao);
-        jLabel_conservacao.setBounds(310, 480, 58, 14);
-
-        jLabel_estadoVenda.setText("Estado:");
-        Anuncio.add(jLabel_estadoVenda);
-        jLabel_estadoVenda.setBounds(650, 400, 37, 14);
-
-        jl_Imagem.setText("Foto do produto");
-        Anuncio.add(jl_Imagem);
-        jl_Imagem.setBounds(32, 468, 78, 14);
-
-        jl_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Campo Foto.png"))); // NOI18N
-        Anuncio.add(jl_img);
-        jl_img.setBounds(10, 96, 284, 355);
-
-        jLabel6.setText("Descrição:");
-        Anuncio.add(jLabel6);
-        jLabel6.setBounds(320, 170, 50, 14);
-
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Campo Senha.png"))); // NOI18N
-        Anuncio.add(jLabel7);
-        jLabel7.setBounds(390, 400, 220, 34);
-
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Campo Titulo.png"))); // NOI18N
-        Anuncio.add(jLabel9);
-        jLabel9.setBounds(390, 100, 378, 34);
-
-        jl_campoDescricao.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Campo descricao.png"))); // NOI18N
-        Anuncio.add(jl_campoDescricao);
-        jl_campoDescricao.setBounds(390, 150, 380, 220);
-
-        jtf_NomeProduto.setBackground(new java.awt.Color(242, 242, 242));
-        jtf_NomeProduto.setBorder(null);
-        Anuncio.add(jtf_NomeProduto);
-        jtf_NomeProduto.setBounds(400, 110, 360, 14);
-
-        jtf_PrecoProduto.setEditable(false);
-        jtf_PrecoProduto.setBorder(null);
-        jtf_PrecoProduto.addActionListener(new java.awt.event.ActionListener() {
+        bt_fechar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Botao fechar.png"))); // NOI18N
+        bt_fechar.setBorder(null);
+        bt_fechar.setBorderPainted(false);
+        bt_fechar.setContentAreaFilled(false);
+        bt_fechar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jtf_PrecoProdutoActionPerformed(evt);
+                bt_fecharActionPerformed(evt);
             }
         });
-        Anuncio.add(jtf_PrecoProduto);
-        jtf_PrecoProduto.setBounds(400, 410, 200, 20);
+        getContentPane().add(bt_fechar);
+        bt_fechar.setBounds(1316, 0, 50, 50);
 
-        jtf_NomeProduto1.setBackground(new java.awt.Color(242, 242, 242));
-        jtf_NomeProduto1.setBorder(null);
-        Anuncio.add(jtf_NomeProduto1);
-        jtf_NomeProduto1.setBounds(400, 160, 360, 200);
+        BarraTop.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/barra superior.png"))); // NOI18N
+        getContentPane().add(BarraTop);
+        BarraTop.setBounds(0, 0, 1370, 50);
 
-        jRB_Novo.setText("Novo");
-        Anuncio.add(jRB_Novo);
-        jRB_Novo.setBounds(380, 480, 51, 23);
+        Logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Logo-3D.png"))); // NOI18N
+        getContentPane().add(Logo);
+        Logo.setBounds(10, 60, 100, 100);
 
-        jRB_usado.setText("usado");
-        Anuncio.add(jRB_usado);
-        jRB_usado.setBounds(380, 500, 55, 23);
+        nomeUser.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        nomeUser.setText("Nome do usuário aqui");
+        getContentPane().add(nomeUser);
+        nomeUser.setBounds(120, 100, 210, 22);
 
-        jcb_estado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        Anuncio.add(jcb_estado);
-        jcb_estado.setBounds(700, 400, 56, 20);
+        bt_meuCadastro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Icon meu cadastro.png"))); // NOI18N
+        bt_meuCadastro.setBorder(null);
+        bt_meuCadastro.setBorderPainted(false);
+        bt_meuCadastro.setContentAreaFilled(false);
+        bt_meuCadastro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt_meuCadastroActionPerformed(evt);
+            }
+        });
+        getContentPane().add(bt_meuCadastro);
+        bt_meuCadastro.setBounds(-7, 200, 310, 63);
 
-        btn_Editar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Edit icon.png"))); // NOI18N
-        btn_Editar.setContentAreaFilled(false);
-        Anuncio.add(btn_Editar);
-        btn_Editar.setBounds(209, 604, 97, 73);
+        bt_desapegar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icon desapega.png"))); // NOI18N
+        bt_desapegar.setBorder(null);
+        bt_desapegar.setBorderPainted(false);
+        bt_desapegar.setContentAreaFilled(false);
+        getContentPane().add(bt_desapegar);
+        bt_desapegar.setBounds(-7, 310, 310, 63);
 
-        btn_cancelar.setText("Cancelar");
-        Anuncio.add(btn_cancelar);
-        btn_cancelar.setBounds(341, 654, 75, 23);
+        bt_meusPedidos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icon anuncios reservados.png"))); // NOI18N
+        bt_meusPedidos.setBorder(null);
+        bt_meusPedidos.setBorderPainted(false);
+        bt_meusPedidos.setContentAreaFilled(false);
+        getContentPane().add(bt_meusPedidos);
+        bt_meusPedidos.setBounds(-7, 420, 310, 63);
 
-        btn_cadastrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Save icon.png"))); // NOI18N
-        btn_cadastrar.setContentAreaFilled(false);
-        Anuncio.add(btn_cadastrar);
-        btn_cadastrar.setBounds(446, 604, 97, 73);
+        bt_meusAnuncios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Meus anuncios.png"))); // NOI18N
+        bt_meusAnuncios.setBorder(null);
+        bt_meusAnuncios.setBorderPainted(false);
+        bt_meusAnuncios.setContentAreaFilled(false);
+        getContentPane().add(bt_meusAnuncios);
+        bt_meusAnuncios.setBounds(-7, 530, 310, 63);
 
-        getContentPane().add(Anuncio);
-        Anuncio.setBounds(0, 0, 1025, 728);
+        bt_sair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icon Sair.png"))); // NOI18N
+        bt_sair.setBorder(null);
+        bt_sair.setBorderPainted(false);
+        bt_sair.setContentAreaFilled(false);
+        getContentPane().add(bt_sair);
+        bt_sair.setBounds(-7, 640, 310, 70);
 
-        inicial.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        Fundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Fundo menu.png"))); // NOI18N
+        getContentPane().add(Fundo);
+        Fundo.setBounds(0, 0, 340, 730);
 
-        jLabel1.setText("Exibir anuncio");
-        inicial.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 440, 149, 106));
+        Cadastro.setLayout(new java.awt.CardLayout());
 
-        jLabel2.setText("Exibir anuncio");
-        inicial.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 30, 149, 106));
+        jPanel2.setLayout(null);
 
-        jLabel3.setText("Exibir anuncio");
-        inicial.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 140, 149, 106));
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel1.setText("Novo desapego");
+        jPanel2.add(jLabel1);
+        jLabel1.setBounds(420, 40, 170, 30);
 
-        jLabel4.setText("Exibir anuncio");
-        inicial.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 240, 149, 106));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Campo Foto.png"))); // NOI18N
+        jLabel2.setToolTipText("");
+        jPanel2.add(jLabel2);
+        jLabel2.setBounds(90, 130, 290, 340);
 
-        jLabel5.setText("Exibir anuncio");
-        inicial.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 340, 149, 106));
+        jLabel3.setText("Titulo");
+        jPanel2.add(jLabel3);
+        jLabel3.setBounds(490, 150, 41, 16);
 
-        ___.setText("___");
-        inicial.add(___, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 60));
+        jtf_titulo.setBackground(new java.awt.Color(242, 242, 242));
+        jtf_titulo.setBorder(null);
+        jPanel2.add(jtf_titulo);
+        jtf_titulo.setBounds(570, 150, 360, 16);
 
-        getContentPane().add(inicial);
-        inicial.setBounds(0, 0, 1025, 728);
+        jLabel4.setText("Descricão");
+        jPanel2.add(jLabel4);
+        jLabel4.setBounds(470, 200, 60, 16);
+
+        jl_valor.setText("Valor");
+        jPanel2.add(jl_valor);
+        jl_valor.setBounds(490, 450, 30, 16);
+
+        jtf_valor.setBackground(new java.awt.Color(242, 242, 242));
+        jtf_valor.setBorder(null);
+        jPanel2.add(jtf_valor);
+        jtf_valor.setBounds(560, 450, 200, 16);
+
+        jl_condicaoProduto.setText("O produto é");
+        jPanel2.add(jl_condicaoProduto);
+        jl_condicaoProduto.setBounds(482, 505, 100, 16);
+
+        jrb_Novo.setText("Novo");
+        jrb_Novo.setContentAreaFilled(false);
+        jPanel2.add(jrb_Novo);
+        jrb_Novo.setBounds(570, 500, 57, 25);
+
+        jrb_Usado.setText("Usado");
+        jrb_Usado.setContentAreaFilled(false);
+        jPanel2.add(jrb_Usado);
+        jrb_Usado.setBounds(630, 500, 63, 25);
+
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Inserir foto icon.png"))); // NOI18N
+        jButton1.setBorder(null);
+        jButton1.setBorderPainted(false);
+        jButton1.setContentAreaFilled(false);
+        jPanel2.add(jButton1);
+        jButton1.setBounds(150, 510, 130, 33);
+
+        btn_edit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Edit icon.png"))); // NOI18N
+        btn_edit.setBorder(null);
+        btn_edit.setBorderPainted(false);
+        btn_edit.setContentAreaFilled(false);
+        jPanel2.add(btn_edit);
+        btn_edit.setBounds(420, 570, 65, 80);
+
+        btn_save.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Save icon.png"))); // NOI18N
+        btn_save.setBorder(null);
+        btn_save.setBorderPainted(false);
+        btn_save.setContentAreaFilled(false);
+        jPanel2.add(btn_save);
+        btn_save.setBounds(530, 570, 65, 80);
+
+        jTextField1.setText("jTextField1");
+        jPanel2.add(jTextField1);
+        jTextField1.setBounds(570, 200, 360, 200);
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Campo Titulo.png"))); // NOI18N
+        jPanel2.add(jLabel5);
+        jLabel5.setBounds(560, 140, 390, 34);
+
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Campo Senha.png"))); // NOI18N
+        jPanel2.add(jLabel8);
+        jLabel8.setBounds(550, 440, 220, 34);
+
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Campo descricao.png"))); // NOI18N
+        jPanel2.add(jLabel9);
+        jLabel9.setBounds(560, 190, 390, 220);
+
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Íco-Imovel copiar 6.png"))); // NOI18N
+        jPanel2.add(jLabel7);
+        jLabel7.setBounds(0, -40, 1040, 740);
+
+        Cadastro.add(jPanel2, "card2");
+
+        getContentPane().add(Cadastro);
+        Cadastro.setBounds(340, 50, 1030, 680);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jtf_PrecoProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtf_PrecoProdutoActionPerformed
+    private void bt_meuCadastroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_meuCadastroActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jtf_PrecoProdutoActionPerformed
+    }//GEN-LAST:event_bt_meuCadastroActionPerformed
+
+    private void bt_fecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_fecharActionPerformed
+        dispose();
+    }//GEN-LAST:event_bt_fecharActionPerformed
 
     /**
      * @param args the command line arguments
@@ -267,36 +278,35 @@ public class CardLayout extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel Anuncio;
-    private javax.swing.JPanel Reserva;
-    private javax.swing.JPanel Venda;
-    private javax.swing.JButton ___;
-    private javax.swing.JButton btn_Editar;
-    private javax.swing.JButton btn_aceitar;
-    private javax.swing.JButton btn_cadastrar;
-    private javax.swing.JButton btn_cancelar;
-    private javax.swing.JButton btn_recusar;
-    private javax.swing.JPanel inicial;
+    private javax.swing.JLabel BarraTop;
+    private javax.swing.JPanel Cadastro;
+    private javax.swing.JLabel Fundo;
+    private javax.swing.JLabel Logo;
+    private javax.swing.JButton bt_desapegar;
+    private javax.swing.JButton bt_fechar;
+    private javax.swing.JButton bt_meuCadastro;
+    private javax.swing.JButton bt_meusAnuncios;
+    private javax.swing.JButton bt_meusPedidos;
+    private javax.swing.JButton bt_sair;
+    private javax.swing.JButton btn_edit;
+    private javax.swing.JButton btn_save;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JLabel jLabel_conservacao;
-    private javax.swing.JLabel jLabel_estadoVenda;
-    private javax.swing.JLabel jLabel_preco;
-    private javax.swing.JRadioButton jRB_Novo;
-    private javax.swing.JRadioButton jRB_usado;
-    private javax.swing.JComboBox<String> jcb_estado;
-    private javax.swing.JLabel jl_Imagem;
-    private javax.swing.JLabel jl_campoDescricao;
-    private javax.swing.JLabel jl_img;
-    private javax.swing.JLabel jl_titulo;
-    private javax.swing.JTextField jtf_NomeProduto;
-    private javax.swing.JTextField jtf_NomeProduto1;
-    private javax.swing.JTextField jtf_PrecoProduto;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JLabel jl_condicaoProduto;
+    private javax.swing.JLabel jl_valor;
+    private javax.swing.JRadioButton jrb_Novo;
+    private javax.swing.JRadioButton jrb_Usado;
+    private javax.swing.JTextField jtf_titulo;
+    private javax.swing.JTextField jtf_valor;
+    private javax.swing.JLabel nomeUser;
     // End of variables declaration//GEN-END:variables
 }
