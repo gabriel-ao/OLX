@@ -44,7 +44,6 @@ public class Cadastro extends javax.swing.JFrame {
         jtf_CPF = new javax.swing.JTextField();
         jtf_Rua = new javax.swing.JTextField();
         jtf_Cidade = new javax.swing.JTextField();
-        jtf_Bairro = new javax.swing.JTextField();
         jtf_Estado = new javax.swing.JTextField();
         jtf_Telefone = new javax.swing.JTextField();
         jtf_Email = new javax.swing.JTextField();
@@ -65,6 +64,8 @@ public class Cadastro extends javax.swing.JFrame {
         JlSenha = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         JlTopobackground = new javax.swing.JLabel();
+        jtf_Bairro = new javax.swing.JTextField();
+        jLBairro = new javax.swing.JLabel();
         Jlbackground = new javax.swing.JLabel();
 
         jTextField11.setText("jTextField11");
@@ -82,37 +83,37 @@ public class Cadastro extends javax.swing.JFrame {
         jLabelNomeCompleto.setFont(new java.awt.Font("Cooper Black", 0, 14)); // NOI18N
         jLabelNomeCompleto.setText("Nome");
         getContentPane().add(jLabelNomeCompleto);
-        jLabelNomeCompleto.setBounds(40, 150, 50, 17);
+        jLabelNomeCompleto.setBounds(40, 150, 50, 19);
 
         jLabelDataDeNascimento.setFont(new java.awt.Font("Cooper Black", 0, 14)); // NOI18N
         jLabelDataDeNascimento.setText("Data de Nascimento");
         getContentPane().add(jLabelDataDeNascimento);
-        jLabelDataDeNascimento.setBounds(580, 150, 141, 17);
+        jLabelDataDeNascimento.setBounds(580, 150, 127, 19);
 
         jLabelCPF.setFont(new java.awt.Font("Cooper Black", 0, 14)); // NOI18N
         jLabelCPF.setText("CPF");
         getContentPane().add(jLabelCPF);
-        jLabelCPF.setBounds(50, 200, 40, 17);
+        jLabelCPF.setBounds(50, 200, 40, 19);
 
         jLabelRua.setFont(new java.awt.Font("Cooper Black", 0, 14)); // NOI18N
         jLabelRua.setText("Rua");
         getContentPane().add(jLabelRua);
-        jLabelRua.setBounds(50, 280, 30, 17);
+        jLabelRua.setBounds(50, 280, 30, 19);
 
         jLabelCidade.setFont(new java.awt.Font("Cooper Black", 0, 14)); // NOI18N
         jLabelCidade.setText("Cidade");
         getContentPane().add(jLabelCidade);
-        jLabelCidade.setBounds(40, 320, 49, 17);
+        jLabelCidade.setBounds(40, 320, 45, 19);
 
         jLabelBairro.setFont(new java.awt.Font("Cooper Black", 0, 14)); // NOI18N
         jLabelBairro.setText("Bairro");
         getContentPane().add(jLabelBairro);
-        jLabelBairro.setBounds(580, 270, 50, 17);
+        jLabelBairro.setBounds(580, 270, 50, 19);
 
         jLabelEstado.setFont(new java.awt.Font("Cooper Black", 0, 14)); // NOI18N
         jLabelEstado.setText("Estado");
         getContentPane().add(jLabelEstado);
-        jLabelEstado.setBounds(580, 310, 50, 17);
+        jLabelEstado.setBounds(580, 310, 50, 19);
 
         jLabelTelefone.setFont(new java.awt.Font("Cooper Black", 0, 14)); // NOI18N
         jLabelTelefone.setText("Telefone");
@@ -123,17 +124,17 @@ public class Cadastro extends javax.swing.JFrame {
         jLabelEmail.setFont(new java.awt.Font("Cooper Black", 0, 14)); // NOI18N
         jLabelEmail.setText("Email");
         getContentPane().add(jLabelEmail);
-        jLabelEmail.setBounds(580, 400, 50, 17);
+        jLabelEmail.setBounds(580, 400, 50, 19);
 
         jLabelUsuario.setFont(new java.awt.Font("Cooper Black", 0, 14)); // NOI18N
         jLabelUsuario.setText("Usuario");
         getContentPane().add(jLabelUsuario);
-        jLabelUsuario.setBounds(30, 440, 60, 17);
+        jLabelUsuario.setBounds(30, 440, 60, 19);
 
         jLabelSenha.setFont(new java.awt.Font("Cooper Black", 0, 14)); // NOI18N
         jLabelSenha.setText("Senha");
         getContentPane().add(jLabelSenha);
-        jLabelSenha.setBounds(580, 440, 60, 17);
+        jLabelSenha.setBounds(580, 440, 60, 19);
 
         jtf_Nome.setBackground(new java.awt.Color(242, 242, 242));
         jtf_Nome.setBorder(null);
@@ -153,23 +154,18 @@ public class Cadastro extends javax.swing.JFrame {
         jtf_Rua.setBackground(new java.awt.Color(242, 242, 242));
         jtf_Rua.setBorder(null);
         getContentPane().add(jtf_Rua);
-        jtf_Rua.setBounds(110, 280, 310, 14);
+        jtf_Rua.setBounds(110, 280, 310, 16);
 
         jtf_Cidade.setBackground(new java.awt.Color(242, 242, 242));
         jtf_Cidade.setBorder(null);
         getContentPane().add(jtf_Cidade);
-        jtf_Cidade.setBounds(110, 320, 310, 14);
-
-        jtf_Bairro.setBackground(new java.awt.Color(242, 242, 242));
-        jtf_Bairro.setBorder(null);
-        getContentPane().add(jtf_Bairro);
-        jtf_Bairro.setBounds(640, 270, 310, 20);
+        jtf_Cidade.setBounds(110, 320, 310, 16);
 
         jtf_Estado.setEditable(false);
         jtf_Estado.setBackground(new java.awt.Color(242, 242, 242));
         jtf_Estado.setBorder(null);
         getContentPane().add(jtf_Estado);
-        jtf_Estado.setBounds(640, 310, 320, 14);
+        jtf_Estado.setBounds(640, 310, 320, 16);
 
         jtf_Telefone.setBackground(new java.awt.Color(242, 242, 242));
         jtf_Telefone.setBorder(null);
@@ -244,9 +240,9 @@ public class Cadastro extends javax.swing.JFrame {
         getContentPane().add(JlEmail);
         JlEmail.setBounds(630, 390, 350, 34);
 
-        JlSenha.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Campo Senha.png"))); // NOI18N
+        JlSenha.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Campo Senha2.png"))); // NOI18N
         getContentPane().add(JlSenha);
-        JlSenha.setBounds(630, 440, 220, 34);
+        JlSenha.setBounds(630, 440, 230, 34);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icon fechar.png"))); // NOI18N
         getContentPane().add(jLabel2);
@@ -255,6 +251,15 @@ public class Cadastro extends javax.swing.JFrame {
         JlTopobackground.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Tela superior.png"))); // NOI18N
         getContentPane().add(JlTopobackground);
         JlTopobackground.setBounds(0, 0, 1050, 50);
+
+        jtf_Bairro.setBackground(new java.awt.Color(242, 242, 242));
+        jtf_Bairro.setBorder(null);
+        getContentPane().add(jtf_Bairro);
+        jtf_Bairro.setBounds(640, 270, 310, 20);
+
+        jLBairro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Campo Bairro.png"))); // NOI18N
+        getContentPane().add(jLBairro);
+        jLBairro.setBounds(630, 250, 340, 60);
 
         Jlbackground.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/background.jpeg"))); // NOI18N
         getContentPane().add(Jlbackground);
@@ -316,6 +321,7 @@ public class Cadastro extends javax.swing.JFrame {
     private javax.swing.JLabel Jlbackground;
     private javax.swing.JButton btn_Cadastrar;
     private com.toedter.calendar.JDateChooser jDateChooser1;
+    private javax.swing.JLabel jLBairro;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabelBairro;

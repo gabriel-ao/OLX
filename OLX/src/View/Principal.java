@@ -223,8 +223,13 @@ public class Principal extends javax.swing.JFrame {
 
         jtf_valor.setBackground(new java.awt.Color(242, 242, 242));
         jtf_valor.setBorder(null);
+        jtf_valor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtf_valorActionPerformed(evt);
+            }
+        });
         Desapego.add(jtf_valor);
-        jtf_valor.setBounds(560, 450, 200, 16);
+        jtf_valor.setBounds(560, 450, 170, 16);
 
         jl_condicaoProduto.setText("O produto é");
         Desapego.add(jl_condicaoProduto);
@@ -269,9 +274,9 @@ public class Principal extends javax.swing.JFrame {
         Desapego.add(jLabel5);
         jLabel5.setBounds(560, 140, 390, 34);
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Campo Senha.png"))); // NOI18N
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Valor campo.png"))); // NOI18N
         Desapego.add(jLabel8);
-        jLabel8.setBounds(550, 440, 220, 34);
+        jLabel8.setBounds(550, 440, 240, 34);
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Campo descricao.png"))); // NOI18N
         Desapego.add(jLabel9);
@@ -339,7 +344,7 @@ public class Principal extends javax.swing.JFrame {
         jLabelSenha.setFont(new java.awt.Font("Cooper Black", 0, 14)); // NOI18N
         jLabelSenha.setText("Senha");
         MeuCadastro.add(jLabelSenha);
-        jLabelSenha.setBounds(580, 440, 60, 19);
+        jLabelSenha.setBounds(580, 450, 60, 19);
 
         jtf_Nome.setBackground(new java.awt.Color(242, 242, 242));
         jtf_Nome.setBorder(null);
@@ -451,17 +456,19 @@ public class Principal extends javax.swing.JFrame {
         MeuCadastro.add(JlEmail);
         JlEmail.setBounds(630, 390, 350, 34);
 
-        JlSenha.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Campo Senha.png"))); // NOI18N
+        JlSenha.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Campo Senha2.png"))); // NOI18N
         MeuCadastro.add(JlSenha);
         JlSenha.setBounds(630, 440, 220, 34);
 
+        jl_MeuCadastro.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jl_MeuCadastro.setForeground(new java.awt.Color(250, 130, 50));
         jl_MeuCadastro.setText("Meu Cadastro");
         MeuCadastro.add(jl_MeuCadastro);
-        jl_MeuCadastro.setBounds(440, 60, 90, 16);
+        jl_MeuCadastro.setBounds(420, 30, 150, 50);
 
         Jlbackground.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/background.jpeg"))); // NOI18N
         MeuCadastro.add(Jlbackground);
-        Jlbackground.setBounds(0, -20, 1030, 710);
+        Jlbackground.setBounds(0, -30, 1030, 710);
 
         Principal.add(MeuCadastro, "MeuCadastro");
 
@@ -517,6 +524,10 @@ public class Principal extends javax.swing.JFrame {
      CardLayout card = (CardLayout) Principal.getLayout();
      card.show(Principal, "MeusAnuncios");
     }//GEN-LAST:event_bt_meusAnunciosActionPerformed
+
+    private void jtf_valorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtf_valorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtf_valorActionPerformed
 
     /**
      * @param args the command line arguments

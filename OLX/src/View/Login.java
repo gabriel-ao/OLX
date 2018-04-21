@@ -128,7 +128,7 @@ public class Login extends javax.swing.JFrame {
         getContentPane().add(Top, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 520, 50));
 
         Fundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fundo.png"))); // NOI18N
-        getContentPane().add(Fundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 520, 440));
+        getContentPane().add(Fundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 520, 440));
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Desapegue já button.png"))); // NOI18N
         jButton1.setBorder(null);
