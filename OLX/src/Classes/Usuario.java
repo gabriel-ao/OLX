@@ -15,9 +15,6 @@ public class Usuario {
     
     private int id_usuario;
     private String nome;
-    private String CPF;
-    private Date data; 
-    private String rua;
     private String bairro;
     private String cidade;
     private String estado;
@@ -43,36 +40,12 @@ public class Usuario {
         this.nome = nome;
     }
     
-    public Date getDataNascimento() {
-        return data;
-    }
-
-    public void setDataNascimento(Date data) {
-        this.data = data;
-    }
-    
-    public String getCPF() {
-        return CPF;
-    }
-
-    public void setCPF(String CPF) {
-        this.CPF = CPF;
-    }
-    
     public String getBairro() {
         return bairro;
     }
 
     public void setBairro(String Bairro) {
         this.bairro = Bairro;
-    }
-    
-    public String getRua() {
-        return rua;
-    }
-
-    public void setRua(String rua) {
-        this.rua = rua;
     }
     
     public String getCidade() {
