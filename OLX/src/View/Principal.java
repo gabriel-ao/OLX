@@ -94,9 +94,11 @@ public class Principal extends javax.swing.JFrame {
         JlEmail = new javax.swing.JLabel();
         JlSenha = new javax.swing.JLabel();
         jl_MeuCadastro = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
         Jlbackground = new javax.swing.JLabel();
         MeusAnuncios = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
+        btn_inicio = new javax.swing.JButton();
         background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -466,6 +468,11 @@ public class Principal extends javax.swing.JFrame {
         MeuCadastro.add(jl_MeuCadastro);
         jl_MeuCadastro.setBounds(420, 30, 150, 50);
 
+        jButton2.setText("INICIO");
+        jButton2.setBorder(null);
+        MeuCadastro.add(jButton2);
+        jButton2.setBounds(840, 560, 35, 15);
+
         Jlbackground.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/background.jpeg"))); // NOI18N
         MeuCadastro.add(Jlbackground);
         Jlbackground.setBounds(0, -30, 1030, 710);
@@ -477,6 +484,11 @@ public class Principal extends javax.swing.JFrame {
         jLabel6.setText("Meus Anuncios");
         MeusAnuncios.add(jLabel6);
         jLabel6.setBounds(330, 160, 110, 14);
+
+        btn_inicio.setText("Inicio");
+        btn_inicio.setBorder(null);
+        MeusAnuncios.add(btn_inicio);
+        btn_inicio.setBounds(890, 610, 25, 15);
 
         background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Íco-Imovel copiar 6.png"))); // NOI18N
         MeusAnuncios.add(background);
@@ -593,8 +605,10 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JButton bt_sair;
     private javax.swing.JButton btn_Cadastrar;
     private javax.swing.JButton btn_edit;
+    private javax.swing.JButton btn_inicio;
     private javax.swing.JButton btn_save;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private com.toedter.calendar.JDateChooser jDateChooser1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
