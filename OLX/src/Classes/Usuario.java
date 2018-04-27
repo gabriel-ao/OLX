@@ -17,7 +17,7 @@ public class Usuario {
     private String nome;
     private String bairro;
     private String cidade;
-    private String estado;
+    private String uf;
     private String telefone;
     private String email;
     private String usuario;
@@ -56,12 +56,12 @@ public class Usuario {
         this.cidade = Cidade;
     }
     
-       public String getEstado() {
-        return estado;
+       public String getUF() {
+        return uf;
     }
 
-    public void setEstado(String estado) {
-        this.estado = estado;
+    public void setUF(String estado) {
+        this.uf = estado;
     }
     
     public String getTelefone() {

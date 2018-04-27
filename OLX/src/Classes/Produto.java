@@ -5,6 +5,8 @@
  */
 package Classes;
 
+import java.sql.Date;
+
 /**
  *
  * @author Andressa
@@ -18,6 +20,7 @@ public class Produto extends Usuario{
  private double preco;
  private byte img;
  private String status;
+ private Date dt_anuncio;
 
     public int getId_produto() {
         return Id_produto;
@@ -81,6 +84,14 @@ public class Produto extends Usuario{
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public Date getDt_anuncio() {
+        return dt_anuncio;
+    }
+
+    public void setDt_anuncio(Date dt_anuncio) {
+        this.dt_anuncio = dt_anuncio;
     }
 
  

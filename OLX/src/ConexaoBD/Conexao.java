@@ -15,7 +15,7 @@ import java.sql.DriverManager;
 public class Conexao {
     public static Connection conectar() throws Exception {
 
-        String url = "jdbc:postgresql://localhost:5432/OLX";
+        String url = "jdbc:postgresql://localhost:5432/Banco_OLX";
         String usuario = "postgres";
         String senha = "admin";
 
