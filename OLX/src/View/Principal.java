@@ -44,7 +44,6 @@ public class Principal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        buttonGroup1 = new javax.swing.ButtonGroup();
         bt_fechar = new javax.swing.JButton();
         Logo = new javax.swing.JLabel();
         nomeUser = new javax.swing.JLabel();
@@ -57,21 +56,6 @@ public class Principal extends javax.swing.JFrame {
         btn_buscar = new javax.swing.JButton();
         Fundo = new javax.swing.JLabel();
         Principal = new javax.swing.JPanel();
-        Inicio_buscar = new javax.swing.JPanel();
-        jLabelB_Categoria = new javax.swing.JLabel();
-        jLabelB_Regiao = new javax.swing.JLabel();
-        jLabelB_Estado = new javax.swing.JLabel();
-        jComboBoxCategoria = new javax.swing.JComboBox<>();
-        jComboBoxRegiao = new javax.swing.JComboBox<>();
-        jRadioButtonNovo = new javax.swing.JRadioButton();
-        jRadioButtonUsado = new javax.swing.JRadioButton();
-        jTextFieldBuscar = new javax.swing.JTextField();
-        bt_ExibirAnuncio = new javax.swing.JButton();
-        jLabel10 = new javax.swing.JLabel();
-        bt_Lupa = new javax.swing.JButton();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        background1 = new javax.swing.JLabel();
         Desapego = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         lblImagemProd = new javax.swing.JLabel();
@@ -127,6 +111,10 @@ public class Principal extends javax.swing.JFrame {
         jLabel_Pesquisa = new javax.swing.JLabel();
         btn_busca = new javax.swing.JButton();
         background = new javax.swing.JLabel();
+        Inicio = new javax.swing.JPanel();
+        jLabel10 = new javax.swing.JLabel();
+        btn_inicio1 = new javax.swing.JButton();
+        background1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(1369, 730));
@@ -233,87 +221,6 @@ public class Principal extends javax.swing.JFrame {
         Fundo.setBounds(0, 0, 350, 730);
 
         Principal.setLayout(new java.awt.CardLayout());
-
-        Inicio_buscar.setLayout(null);
-
-        jLabelB_Categoria.setText("Categoria:");
-        Inicio_buscar.add(jLabelB_Categoria);
-        jLabelB_Categoria.setBounds(660, 50, 60, 20);
-
-        jLabelB_Regiao.setText("Região:");
-        Inicio_buscar.add(jLabelB_Regiao);
-        jLabelB_Regiao.setBounds(675, 20, 44, 16);
-
-        jLabelB_Estado.setText("Estado:");
-        Inicio_buscar.add(jLabelB_Estado);
-        jLabelB_Estado.setBounds(809, 18, 48, 16);
-
-        jComboBoxCategoria.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBoxCategoria.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBoxCategoriaActionPerformed(evt);
-            }
-        });
-        Inicio_buscar.add(jComboBoxCategoria);
-        jComboBoxCategoria.setBounds(721, 50, 64, 22);
-
-        jComboBoxRegiao.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        Inicio_buscar.add(jComboBoxRegiao);
-        jComboBoxRegiao.setBounds(721, 18, 64, 22);
-
-        jRadioButtonNovo.setText("Novo");
-        jRadioButtonNovo.setContentAreaFilled(false);
-        Inicio_buscar.add(jRadioButtonNovo);
-        jRadioButtonNovo.setBounds(850, 16, 57, 25);
-
-        jRadioButtonUsado.setText("Usado");
-        jRadioButtonUsado.setContentAreaFilled(false);
-        jRadioButtonUsado.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButtonUsadoActionPerformed(evt);
-            }
-        });
-        Inicio_buscar.add(jRadioButtonUsado);
-        jRadioButtonUsado.setBounds(850, 35, 70, 25);
-
-        jTextFieldBuscar.setBorder(null);
-        Inicio_buscar.add(jTextFieldBuscar);
-        jTextFieldBuscar.setBounds(50, 30, 590, 30);
-
-        bt_ExibirAnuncio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Buscar/ExibirAnuncioBTN.png"))); // NOI18N
-        bt_ExibirAnuncio.setBorderPainted(false);
-        bt_ExibirAnuncio.setContentAreaFilled(false);
-        Inicio_buscar.add(bt_ExibirAnuncio);
-        bt_ExibirAnuncio.setBounds(440, 620, 140, 51);
-
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Buscar/CAMPO BUSCA.png"))); // NOI18N
-        Inicio_buscar.add(jLabel10);
-        jLabel10.setBounds(40, 20, 610, 50);
-
-        bt_Lupa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Buscar/botao lupa.png"))); // NOI18N
-        bt_Lupa.setBorderPainted(false);
-        bt_Lupa.setContentAreaFilled(false);
-        Inicio_buscar.add(bt_Lupa);
-        bt_Lupa.setBounds(930, 23, 60, 43);
-
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-
-            }
-        ));
-        jScrollPane2.setViewportView(jTable1);
-
-        Inicio_buscar.add(jScrollPane2);
-        jScrollPane2.setBounds(40, 90, 950, 520);
-
-        background1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Íco-Imovel copiar 6.png"))); // NOI18N
-        Inicio_buscar.add(background1);
-        background1.setBounds(0, -40, 1025, 720);
-
-        Principal.add(Inicio_buscar, "Inicio");
 
         Desapego.setLayout(null);
 
@@ -579,6 +486,22 @@ public class Principal extends javax.swing.JFrame {
         Principal.add(MeusAnuncios, "MeusAnuncios");
         MeusAnuncios.getAccessibleContext().setAccessibleName("");
 
+        Inicio.setLayout(null);
+
+        jLabel10.setText("TELA INICIAL");
+        Inicio.add(jLabel10);
+        jLabel10.setBounds(330, 160, 330, 60);
+
+        btn_inicio1.setText("Inicio");
+        Inicio.add(btn_inicio1);
+        btn_inicio1.setBounds(890, 610, 63, 25);
+
+        background1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Íco-Imovel copiar 6.png"))); // NOI18N
+        Inicio.add(background1);
+        background1.setBounds(0, -50, 1030, 730);
+
+        Principal.add(Inicio, "Inicio");
+
         getContentPane().add(Principal);
         Principal.setBounds(340, 50, 1030, 680);
 
@@ -706,14 +629,6 @@ public class Principal extends javax.swing.JFrame {
         
     }//GEN-LAST:event_bt_meusPedidosActionPerformed
 
-    private void jRadioButtonUsadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonUsadoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButtonUsadoActionPerformed
-
-    private void jComboBoxCategoriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxCategoriaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBoxCategoriaActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -756,7 +671,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel BarraTop;
     private javax.swing.JPanel Desapego;
     private javax.swing.JLabel Fundo;
-    private javax.swing.JPanel Inicio_buscar;
+    private javax.swing.JPanel Inicio;
     private javax.swing.JLabel JlCidade;
     private javax.swing.JLabel JlEmail;
     private javax.swing.JLabel JlEstado;
@@ -770,8 +685,6 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JPanel Principal;
     private javax.swing.JLabel background;
     private javax.swing.JLabel background1;
-    private javax.swing.JButton bt_ExibirAnuncio;
-    private javax.swing.JButton bt_Lupa;
     private javax.swing.JButton bt_desapegar;
     private javax.swing.JButton bt_fechar;
     private javax.swing.JButton bt_meuCadastro;
@@ -784,9 +697,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JButton btn_busca;
     private javax.swing.JButton btn_buscar;
     private javax.swing.JButton btn_edit;
-    private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.JComboBox<String> jComboBoxCategoria;
-    private javax.swing.JComboBox<String> jComboBoxRegiao;
+    private javax.swing.JButton btn_inicio1;
     private com.toedter.calendar.JDateChooser jDateChooser1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -798,9 +709,6 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JLabel jLabelB_Categoria;
-    private javax.swing.JLabel jLabelB_Estado;
-    private javax.swing.JLabel jLabelB_Regiao;
     private javax.swing.JLabel jLabelBairro;
     private javax.swing.JLabel jLabelCidade;
     private javax.swing.JLabel jLabelDataDeNascimento;
@@ -812,12 +720,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelTelefone;
     private javax.swing.JLabel jLabelUsuario;
     private javax.swing.JLabel jLabel_Pesquisa;
-    private javax.swing.JRadioButton jRadioButtonNovo;
-    private javax.swing.JRadioButton jRadioButtonUsado;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextFieldBuscar;
     private javax.swing.JLabel jl_MeuCadastro;
     private javax.swing.JLabel jl_condicaoProduto;
     private javax.swing.JLabel jl_valor;

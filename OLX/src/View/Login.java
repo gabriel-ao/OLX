@@ -67,7 +67,7 @@ public class Login extends javax.swing.JFrame {
 
         btn_Logar.setBackground(new java.awt.Color(169, 45, 215));
         btn_Logar.setForeground(new java.awt.Color(255, 255, 255));
-        btn_Logar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Entrar button.png"))); // NOI18N
+        btn_Logar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Entrar button.png"))); // NOI18N
         btn_Logar.setBorder(null);
         btn_Logar.setBorderPainted(false);
         btn_Logar.setContentAreaFilled(false);
