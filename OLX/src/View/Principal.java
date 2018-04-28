@@ -127,6 +127,15 @@ public class Principal extends javax.swing.JFrame {
         jLabel_Pesquisa = new javax.swing.JLabel();
         btn_busca = new javax.swing.JButton();
         background = new javax.swing.JLabel();
+        ExibirAnuncio = new javax.swing.JPanel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        background2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(1369, 730));
@@ -283,6 +292,11 @@ public class Principal extends javax.swing.JFrame {
         bt_ExibirAnuncio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Buscar/ExibirAnuncioBTN.png"))); // NOI18N
         bt_ExibirAnuncio.setBorderPainted(false);
         bt_ExibirAnuncio.setContentAreaFilled(false);
+        bt_ExibirAnuncio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt_ExibirAnuncioActionPerformed(evt);
+            }
+        });
         Inicio_buscar.add(bt_ExibirAnuncio);
         bt_ExibirAnuncio.setBounds(440, 620, 140, 51);
 
@@ -579,6 +593,45 @@ public class Principal extends javax.swing.JFrame {
         Principal.add(MeusAnuncios, "MeusAnuncios");
         MeusAnuncios.getAccessibleContext().setAccessibleName("");
 
+        ExibirAnuncio.setLayout(null);
+
+        jLabel11.setBackground(new java.awt.Color(250, 250, 250));
+        jLabel11.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(247, 130, 50));
+        jLabel11.setText("Titulo AQUI");
+        ExibirAnuncio.add(jLabel11);
+        jLabel11.setBounds(580, -10, 270, 150);
+
+        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ExibirAnuncio/OLX FOTO.png"))); // NOI18N
+        ExibirAnuncio.add(jLabel12);
+        jLabel12.setBounds(20, 40, 350, 450);
+
+        jLabel13.setText("jLabel13");
+        ExibirAnuncio.add(jLabel13);
+        jLabel13.setBounds(870, 410, 48, 16);
+
+        jLabel14.setText("jLabel14");
+        ExibirAnuncio.add(jLabel14);
+        jLabel14.setBounds(850, 440, 48, 16);
+
+        jLabel15.setText("Exibir a data e estado dessa forma(18 de Novembro de 2017   SP)");
+        ExibirAnuncio.add(jLabel15);
+        jLabel15.setBounds(20, 500, 270, 16);
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jScrollPane3.setViewportView(jTextArea1);
+
+        ExibirAnuncio.add(jScrollPane3);
+        jScrollPane3.setBounds(460, 100, 480, 260);
+
+        background2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ExibirAnuncio/Fundo.png"))); // NOI18N
+        ExibirAnuncio.add(background2);
+        background2.setBounds(0, 0, 1025, 680);
+
+        Principal.add(ExibirAnuncio, "ExibirAnuncio");
+        ExibirAnuncio.getAccessibleContext().setAccessibleName("");
+
         getContentPane().add(Principal);
         Principal.setBounds(340, 50, 1030, 680);
 
@@ -714,6 +767,11 @@ public class Principal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBoxCategoriaActionPerformed
 
+    private void bt_ExibirAnuncioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_ExibirAnuncioActionPerformed
+        CardLayout card = (CardLayout) Principal.getLayout();
+        card.show(Principal, "ExibirAnuncio");
+    }//GEN-LAST:event_bt_ExibirAnuncioActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -755,6 +813,7 @@ public class Principal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel BarraTop;
     private javax.swing.JPanel Desapego;
+    private javax.swing.JPanel ExibirAnuncio;
     private javax.swing.JLabel Fundo;
     private javax.swing.JPanel Inicio_buscar;
     private javax.swing.JLabel JlCidade;
@@ -770,6 +829,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JPanel Principal;
     private javax.swing.JLabel background;
     private javax.swing.JLabel background1;
+    private javax.swing.JLabel background2;
     private javax.swing.JButton bt_ExibirAnuncio;
     private javax.swing.JButton bt_Lupa;
     private javax.swing.JButton bt_desapegar;
@@ -790,6 +850,11 @@ public class Principal extends javax.swing.JFrame {
     private com.toedter.calendar.JDateChooser jDateChooser1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -816,7 +881,9 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JRadioButton jRadioButtonUsado;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTable jTable1;
+    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField jTextFieldBuscar;
     private javax.swing.JLabel jl_MeuCadastro;
     private javax.swing.JLabel jl_condicaoProduto;

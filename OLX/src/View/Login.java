@@ -78,7 +78,7 @@ public class Login extends javax.swing.JFrame {
                 btn_LogarActionPerformed(evt);
             }
         });
-        getContentPane().add(btn_Logar, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 310, 110, 30));
+        getContentPane().add(btn_Logar, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 310, 110, 30));
 
         btn_Cadastrar.setBackground(new java.awt.Color(169, 45, 215));
         btn_Cadastrar.setForeground(new java.awt.Color(255, 255, 255));
