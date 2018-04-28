@@ -195,7 +195,7 @@ public class Principal extends javax.swing.JFrame {
 
         Fundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Fundo menu.png"))); // NOI18N
         getContentPane().add(Fundo);
-        Fundo.setBounds(-20, 0, 340, 730);
+        Fundo.setBounds(0, 0, 350, 730);
 
         Principal.setLayout(new java.awt.CardLayout());
 
@@ -271,7 +271,7 @@ public class Principal extends javax.swing.JFrame {
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Íco-Imovel copiar 6.png"))); // NOI18N
         Desapego.add(jLabel7);
-        jLabel7.setBounds(0, -40, 1030, 680);
+        jLabel7.setBounds(0, -50, 1030, 730);
 
         Principal.add(Desapego, "Desapegar");
 
