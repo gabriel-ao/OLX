@@ -20,9 +20,20 @@ public class Principal extends javax.swing.JFrame {
     public Principal() {
         initComponents();
     }
-    ImageIcon BuscarSelected = new ImageIcon(getClass().getResource("/Img/MenuLateral/BuscarSelected.png"));
+   
+    ImageIcon Buscar2 = new ImageIcon(getClass().getResource("/Img/MenuLateral/Buscar.png"));
+    ImageIcon MeuCadastro2 = new ImageIcon(getClass().getResource("/Img/MenuLateral/MeuCadastro.png"));
+    ImageIcon Desapegar2 = new ImageIcon(getClass().getResource("/Img/MenuLateral/Desapegar.png"));
+    ImageIcon MeusPedidos2 = new ImageIcon(getClass().getResource("/Img/MenuLateral/MeusPedidos.png"));
+    ImageIcon MeusAnuncios2 = new ImageIcon(getClass().getResource("/Img/MenuLateral/MeusAnuncios.png"));
+    ImageIcon Sair2 = new ImageIcon(getClass().getResource("/Img/MenuLateral/Sair.png"));
     
-    
+     ImageIcon BuscarSelected = new ImageIcon(getClass().getResource("/Img/MenuLateral/BuscarSelected.png"));
+     ImageIcon MeuCadastroSelected = new ImageIcon(getClass().getResource("/Img/MenuLateral/MeuCadastroSelected.png"));
+     ImageIcon DesapegarSelected = new ImageIcon(getClass().getResource("/Img/MenuLateral/DesapegarSelected.png"));
+     ImageIcon MeusPedidosSelected = new ImageIcon(getClass().getResource("/Img/MenuLateral/MeusPedidosSelected.png"));
+     ImageIcon MeusAnunciosSelected = new ImageIcon(getClass().getResource("/Img/MenuLateral/MeusAnunciosSelected.png"));
+     ImageIcon SairSelected = new ImageIcon(getClass().getResource("/Img/MenuLateral/SairSelected.png"));
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -162,6 +173,11 @@ public class Principal extends javax.swing.JFrame {
         bt_meusPedidos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/MenuLateral/MeusPedidos.png"))); // NOI18N
         bt_meusPedidos.setBorderPainted(false);
         bt_meusPedidos.setContentAreaFilled(false);
+        bt_meusPedidos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt_meusPedidosActionPerformed(evt);
+            }
+        });
         getContentPane().add(bt_meusPedidos);
         bt_meusPedidos.setBounds(-7, 420, 310, 75);
 
@@ -198,7 +214,7 @@ public class Principal extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btn_buscar);
-        btn_buscar.setBounds(0, 90, 300, 67);
+        btn_buscar.setBounds(-2, 90, 300, 67);
 
         Fundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Fundo menu.png"))); // NOI18N
         getContentPane().add(Fundo);
@@ -493,6 +509,16 @@ public class Principal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void bt_meuCadastroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_meuCadastroActionPerformed
+       if (!bt_meuCadastro.isSelected()) {
+            btn_buscar.setIcon(Buscar2);
+            bt_meuCadastro.setIcon(MeuCadastroSelected);
+            bt_desapegar.setIcon(Desapegar2);
+            bt_meusPedidos.setIcon(MeusPedidos2);
+            bt_meusAnuncios.setIcon(MeusAnuncios2);
+            bt_sair.setIcon(Sair2);
+            
+        }
+        
         CardLayout card = (CardLayout) Principal.getLayout();
         card.show(Principal, "MeuCadastro");
     }//GEN-LAST:event_bt_meuCadastroActionPerformed
@@ -506,6 +532,16 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jtf_NomeActionPerformed
 
     private void bt_sairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_sairActionPerformed
+       if (!bt_sair.isSelected()) {
+            btn_buscar.setIcon(Buscar2);
+            bt_meuCadastro.setIcon(MeuCadastro2);
+            bt_desapegar.setIcon(Desapegar2);
+            bt_meusPedidos.setIcon(MeusPedidos2);
+            bt_meusAnuncios.setIcon(MeusAnuncios2);
+            bt_sair.setIcon(SairSelected);
+            
+        }
+        
         Login login = new Login();
         login.setVisible(true);
         dispose();
@@ -517,11 +553,31 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jtf_TelefoneActionPerformed
 
     private void bt_desapegarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_desapegarActionPerformed
+        if (!bt_desapegar.isSelected()) {
+            btn_buscar.setIcon(Buscar2);
+            bt_meuCadastro.setIcon(MeuCadastro2);
+            bt_desapegar.setIcon(DesapegarSelected);
+            bt_meusPedidos.setIcon(MeusPedidos2);
+            bt_meusAnuncios.setIcon(MeusAnuncios2);
+            bt_sair.setIcon(Sair2);
+            
+        }
+
         CardLayout card = (CardLayout) Principal.getLayout();
         card.show(Principal, "Desapegar");
     }//GEN-LAST:event_bt_desapegarActionPerformed
 
     private void bt_meusAnunciosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_meusAnunciosActionPerformed
+        if (!bt_meusAnuncios.isSelected()) {
+            btn_buscar.setIcon(Buscar2);
+            bt_meuCadastro.setIcon(MeuCadastro2);
+            bt_desapegar.setIcon(Desapegar2);
+            bt_meusPedidos.setIcon(MeusPedidos2);
+            bt_meusAnuncios.setIcon(MeusAnunciosSelected);
+            bt_sair.setIcon(Sair2);
+            
+        }
+        
         CardLayout card = (CardLayout) Principal.getLayout();
         card.show(Principal, "MeusAnuncios");
     }//GEN-LAST:event_bt_meusAnunciosActionPerformed
@@ -545,14 +601,33 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_inicio1ActionPerformed
 
     private void btn_buscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_buscarActionPerformed
-        if (!btn_buscar.isSelected()) {
+       if (!btn_buscar.isSelected()) {
             btn_buscar.setIcon(BuscarSelected);
+            bt_meuCadastro.setIcon(MeuCadastro2);
+            bt_desapegar.setIcon(Desapegar2);
+            bt_meusPedidos.setIcon(MeusPedidos2);
+            bt_meusAnuncios.setIcon(MeusAnuncios2);
+            bt_sair.setIcon(Sair2);
             
         }
 
         CardLayout card = (CardLayout) Principal.getLayout();
         card.show(Principal, "Inicio");
     }//GEN-LAST:event_btn_buscarActionPerformed
+
+    private void bt_meusPedidosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_meusPedidosActionPerformed
+        if (!bt_meusPedidos.isSelected()) {
+            btn_buscar.setIcon(Buscar2);
+            bt_meuCadastro.setIcon(MeuCadastro2);
+            bt_desapegar.setIcon(Desapegar2);
+            bt_meusPedidos.setIcon(MeusPedidosSelected);
+            bt_meusAnuncios.setIcon(MeusAnuncios2);
+            bt_sair.setIcon(Sair2);
+            
+        }
+        
+        
+    }//GEN-LAST:event_bt_meusPedidosActionPerformed
 
     /**
      * @param args the command line arguments
