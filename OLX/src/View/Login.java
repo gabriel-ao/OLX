@@ -5,6 +5,14 @@
  */
 package View;
 
+import ConexaoBD.Conexao;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author gabri
@@ -148,7 +156,37 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_fecharActionPerformed
 
     private void btn_LogarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_LogarActionPerformed
-        // TODO add your handling code here:
+        try {
+                String usuario, senha;
+                
+                Connection con;
+                Conexao conecta = new Conexao();
+                con  = Conexao.conectar();
+                ResultSet rs;
+                
+                usuario = jtfUsuario.getText();
+                senha  = String.valueOf(jpfSenha.getPassword());
+                
+                String sql = "SELECT usuario, senha FROM usuario WHERE usuario = '"+usuario+"' AND  senha = '"+senha+"'" ;
+                
+                PreparedStatement statement = con.prepareStatement(sql);
+                
+                rs = statement.executeQuery();
+                
+                if(rs.next()){
+                    
+                    if(usuario.equals(rs.getString("usuario")) && senha.equals(rs.getString("senha"))){
+       
+                        Principal principal = new Principal(usuario);
+                        principal.setVisible(true);
+                        this.setVisible(false);
+                    }
+                }else{
+                    JOptionPane.showMessageDialog(null, "Usuário ou Senha inválidos");
+                }
+              } catch (Exception ex) {
+            Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_btn_LogarActionPerformed
 
     private void btn_CadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_CadastrarActionPerformed
