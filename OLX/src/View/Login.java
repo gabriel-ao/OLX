@@ -161,7 +161,7 @@ public class Login extends javax.swing.JFrame {
                 
                 Connection con;
                 Conexao conecta = new Conexao();
-                con  = Conexao.conectar();
+                con  = conecta.conectar();
                 ResultSet rs;
                 
                 usuario = jtfUsuario.getText();
@@ -177,7 +177,7 @@ public class Login extends javax.swing.JFrame {
                     
                     if(usuario.equals(rs.getString("usuario")) && senha.equals(rs.getString("senha"))){
        
-                        Principal principal = new Principal(usuario);
+                        Principal principal = new Principal();
                         principal.setVisible(true);
                         this.setVisible(false);
                     }

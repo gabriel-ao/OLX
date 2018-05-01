@@ -28,9 +28,9 @@ public class OLX {
         //Cadastro cadastro = new Cadastro();
         //cadastro.setVisible(true);
         
-        Principal cd = new Principal();
-        cd.setVisible(true);
-        
+//        Principal cd = new Principal();
+//        cd.setVisible(true);
+//        
         
         // TODAS AS TELAS TEM TAMANHO PADRÃO DE (1300,730)
     }
