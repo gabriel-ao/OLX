@@ -39,7 +39,6 @@ public class Cadastro extends javax.swing.JFrame {
         jtf_Senha = new javax.swing.JTextField();
         jtf_Bairro = new javax.swing.JTextField();
         jLabelNomeCompleto = new javax.swing.JLabel();
-        jLabelDataDeNascimento = new javax.swing.JLabel();
         jLabelCidade = new javax.swing.JLabel();
         jLabelBairro = new javax.swing.JLabel();
         jLabelEstado = new javax.swing.JLabel();
@@ -50,7 +49,6 @@ public class Cadastro extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         btn_Cadastrar = new javax.swing.JButton();
         jtf_Cancelar = new javax.swing.JButton();
-        jDateChooser1 = new com.toedter.calendar.JDateChooser();
         jLabelNome = new javax.swing.JLabel();
         JlCidade = new javax.swing.JLabel();
         JlTelefone = new javax.swing.JLabel();
@@ -109,17 +107,17 @@ public class Cadastro extends javax.swing.JFrame {
         jtf_Email.setBackground(new java.awt.Color(242, 242, 242));
         jtf_Email.setBorder(null);
         getContentPane().add(jtf_Email);
-        jtf_Email.setBounds(630, 214, 320, 26);
+        jtf_Email.setBounds(640, 153, 320, 26);
 
         jtf_Usuario.setBackground(new java.awt.Color(242, 242, 242));
         jtf_Usuario.setBorder(null);
         getContentPane().add(jtf_Usuario);
-        jtf_Usuario.setBounds(630, 265, 200, 26);
+        jtf_Usuario.setBounds(670, 283, 200, 26);
 
         jtf_Senha.setBackground(new java.awt.Color(242, 242, 242));
         jtf_Senha.setBorder(null);
         getContentPane().add(jtf_Senha);
-        jtf_Senha.setBounds(630, 315, 200, 26);
+        jtf_Senha.setBounds(670, 333, 200, 26);
 
         jtf_Bairro.setBackground(new java.awt.Color(242, 242, 242));
         jtf_Bairro.setBorder(null);
@@ -130,11 +128,6 @@ public class Cadastro extends javax.swing.JFrame {
         jLabelNomeCompleto.setText("Nome:");
         getContentPane().add(jLabelNomeCompleto);
         jLabelNomeCompleto.setBounds(58, 150, 40, 19);
-
-        jLabelDataDeNascimento.setFont(new java.awt.Font("Cooper Black", 0, 14)); // NOI18N
-        jLabelDataDeNascimento.setText("Data de Nascimento");
-        getContentPane().add(jLabelDataDeNascimento);
-        jLabelDataDeNascimento.setBounds(580, 150, 127, 19);
 
         jLabelCidade.setFont(new java.awt.Font("Cooper Black", 0, 14)); // NOI18N
         jLabelCidade.setText("Cidade:");
@@ -160,17 +153,17 @@ public class Cadastro extends javax.swing.JFrame {
         jLabelEmail.setFont(new java.awt.Font("Cooper Black", 0, 14)); // NOI18N
         jLabelEmail.setText("Email:");
         getContentPane().add(jLabelEmail);
-        jLabelEmail.setBounds(578, 218, 40, 19);
+        jLabelEmail.setBounds(590, 155, 40, 19);
 
         jLabelUsuario.setFont(new java.awt.Font("Cooper Black", 0, 14)); // NOI18N
         jLabelUsuario.setText("Usuario:");
         getContentPane().add(jLabelUsuario);
-        jLabelUsuario.setBounds(566, 268, 52, 19);
+        jLabelUsuario.setBounds(605, 285, 52, 19);
 
         jLabelSenha.setFont(new java.awt.Font("Cooper Black", 0, 14)); // NOI18N
         jLabelSenha.setText("Senha:");
         getContentPane().add(jLabelSenha);
-        jLabelSenha.setBounds(572, 317, 45, 19);
+        jLabelSenha.setBounds(610, 335, 45, 19);
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Botao fechar.png"))); // NOI18N
         jButton1.setBorderPainted(false);
@@ -202,10 +195,6 @@ public class Cadastro extends javax.swing.JFrame {
         getContentPane().add(jtf_Cancelar);
         jtf_Cancelar.setBounds(550, 540, 97, 70);
 
-        jDateChooser1.setBackground(new java.awt.Color(242, 242, 242));
-        getContentPane().add(jDateChooser1);
-        jDateChooser1.setBounds(740, 150, 200, 20);
-
         jLabelNome.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Campo Nome.png"))); // NOI18N
         getContentPane().add(jLabelNome);
         jLabelNome.setBounds(100, 140, 480, 40);
@@ -220,7 +209,7 @@ public class Cadastro extends javax.swing.JFrame {
 
         JlUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Campo user.png"))); // NOI18N
         getContentPane().add(JlUsuario);
-        JlUsuario.setBounds(620, 260, 230, 34);
+        JlUsuario.setBounds(660, 280, 230, 34);
 
         JlEstado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Campo estado.png"))); // NOI18N
         getContentPane().add(JlEstado);
@@ -228,11 +217,11 @@ public class Cadastro extends javax.swing.JFrame {
 
         JlEmail.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Campo Email.png"))); // NOI18N
         getContentPane().add(JlEmail);
-        JlEmail.setBounds(620, 210, 350, 34);
+        JlEmail.setBounds(630, 150, 350, 34);
 
         JlSenha.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Campo Senha2.png"))); // NOI18N
         getContentPane().add(JlSenha);
-        JlSenha.setBounds(620, 310, 230, 34);
+        JlSenha.setBounds(660, 330, 230, 34);
 
         JlTopobackground.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Tela superior.png"))); // NOI18N
         getContentPane().add(JlTopobackground);
@@ -311,12 +300,10 @@ public class Cadastro extends javax.swing.JFrame {
     private javax.swing.JLabel Jlbackground;
     private javax.swing.JButton btn_Cadastrar;
     private javax.swing.JButton jButton1;
-    private com.toedter.calendar.JDateChooser jDateChooser1;
     private javax.swing.JLabel jLBairro;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabelBairro;
     private javax.swing.JLabel jLabelCidade;
-    private javax.swing.JLabel jLabelDataDeNascimento;
     private javax.swing.JLabel jLabelEmail;
     private javax.swing.JLabel jLabelEstado;
     private javax.swing.JLabel jLabelNome;

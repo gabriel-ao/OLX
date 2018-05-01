@@ -177,9 +177,9 @@ public class Login extends javax.swing.JFrame {
                     
                     if(usuario.equals(rs.getString("usuario")) && senha.equals(rs.getString("senha"))){
        
-                        Principal principal = new Principal();
-                        principal.setVisible(true);
-                        this.setVisible(false);
+                      Principal principal = new Principal();
+                      principal.setVisible(true);
+                      this.setVisible(false); 
                     }
                 }else{
                     JOptionPane.showMessageDialog(null, "Usuário ou Senha inválidos");
