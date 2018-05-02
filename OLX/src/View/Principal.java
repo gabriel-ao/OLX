@@ -510,7 +510,7 @@ public class Principal extends javax.swing.JFrame {
         jLabelTelefone.setFont(new java.awt.Font("Cooper Black", 0, 14)); // NOI18N
         jLabelTelefone.setText("Telefone:");
         MeuCadastro.add(jLabelTelefone);
-        jLabelTelefone.setBounds(36, 425, 60, 20);
+        jLabelTelefone.setBounds(600, 220, 60, 20);
 
         jLabelEmail.setBackground(new java.awt.Color(255, 255, 255));
         jLabelEmail.setFont(new java.awt.Font("Cooper Black", 0, 14)); // NOI18N
@@ -521,12 +521,12 @@ public class Principal extends javax.swing.JFrame {
         jLabelUsuario.setFont(new java.awt.Font("Cooper Black", 0, 14)); // NOI18N
         jLabelUsuario.setText("Usuário:");
         MeuCadastro.add(jLabelUsuario);
-        jLabelUsuario.setBounds(583, 238, 60, 17);
+        jLabelUsuario.setBounds(600, 280, 60, 17);
 
         jLabelSenha.setFont(new java.awt.Font("Cooper Black", 0, 14)); // NOI18N
         jLabelSenha.setText("Senha:");
         MeuCadastro.add(jLabelSenha);
-        jLabelSenha.setBounds(590, 295, 50, 17);
+        jLabelSenha.setBounds(610, 340, 50, 17);
 
         jtfTelefone.setBackground(new java.awt.Color(242, 242, 242));
         jtfTelefone.setBorder(null);
@@ -537,7 +537,7 @@ public class Principal extends javax.swing.JFrame {
         }
         jtfTelefone.setFont(new java.awt.Font("Cooper Black", 0, 14)); // NOI18N
         MeuCadastro.add(jtfTelefone);
-        jtfTelefone.setBounds(110, 425, 250, 23);
+        jtfTelefone.setBounds(670, 220, 250, 23);
 
         jtf_Nome.setBackground(new java.awt.Color(242, 242, 242));
         jtf_Nome.setBorder(null);
@@ -573,12 +573,12 @@ public class Principal extends javax.swing.JFrame {
         jtf_Usuario.setBackground(new java.awt.Color(242, 242, 242));
         jtf_Usuario.setBorder(null);
         MeuCadastro.add(jtf_Usuario);
-        jtf_Usuario.setBounds(650, 240, 200, 20);
+        jtf_Usuario.setBounds(670, 290, 200, 20);
 
         jtf_Senha.setBackground(new java.awt.Color(242, 242, 242));
         jtf_Senha.setBorder(null);
         MeuCadastro.add(jtf_Senha);
-        jtf_Senha.setBounds(650, 300, 200, 20);
+        jtf_Senha.setBounds(670, 350, 200, 20);
 
         btn_edit1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Edit icon.png"))); // NOI18N
         btn_edit1.setBorderPainted(false);
@@ -595,6 +595,11 @@ public class Principal extends javax.swing.JFrame {
         btn_Cadastrar.setBackground(new java.awt.Color(242, 242, 242));
         btn_Cadastrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Save icon.png"))); // NOI18N
         btn_Cadastrar.setContentAreaFilled(false);
+        btn_Cadastrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_CadastrarActionPerformed(evt);
+            }
+        });
         MeuCadastro.add(btn_Cadastrar);
         btn_Cadastrar.setBounds(400, 551, 97, 70);
 
@@ -614,11 +619,11 @@ public class Principal extends javax.swing.JFrame {
 
         JlTelefone.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Campo telefone.png"))); // NOI18N
         MeuCadastro.add(JlTelefone);
-        JlTelefone.setBounds(100, 420, 350, 34);
+        JlTelefone.setBounds(660, 210, 350, 34);
 
         JlUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Campo user.png"))); // NOI18N
         MeuCadastro.add(JlUsuario);
-        JlUsuario.setBounds(640, 230, 220, 34);
+        JlUsuario.setBounds(660, 280, 220, 34);
 
         JlEstado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Campo estado.png"))); // NOI18N
         MeuCadastro.add(JlEstado);
@@ -630,7 +635,7 @@ public class Principal extends javax.swing.JFrame {
 
         JlSenha.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Campo Senha2.png"))); // NOI18N
         MeuCadastro.add(JlSenha);
-        JlSenha.setBounds(640, 290, 220, 34);
+        JlSenha.setBounds(660, 340, 220, 34);
 
         jl_MeuCadastro.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jl_MeuCadastro.setForeground(new java.awt.Color(250, 130, 50));
@@ -883,6 +888,10 @@ public class Principal extends javax.swing.JFrame {
     private void btn_saveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_saveActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btn_saveActionPerformed
+
+    private void btn_CadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_CadastrarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_CadastrarActionPerformed
 
     /**
      * @param args the command line arguments
