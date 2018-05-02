@@ -5,6 +5,7 @@
  */
 package View;
 
+import Classes.Usuario;
 import ConexaoBD.Conexao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -18,7 +19,7 @@ import javax.swing.JOptionPane;
  * @author gabri
  */
 public class Login extends javax.swing.JFrame {
-
+    Usuario usuario = new Usuario ();
     /**
      * Creates new form Login
      */
@@ -157,31 +158,39 @@ public class Login extends javax.swing.JFrame {
 
     private void btn_LogarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_LogarActionPerformed
         try {
-                String usuario, senha;
+                String user, senha;
                 
                 Connection con;
                 Conexao conecta = new Conexao();
                 con  = conecta.conectar();
                 ResultSet rs;
                 
-                usuario = jtfUsuario.getText();
+                user = jtfUsuario.getText();
                 senha  = String.valueOf(jpfSenha.getPassword());
                 
-                String sql = "SELECT usuario, senha FROM usuario WHERE usuario = '"+usuario+"' AND  senha = '"+senha+"'" ;
+                String sql = "SELECT * FROM usuario WHERE usuario = '"+user+"' AND  senha = '"+senha+"'" ;
                 
                 PreparedStatement statement = con.prepareStatement(sql);
-                
+               
                 rs = statement.executeQuery();
                 
-                if(rs.next()){
+                
                     
-                    if(usuario.equals(rs.getString("usuario")) && senha.equals(rs.getString("senha"))){
-       
-                      Principal principal = new Principal();
+                    if(user.equals(rs.getString("usuario")) && senha.equals(rs.getString("senha"))){
+                        
+                      usuario.setBairro(rs.getString("bairro"));
+                      usuario.setCidade(rs.getString("Cidade"));
+                      usuario.setNome(rs.getString("Nome"));
+                      usuario.setEmail(rs.getString("Email"));
+                      usuario.setTelefone(rs.getString("Telefone"));
+                      usuario.setUF(rs.getString("UF"));
+                      usuario.setUsuario(rs.getString("Usuario"));
+                      usuario.setSenha(rs.getString("Senha"));
+                      Principal principal = new Principal(usuario);
                       principal.setVisible(true);
                       this.setVisible(false); 
                     }
-                }else{
+                else{
                     JOptionPane.showMessageDialog(null, "Usuário ou Senha inválidos");
                 }
               } catch (Exception ex) {

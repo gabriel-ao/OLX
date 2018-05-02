@@ -5,6 +5,7 @@
  */
 package View;
 
+import Classes.Usuario;
 import java.awt.CardLayout;
 import javax.swing.ImageIcon;
 
@@ -13,11 +14,11 @@ import javax.swing.ImageIcon;
  * @author gabri
  */
 public class Principal extends javax.swing.JFrame {
-
+    
     /**
      * Creates new form Inicial
      */
-    public Principal() {
+    public Principal(Usuario usuario) {
         initComponents();
         this.setLocationRelativeTo(null);
         btn_buscar.setIcon(BuscarSelected);
@@ -37,9 +38,7 @@ public class Principal extends javax.swing.JFrame {
      ImageIcon MeusAnunciosSelected = new ImageIcon(getClass().getResource("/Img/MenuLateral/MeusAnunciosSelected.png"));
      ImageIcon SairSelected = new ImageIcon(getClass().getResource("/Img/MenuLateral/SairSelected.png"));
 
-    Principal(String usuario) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    
      
      
      
@@ -764,6 +763,7 @@ public class Principal extends javax.swing.JFrame {
          
         CardLayout card = (CardLayout) Principal.getLayout();
         card.show(Principal, "MeuCadastro");
+        
     }//GEN-LAST:event_bt_meuCadastroActionPerformed
 
     private void bt_fecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_fecharActionPerformed
