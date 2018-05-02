@@ -5,12 +5,17 @@
  */
 package View;
 
+import Classes.Usuario;
+import ConexaoBD.UsuarioBD;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author gabri
  */
 public class Cadastro extends javax.swing.JFrame {
-
+       Usuario usuario = new Usuario ();
+    UsuarioBD usuarioBD = new UsuarioBD ();
     /**
      * Creates new form Cadastro
      */
@@ -181,6 +186,11 @@ public class Cadastro extends javax.swing.JFrame {
         btn_Cadastrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Save icon.png"))); // NOI18N
         btn_Cadastrar.setBorder(null);
         btn_Cadastrar.setContentAreaFilled(false);
+        btn_Cadastrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_CadastrarActionPerformed(evt);
+            }
+        });
         getContentPane().add(btn_Cadastrar);
         btn_Cadastrar.setBounds(410, 450, 65, 70);
 
@@ -258,6 +268,29 @@ public class Cadastro extends javax.swing.JFrame {
         login.setVisible(true);
         dispose();
     }//GEN-LAST:event_jtf_CancelarActionPerformed
+
+    private void btn_CadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_CadastrarActionPerformed
+          usuario.setBairro(jtf_Bairro.getText());
+          usuario.setCidade(jtf_Cidade.getText());
+          usuario.setNome(jtf_Nome.getText());
+          usuario.setEmail(jtf_Email.getText());
+          usuario.setTelefone(jtfTelefone.getText());
+          usuario.setUF(jtf_Estado.getText());
+          usuario.setUsuario(jtf_Usuario.getText());
+          usuario.setSenha(jtf_Senha.getText());
+                   
+          try {
+                            usuarioBD.inserir(usuario);
+                        } catch (Exception ex) {
+                            JOptionPane.showMessageDialog(this, "Erro ao inserir Usuário.\n" + ex.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
+                        }
+            JOptionPane.showMessageDialog(null, "Usuário Cadastrado com Sucesso");
+        
+        Login login = new Login();
+        login.setVisible(true);
+        dispose();
+
+    }//GEN-LAST:event_btn_CadastrarActionPerformed
 
     /**
      * @param args the command line arguments
