@@ -264,17 +264,20 @@ public class Principal extends javax.swing.JFrame {
 
         Inicio_buscar.setLayout(null);
 
+        jLabelB_Categoria.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabelB_Categoria.setText("Categoria:");
         Inicio_buscar.add(jLabelB_Categoria);
-        jLabelB_Categoria.setBounds(660, 50, 51, 20);
+        jLabelB_Categoria.setBounds(660, 50, 63, 20);
 
+        jLabelB_Regiao.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabelB_Regiao.setText("Região:");
         Inicio_buscar.add(jLabelB_Regiao);
-        jLabelB_Regiao.setBounds(675, 20, 37, 14);
+        jLabelB_Regiao.setBounds(675, 20, 46, 17);
 
+        jLabelB_Estado.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabelB_Estado.setText("Estado:");
         Inicio_buscar.add(jLabelB_Estado);
-        jLabelB_Estado.setBounds(809, 18, 48, 14);
+        jLabelB_Estado.setBounds(809, 18, 48, 17);
 
         jComboBoxCategoria.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         jComboBoxCategoria.addActionListener(new java.awt.event.ActionListener() {
@@ -486,43 +489,43 @@ public class Principal extends javax.swing.JFrame {
 
         MeuCadastro.setLayout(null);
 
-        jLabelNomeCompleto.setFont(new java.awt.Font("Cooper Black", 0, 14)); // NOI18N
+        jLabelNomeCompleto.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabelNomeCompleto.setText("Nome:");
         MeuCadastro.add(jLabelNomeCompleto);
         jLabelNomeCompleto.setBounds(57, 150, 50, 17);
 
-        jLabelCidade.setFont(new java.awt.Font("Cooper Black", 0, 14)); // NOI18N
+        jLabelCidade.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabelCidade.setText("Cidade:");
         MeuCadastro.add(jLabelCidade);
-        jLabelCidade.setBounds(48, 356, 53, 17);
+        jLabelCidade.setBounds(48, 356, 46, 17);
 
-        jLabelBairro.setFont(new java.awt.Font("Cooper Black", 0, 14)); // NOI18N
+        jLabelBairro.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabelBairro.setText("Bairro:");
         MeuCadastro.add(jLabelBairro);
         jLabelBairro.setBounds(56, 230, 50, 17);
 
-        jLabelEstado.setFont(new java.awt.Font("Cooper Black", 0, 14)); // NOI18N
+        jLabelEstado.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabelEstado.setText("Estado:");
         MeuCadastro.add(jLabelEstado);
         jLabelEstado.setBounds(48, 300, 50, 17);
 
-        jLabelTelefone.setFont(new java.awt.Font("Cooper Black", 0, 14)); // NOI18N
+        jLabelTelefone.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabelTelefone.setText("Telefone:");
         MeuCadastro.add(jLabelTelefone);
         jLabelTelefone.setBounds(600, 220, 60, 20);
 
         jLabelEmail.setBackground(new java.awt.Color(255, 255, 255));
-        jLabelEmail.setFont(new java.awt.Font("Cooper Black", 0, 14)); // NOI18N
+        jLabelEmail.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabelEmail.setText("Email:");
         MeuCadastro.add(jLabelEmail);
         jLabelEmail.setBounds(599, 150, 50, 17);
 
-        jLabelUsuario.setFont(new java.awt.Font("Cooper Black", 0, 14)); // NOI18N
+        jLabelUsuario.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabelUsuario.setText("Usuário:");
         MeuCadastro.add(jLabelUsuario);
         jLabelUsuario.setBounds(600, 280, 60, 17);
 
-        jLabelSenha.setFont(new java.awt.Font("Cooper Black", 0, 14)); // NOI18N
+        jLabelSenha.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabelSenha.setText("Senha:");
         MeuCadastro.add(jLabelSenha);
         jLabelSenha.setBounds(610, 340, 50, 17);

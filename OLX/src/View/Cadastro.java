@@ -130,46 +130,46 @@ public class Cadastro extends javax.swing.JFrame {
         getContentPane().add(jtf_Bairro);
         jtf_Bairro.setBounds(110, 220, 310, 20);
 
-        jLabelNomeCompleto.setFont(new java.awt.Font("Cooper Black", 0, 14)); // NOI18N
+        jLabelNomeCompleto.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabelNomeCompleto.setText("Nome:");
         getContentPane().add(jLabelNomeCompleto);
         jLabelNomeCompleto.setBounds(38, 150, 60, 17);
 
-        jLabelCidade.setFont(new java.awt.Font("Cooper Black", 0, 14)); // NOI18N
+        jLabelCidade.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabelCidade.setText("Cidade:");
         getContentPane().add(jLabelCidade);
         jLabelCidade.setBounds(40, 340, 70, 17);
 
-        jLabelBairro.setFont(new java.awt.Font("Cooper Black", 0, 14)); // NOI18N
+        jLabelBairro.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabelBairro.setText("Bairro:");
         getContentPane().add(jLabelBairro);
         jLabelBairro.setBounds(40, 220, 50, 17);
 
-        jLabelEstado.setFont(new java.awt.Font("Cooper Black", 0, 14)); // NOI18N
+        jLabelEstado.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabelEstado.setText("Estado:");
         getContentPane().add(jLabelEstado);
         jLabelEstado.setBounds(40, 280, 70, 17);
 
-        jLabelTelefone.setFont(new java.awt.Font("Cooper Black", 0, 14)); // NOI18N
+        jLabelTelefone.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabelTelefone.setText("Telefone:");
         getContentPane().add(jLabelTelefone);
         jLabelTelefone.setBounds(570, 220, 70, 20);
 
         jLabelEmail.setBackground(new java.awt.Color(255, 255, 255));
-        jLabelEmail.setFont(new java.awt.Font("Cooper Black", 0, 14)); // NOI18N
+        jLabelEmail.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabelEmail.setText("Email:");
         getContentPane().add(jLabelEmail);
         jLabelEmail.setBounds(590, 150, 50, 17);
 
-        jLabelUsuario.setFont(new java.awt.Font("Cooper Black", 0, 14)); // NOI18N
+        jLabelUsuario.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabelUsuario.setText("Usuario:");
         getContentPane().add(jLabelUsuario);
-        jLabelUsuario.setBounds(580, 290, 60, 17);
+        jLabelUsuario.setBounds(580, 290, 50, 17);
 
-        jLabelSenha.setFont(new java.awt.Font("Cooper Black", 0, 14)); // NOI18N
+        jLabelSenha.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabelSenha.setText("Senha:");
         getContentPane().add(jLabelSenha);
-        jLabelSenha.setBounds(590, 340, 47, 17);
+        jLabelSenha.setBounds(590, 340, 43, 17);
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Botao fechar.png"))); // NOI18N
         jButton1.setBorderPainted(false);
@@ -246,6 +246,7 @@ public class Cadastro extends javax.swing.JFrame {
         getContentPane().add(jLBairro);
         jLBairro.setBounds(100, 210, 340, 40);
 
+        Jlbackground.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         Jlbackground.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/background.jpeg"))); // NOI18N
         getContentPane().add(Jlbackground);
         Jlbackground.setBounds(0, 0, 1030, 710);
