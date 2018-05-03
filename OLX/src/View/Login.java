@@ -56,10 +56,8 @@ public class Login extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
         setLocationByPlatform(true);
-        setMaximumSize(new java.awt.Dimension(518, 438));
         setMinimumSize(new java.awt.Dimension(518, 438));
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(518, 438));
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -87,7 +85,7 @@ public class Login extends javax.swing.JFrame {
                 btn_LogarActionPerformed(evt);
             }
         });
-        getContentPane().add(btn_Logar, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 310, 110, 30));
+        getContentPane().add(btn_Logar, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 310, 110, 30));
 
         btn_Cadastrar.setBackground(new java.awt.Color(169, 45, 215));
         btn_Cadastrar.setForeground(new java.awt.Color(255, 255, 255));
@@ -102,7 +100,7 @@ public class Login extends javax.swing.JFrame {
                 btn_CadastrarActionPerformed(evt);
             }
         });
-        getContentPane().add(btn_Cadastrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 395, 150, 40));
+        getContentPane().add(btn_Cadastrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 390, 150, 40));
 
         jtfUsuario.setBorder(null);
         jtfUsuario.addActionListener(new java.awt.event.ActionListener() {
@@ -119,7 +117,7 @@ public class Login extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(247, 130, 50));
         jLabel1.setText("Não possui cadastro?");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 365, -1, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 360, -1, -1));
 
         Logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/olx.png"))); // NOI18N
         getContentPane().add(Logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 50, -1, 140));

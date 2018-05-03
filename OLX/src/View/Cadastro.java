@@ -236,7 +236,7 @@ public class Cadastro extends javax.swing.JFrame {
 
         jLabel_logo_OLX.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Logo novo.png"))); // NOI18N
         getContentPane().add(jLabel_logo_OLX);
-        jLabel_logo_OLX.setBounds(0, 0, 50, 41);
+        jLabel_logo_OLX.setBounds(10, 0, 50, 41);
 
         JlTopobackground.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Tela superior.png"))); // NOI18N
         getContentPane().add(JlTopobackground);
