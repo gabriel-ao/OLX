@@ -67,7 +67,7 @@ public class Cadastro extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        jc_estado = new javax.swing.JComboBox<>();
         Jlbackground = new javax.swing.JLabel();
 
         jTextField11.setText("jTextField11");
@@ -271,10 +271,10 @@ public class Cadastro extends javax.swing.JFrame {
         getContentPane().add(jLabel5);
         jLabel5.setBounds(30, 280, 10, 10);
 
-        jComboBox1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        getContentPane().add(jComboBox1);
-        jComboBox1.setBounds(110, 280, 80, 23);
+        jc_estado.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jc_estado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        getContentPane().add(jc_estado);
+        jc_estado.setBounds(110, 280, 80, 23);
 
         Jlbackground.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         Jlbackground.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/background.jpeg"))); // NOI18N
@@ -306,7 +306,7 @@ public class Cadastro extends javax.swing.JFrame {
           usuario.setNome(jtf_Nome.getText());
           usuario.setEmail(jtf_Email.getText());
           usuario.setTelefone(jtfTelefone.getText());
-          usuario.setUF(jtf_Estado.getText());
+          // ALTERAR PARA COMBOBOX usuario.setUF(jc_estado.getText());
           usuario.setUsuario(jtf_Usuario.getText());
           usuario.setSenha(jtf_Senha.getText());
                    
@@ -368,7 +368,6 @@ public class Cadastro extends javax.swing.JFrame {
     private javax.swing.JLabel Jlbackground;
     private javax.swing.JButton btn_Cadastrar;
     private javax.swing.JButton jButton1;
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLBairro;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -387,6 +386,7 @@ public class Cadastro extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel_CampoObrigatorio;
     private javax.swing.JLabel jLabel_logo_OLX;
     private javax.swing.JTextField jTextField11;
+    private javax.swing.JComboBox<String> jc_estado;
     private javax.swing.JFormattedTextField jtfTelefone;
     private javax.swing.JTextField jtf_Bairro;
     private javax.swing.JButton jtf_Cancelar;
