@@ -488,7 +488,7 @@ public class Principal extends javax.swing.JFrame {
 
         FundoD.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Íco-Imovel copiar 6.png"))); // NOI18N
         Desapego.add(FundoD);
-        FundoD.setBounds(-20, -40, 1030, 730);
+        FundoD.setBounds(0, -50, 1030, 730);
 
         jtf_titulo2.setBackground(new java.awt.Color(242, 242, 242));
         jtf_titulo2.setBorder(null);
