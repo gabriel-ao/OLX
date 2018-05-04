@@ -64,7 +64,6 @@ public class Cadastro extends javax.swing.JFrame {
         jLabel_logo_OLX = new javax.swing.JLabel();
         JlTopobackground = new javax.swing.JLabel();
         jLBairro = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         Jlbackground = new javax.swing.JLabel();
 
         jTextField11.setText("jTextField11");
@@ -247,10 +246,6 @@ public class Cadastro extends javax.swing.JFrame {
         getContentPane().add(jLBairro);
         jLBairro.setBounds(100, 210, 340, 40);
 
-        jLabel2.setText("jLabel2");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(140, 90, 34, 14);
-
         Jlbackground.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         Jlbackground.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/background.jpeg"))); // NOI18N
         getContentPane().add(Jlbackground);
@@ -346,7 +341,6 @@ public class Cadastro extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLBairro;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabelBairro;
     private javax.swing.JLabel jLabelCidade;
     private javax.swing.JLabel jLabelEmail;
