@@ -67,6 +67,10 @@ public class Cadastro extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
         jc_estado = new javax.swing.JComboBox<>();
         Jlbackground = new javax.swing.JLabel();
 
@@ -96,7 +100,7 @@ public class Cadastro extends javax.swing.JFrame {
         jtf_Cidade.setBackground(new java.awt.Color(242, 242, 242));
         jtf_Cidade.setBorder(null);
         getContentPane().add(jtf_Cidade);
-        jtf_Cidade.setBounds(110, 338, 310, 23);
+        jtf_Cidade.setBounds(110, 290, 310, 23);
 
         jtfTelefone.setBackground(new java.awt.Color(242, 242, 242));
         jtfTelefone.setBorder(null);
@@ -117,12 +121,12 @@ public class Cadastro extends javax.swing.JFrame {
         jtf_Usuario.setBackground(new java.awt.Color(242, 242, 242));
         jtf_Usuario.setBorder(null);
         getContentPane().add(jtf_Usuario);
-        jtf_Usuario.setBounds(660, 290, 200, 20);
+        jtf_Usuario.setBounds(650, 290, 200, 20);
 
         jtf_Senha.setBackground(new java.awt.Color(242, 242, 242));
         jtf_Senha.setBorder(null);
         getContentPane().add(jtf_Senha);
-        jtf_Senha.setBounds(660, 340, 200, 20);
+        jtf_Senha.setBounds(650, 350, 200, 20);
 
         jtf_Bairro.setBackground(new java.awt.Color(242, 242, 242));
         jtf_Bairro.setBorder(null);
@@ -132,43 +136,43 @@ public class Cadastro extends javax.swing.JFrame {
         jLabelNomeCompleto.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabelNomeCompleto.setText("Nome:");
         getContentPane().add(jLabelNomeCompleto);
-        jLabelNomeCompleto.setBounds(38, 150, 60, 17);
+        jLabelNomeCompleto.setBounds(110, 120, 60, 17);
 
         jLabelCidade.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabelCidade.setText("Cidade:");
         getContentPane().add(jLabelCidade);
-        jLabelCidade.setBounds(40, 340, 70, 17);
+        jLabelCidade.setBounds(110, 260, 70, 17);
 
         jLabelBairro.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabelBairro.setText("Bairro:");
+        jLabelBairro.setText("Bairro");
         getContentPane().add(jLabelBairro);
-        jLabelBairro.setBounds(40, 220, 50, 17);
+        jLabelBairro.setBounds(110, 190, 50, 17);
 
         jLabelEstado.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabelEstado.setText("Estado:");
         getContentPane().add(jLabelEstado);
-        jLabelEstado.setBounds(40, 280, 70, 17);
+        jLabelEstado.setBounds(110, 330, 70, 17);
 
         jLabelTelefone.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabelTelefone.setText("Telefone:");
         getContentPane().add(jLabelTelefone);
-        jLabelTelefone.setBounds(570, 220, 70, 20);
+        jLabelTelefone.setBounds(650, 190, 70, 20);
 
         jLabelEmail.setBackground(new java.awt.Color(255, 255, 255));
         jLabelEmail.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabelEmail.setText("Email:");
         getContentPane().add(jLabelEmail);
-        jLabelEmail.setBounds(590, 150, 50, 17);
+        jLabelEmail.setBounds(650, 120, 50, 17);
 
         jLabelUsuario.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabelUsuario.setText("Usuario:");
         getContentPane().add(jLabelUsuario);
-        jLabelUsuario.setBounds(580, 290, 50, 17);
+        jLabelUsuario.setBounds(650, 260, 50, 17);
 
         jLabelSenha.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabelSenha.setText("Senha:");
         getContentPane().add(jLabelSenha);
-        jLabelSenha.setBounds(590, 340, 43, 17);
+        jLabelSenha.setBounds(650, 320, 43, 17);
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Botao fechar.png"))); // NOI18N
         jButton1.setBorderPainted(false);
@@ -211,7 +215,7 @@ public class Cadastro extends javax.swing.JFrame {
 
         JlCidade.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Campo Cidade.png"))); // NOI18N
         getContentPane().add(JlCidade);
-        JlCidade.setBounds(100, 330, 340, 34);
+        JlCidade.setBounds(100, 280, 340, 34);
 
         JlTelefone.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Campo telefone.png"))); // NOI18N
         getContentPane().add(JlTelefone);
@@ -219,7 +223,7 @@ public class Cadastro extends javax.swing.JFrame {
 
         JlUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Campo user.png"))); // NOI18N
         getContentPane().add(JlUsuario);
-        JlUsuario.setBounds(650, 280, 230, 34);
+        JlUsuario.setBounds(640, 280, 230, 34);
 
         JlEmail.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Campo Email.png"))); // NOI18N
         getContentPane().add(JlEmail);
@@ -227,7 +231,7 @@ public class Cadastro extends javax.swing.JFrame {
 
         JlSenha.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Campo Senha2.png"))); // NOI18N
         getContentPane().add(JlSenha);
-        JlSenha.setBounds(650, 330, 230, 34);
+        JlSenha.setBounds(640, 340, 230, 34);
 
         jLabel_logo_OLX.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Logo novo.png"))); // NOI18N
         getContentPane().add(jLabel_logo_OLX);
@@ -243,38 +247,62 @@ public class Cadastro extends javax.swing.JFrame {
 
         jLabel_CampoObrigatorio.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel_CampoObrigatorio.setForeground(new java.awt.Color(247, 130, 50));
-        jLabel_CampoObrigatorio.setText("Campos Obrigatorios");
+        jLabel_CampoObrigatorio.setText("Campos Obrigatorios*");
         getContentPane().add(jLabel_CampoObrigatorio);
-        jLabel_CampoObrigatorio.setBounds(100, 100, 130, 15);
+        jLabel_CampoObrigatorio.setBounds(100, 90, 130, 15);
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(247, 130, 50));
         jLabel2.setText("*");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(30, 340, 10, 10);
+        jLabel2.setBounds(100, 260, 10, 10);
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(247, 130, 50));
         jLabel3.setText("*");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(30, 150, 10, 10);
+        jLabel3.setBounds(640, 320, 10, 10);
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(247, 130, 50));
         jLabel4.setText("*");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(30, 220, 10, 10);
+        jLabel4.setBounds(100, 190, 10, 10);
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(247, 130, 50));
         jLabel5.setText("*");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(30, 280, 10, 10);
+        jLabel5.setBounds(100, 330, 10, 10);
+
+        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(247, 130, 50));
+        jLabel6.setText("*");
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(100, 120, 10, 10);
+
+        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(247, 130, 50));
+        jLabel7.setText("*");
+        getContentPane().add(jLabel7);
+        jLabel7.setBounds(640, 120, 10, 10);
+
+        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(247, 130, 50));
+        jLabel8.setText("*");
+        getContentPane().add(jLabel8);
+        jLabel8.setBounds(640, 190, 10, 10);
+
+        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(247, 130, 50));
+        jLabel9.setText("*");
+        getContentPane().add(jLabel9);
+        jLabel9.setBounds(640, 260, 10, 10);
 
         jc_estado.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jc_estado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         getContentPane().add(jc_estado);
-        jc_estado.setBounds(110, 280, 80, 23);
+        jc_estado.setBounds(180, 330, 80, 23);
 
         Jlbackground.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         Jlbackground.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/background.jpeg"))); // NOI18N
@@ -374,6 +402,10 @@ public class Cadastro extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel jLabelBairro;
     private javax.swing.JLabel jLabelCidade;
     private javax.swing.JLabel jLabelEmail;
