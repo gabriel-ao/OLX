@@ -135,6 +135,7 @@ public class Principal extends javax.swing.JFrame {
         JlSenha = new javax.swing.JLabel();
         jl_MeuCadastro = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        jc_estado = new javax.swing.JComboBox<>();
         Jlbackground = new javax.swing.JLabel();
         MeusAnuncios = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
@@ -397,7 +398,7 @@ public class Principal extends javax.swing.JFrame {
 
         bj_Categoria.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         Desapego.add(bj_Categoria);
-        bj_Categoria.setBounds(570, 488, 210, 22);
+        bj_Categoria.setBounds(570, 488, 210, 20);
 
         jLabel_Desapego.setFont(new java.awt.Font("Tahoma", 0, 50)); // NOI18N
         jLabel_Desapego.setForeground(new java.awt.Color(247, 130, 50));
@@ -433,7 +434,7 @@ public class Principal extends javax.swing.JFrame {
 
         jLabel1.setText("Categoria:");
         Desapego.add(jLabel1);
-        jLabel1.setBounds(510, 490, 70, 16);
+        jLabel1.setBounds(510, 490, 70, 14);
 
         CampoTitulo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Campo Titulo.png"))); // NOI18N
         Desapego.add(CampoTitulo);
@@ -447,7 +448,7 @@ public class Principal extends javax.swing.JFrame {
         jrb_Novo.setText("Novo");
         jrb_Novo.setContentAreaFilled(false);
         Desapego.add(jrb_Novo);
-        jrb_Novo.setBounds(860, 430, 61, 25);
+        jrb_Novo.setBounds(860, 430, 59, 25);
 
         jrb_Usado.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jrb_Usado.setText("Usado");
@@ -572,7 +573,7 @@ public class Principal extends javax.swing.JFrame {
         jtf_Cidade.setBackground(new java.awt.Color(242, 242, 242));
         jtf_Cidade.setBorder(null);
         MeuCadastro.add(jtf_Cidade);
-        jtf_Cidade.setBounds(110, 360, 310, 16);
+        jtf_Cidade.setBounds(110, 360, 310, 14);
 
         jtf_Bairro.setBackground(new java.awt.Color(242, 242, 242));
         jtf_Bairro.setBorder(null);
@@ -657,6 +658,11 @@ public class Principal extends javax.swing.JFrame {
         MeuCadastro.add(jLabel2);
         jLabel2.setBounds(100, 220, 340, 40);
 
+        jc_estado.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jc_estado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        MeuCadastro.add(jc_estado);
+        jc_estado.setBounds(120, 300, 80, 23);
+
         Jlbackground.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/background.jpeg"))); // NOI18N
         MeuCadastro.add(Jlbackground);
         Jlbackground.setBounds(0, -48, 1030, 728);
@@ -678,11 +684,11 @@ public class Principal extends javax.swing.JFrame {
             }
         });
         MeusAnuncios.add(btn_AlterarAnuncio);
-        btn_AlterarAnuncio.setBounds(310, 570, 79, 25);
+        btn_AlterarAnuncio.setBounds(310, 570, 71, 23);
 
         btn_Excluir.setText("Excluir");
         MeusAnuncios.add(btn_Excluir);
-        btn_Excluir.setBounds(500, 570, 73, 25);
+        btn_Excluir.setBounds(500, 570, 73, 23);
 
         jLabel_Pesquisa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Campo Nome.png"))); // NOI18N
         MeusAnuncios.add(jLabel_Pesquisa);
@@ -690,23 +696,23 @@ public class Principal extends javax.swing.JFrame {
 
         btn_busca.setText("busca");
         MeusAnuncios.add(btn_busca);
-        btn_busca.setBounds(630, 100, 73, 25);
+        btn_busca.setBounds(630, 100, 73, 23);
 
         jLabel_FotoProduto.setText("FOTO E DESCRIÇÃO DO PRODUTO");
         MeusAnuncios.add(jLabel_FotoProduto);
-        jLabel_FotoProduto.setBounds(220, 200, 180, 16);
+        jLabel_FotoProduto.setBounds(220, 200, 180, 14);
 
         jLabel_NomeComprador.setText("NOME DE QUEM QUER RESERVAR E ESTADO");
         MeusAnuncios.add(jLabel_NomeComprador);
-        jLabel_NomeComprador.setBounds(220, 270, 220, 16);
+        jLabel_NomeComprador.setBounds(220, 270, 220, 14);
 
         btn_Reservar.setText("Reservar");
         MeusAnuncios.add(btn_Reservar);
-        btn_Reservar.setBounds(460, 260, 100, 25);
+        btn_Reservar.setBounds(460, 260, 100, 23);
 
         btn_NaoReservar.setText("Não reservar");
         MeusAnuncios.add(btn_NaoReservar);
-        btn_NaoReservar.setBounds(600, 260, 100, 25);
+        btn_NaoReservar.setBounds(600, 260, 100, 23);
 
         background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Íco-Imovel copiar 6.png"))); // NOI18N
         MeusAnuncios.add(background);
@@ -729,23 +735,23 @@ public class Principal extends javax.swing.JFrame {
 
         btn_busca1.setText("busca");
         MeusPedidos.add(btn_busca1);
-        btn_busca1.setBounds(630, 100, 73, 25);
+        btn_busca1.setBounds(630, 100, 73, 23);
 
         btn_CancelarPedido.setText("Cancelar pedido");
         MeusPedidos.add(btn_CancelarPedido);
-        btn_CancelarPedido.setBounds(570, 220, 210, 25);
+        btn_CancelarPedido.setBounds(570, 220, 210, 23);
 
         btn_comprar.setText("OK para Pergunta");
         MeusPedidos.add(btn_comprar);
-        btn_comprar.setBounds(570, 300, 220, 25);
+        btn_comprar.setBounds(570, 300, 220, 23);
 
         jLabel_fotoProduto.setText("FOTO E DESCRIÇÃO DO PRODUTO");
         MeusPedidos.add(jLabel_fotoProduto);
-        jLabel_fotoProduto.setBounds(190, 220, 370, 16);
+        jLabel_fotoProduto.setBounds(190, 220, 370, 14);
 
         jLabel5.setText("INDICAR SE FUI AUTORIZADO PRA COMPRAR OU RECUSADO");
         MeusPedidos.add(jLabel5);
-        jLabel5.setBounds(100, 300, 380, 16);
+        jLabel5.setBounds(100, 300, 380, 14);
 
         background3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Íco-Imovel copiar 6.png"))); // NOI18N
         MeusPedidos.add(background3);
@@ -1097,6 +1103,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextFieldBuscar;
+    private javax.swing.JComboBox<String> jc_estado;
     private javax.swing.JLabel jl_MeuCadastro;
     private javax.swing.JLabel jl_condicaoProduto;
     private javax.swing.JLabel jl_valor;
