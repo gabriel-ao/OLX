@@ -135,6 +135,7 @@ public class Principal extends javax.swing.JFrame {
         JlSenha = new javax.swing.JLabel();
         jl_MeuCadastro = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        jc_estado = new javax.swing.JComboBox<>();
         Jlbackground = new javax.swing.JLabel();
         MeusAnuncios = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
@@ -659,6 +660,11 @@ public class Principal extends javax.swing.JFrame {
         MeuCadastro.add(jLabel2);
         jLabel2.setBounds(100, 220, 340, 40);
 
+        jc_estado.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jc_estado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        MeuCadastro.add(jc_estado);
+        jc_estado.setBounds(120, 300, 80, 23);
+
         Jlbackground.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/background.jpeg"))); // NOI18N
         MeuCadastro.add(Jlbackground);
         Jlbackground.setBounds(0, -48, 1030, 728);
@@ -1126,6 +1132,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextFieldBuscar;
+    private javax.swing.JComboBox<String> jc_estado;
     private javax.swing.JLabel jl_MeuCadastro;
     private javax.swing.JLabel jl_condicaoProduto;
     private javax.swing.JLabel jl_valor;
