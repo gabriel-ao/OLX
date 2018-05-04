@@ -35,7 +35,6 @@ public class Cadastro extends javax.swing.JFrame {
 
         jTextField11 = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
-        jtf_Estado = new javax.swing.JTextField();
         jtf_Nome = new javax.swing.JTextField();
         jtf_Cidade = new javax.swing.JTextField();
         jtfTelefone = new javax.swing.JFormattedTextField();
@@ -58,12 +57,17 @@ public class Cadastro extends javax.swing.JFrame {
         JlCidade = new javax.swing.JLabel();
         JlTelefone = new javax.swing.JLabel();
         JlUsuario = new javax.swing.JLabel();
-        JlEstado = new javax.swing.JLabel();
         JlEmail = new javax.swing.JLabel();
         JlSenha = new javax.swing.JLabel();
         jLabel_logo_OLX = new javax.swing.JLabel();
         JlTopobackground = new javax.swing.JLabel();
         jLBairro = new javax.swing.JLabel();
+        jLabel_CampoObrigatorio = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jComboBox1 = new javax.swing.JComboBox<>();
         Jlbackground = new javax.swing.JLabel();
 
         jTextField11.setText("jTextField11");
@@ -78,11 +82,6 @@ public class Cadastro extends javax.swing.JFrame {
         setResizable(false);
         setSize(new java.awt.Dimension(1025, 627));
         getContentPane().setLayout(null);
-
-        jtf_Estado.setBackground(new java.awt.Color(242, 242, 242));
-        jtf_Estado.setBorder(null);
-        getContentPane().add(jtf_Estado);
-        jtf_Estado.setBounds(110, 280, 310, 20);
 
         jtf_Nome.setBackground(new java.awt.Color(242, 242, 242));
         jtf_Nome.setBorder(null);
@@ -222,10 +221,6 @@ public class Cadastro extends javax.swing.JFrame {
         getContentPane().add(JlUsuario);
         JlUsuario.setBounds(650, 280, 230, 34);
 
-        JlEstado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Campo estado.png"))); // NOI18N
-        getContentPane().add(JlEstado);
-        JlEstado.setBounds(100, 270, 340, 40);
-
         JlEmail.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Campo Email.png"))); // NOI18N
         getContentPane().add(JlEmail);
         JlEmail.setBounds(640, 140, 350, 34);
@@ -245,6 +240,41 @@ public class Cadastro extends javax.swing.JFrame {
         jLBairro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Campo Bairro.png"))); // NOI18N
         getContentPane().add(jLBairro);
         jLBairro.setBounds(100, 210, 340, 40);
+
+        jLabel_CampoObrigatorio.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel_CampoObrigatorio.setForeground(new java.awt.Color(247, 130, 50));
+        jLabel_CampoObrigatorio.setText("Campos Obrigatorios");
+        getContentPane().add(jLabel_CampoObrigatorio);
+        jLabel_CampoObrigatorio.setBounds(100, 100, 130, 15);
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(247, 130, 50));
+        jLabel2.setText("*");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(30, 340, 10, 10);
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(247, 130, 50));
+        jLabel3.setText("*");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(30, 150, 10, 10);
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(247, 130, 50));
+        jLabel4.setText("*");
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(30, 220, 10, 10);
+
+        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(247, 130, 50));
+        jLabel5.setText("*");
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(30, 280, 10, 10);
+
+        jComboBox1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        getContentPane().add(jComboBox1);
+        jComboBox1.setBounds(110, 280, 80, 23);
 
         Jlbackground.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         Jlbackground.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/background.jpeg"))); // NOI18N
@@ -331,7 +361,6 @@ public class Cadastro extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel JlCidade;
     private javax.swing.JLabel JlEmail;
-    private javax.swing.JLabel JlEstado;
     private javax.swing.JLabel JlSenha;
     private javax.swing.JLabel JlTelefone;
     private javax.swing.JLabel JlTopobackground;
@@ -339,8 +368,13 @@ public class Cadastro extends javax.swing.JFrame {
     private javax.swing.JLabel Jlbackground;
     private javax.swing.JButton btn_Cadastrar;
     private javax.swing.JButton jButton1;
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLBairro;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabelBairro;
     private javax.swing.JLabel jLabelCidade;
     private javax.swing.JLabel jLabelEmail;
@@ -350,6 +384,7 @@ public class Cadastro extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelSenha;
     private javax.swing.JLabel jLabelTelefone;
     private javax.swing.JLabel jLabelUsuario;
+    private javax.swing.JLabel jLabel_CampoObrigatorio;
     private javax.swing.JLabel jLabel_logo_OLX;
     private javax.swing.JTextField jTextField11;
     private javax.swing.JFormattedTextField jtfTelefone;
@@ -357,7 +392,6 @@ public class Cadastro extends javax.swing.JFrame {
     private javax.swing.JButton jtf_Cancelar;
     private javax.swing.JTextField jtf_Cidade;
     private javax.swing.JTextField jtf_Email;
-    private javax.swing.JTextField jtf_Estado;
     private javax.swing.JTextField jtf_Nome;
     private javax.swing.JTextField jtf_Senha;
     private javax.swing.JTextField jtf_Usuario;
