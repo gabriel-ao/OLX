@@ -135,6 +135,11 @@ public class Principal extends javax.swing.JFrame {
         JlSenha = new javax.swing.JLabel();
         jl_MeuCadastro = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
         jc_estado = new javax.swing.JComboBox<>();
         Jlbackground = new javax.swing.JLabel();
         MeusAnuncios = new javax.swing.JPanel();
@@ -658,6 +663,37 @@ public class Principal extends javax.swing.JFrame {
         MeuCadastro.add(jLabel2);
         jLabel2.setBounds(100, 220, 340, 40);
 
+        jLabel8.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(247, 130, 50));
+        jLabel8.setText("Campos Obrigatorios*");
+        MeuCadastro.add(jLabel8);
+        jLabel8.setBounds(50, 100, 150, 17);
+
+        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(247, 130, 50));
+        jLabel9.setText("*");
+        MeuCadastro.add(jLabel9);
+        jLabel9.setBounds(50, 210, 10, 40);
+
+        jLabel12.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(247, 130, 50));
+        jLabel12.setText("*");
+        MeuCadastro.add(jLabel12);
+        jLabel12.setBounds(40, 350, 10, 17);
+
+        jLabel11.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(247, 130, 50));
+        jLabel11.setText("*");
+        MeuCadastro.add(jLabel11);
+        jLabel11.setBounds(50, 137, 10, 30);
+
+        jLabel13.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(247, 130, 50));
+        jLabel13.setText("*");
+        MeuCadastro.add(jLabel13);
+        jLabel13.setBounds(40, 287, 10, 30);
+
         jc_estado.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jc_estado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         MeuCadastro.add(jc_estado);
@@ -1063,12 +1099,17 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> jComboBoxRegiao;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel jLabelB_Categoria;
     private javax.swing.JLabel jLabelB_Estado;
     private javax.swing.JLabel jLabelB_Regiao;

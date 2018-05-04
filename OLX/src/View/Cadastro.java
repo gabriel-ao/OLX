@@ -243,9 +243,9 @@ public class Cadastro extends javax.swing.JFrame {
 
         jLabel_CampoObrigatorio.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel_CampoObrigatorio.setForeground(new java.awt.Color(247, 130, 50));
-        jLabel_CampoObrigatorio.setText("Campos Obrigatorios");
+        jLabel_CampoObrigatorio.setText("Campos Obrigatorios*");
         getContentPane().add(jLabel_CampoObrigatorio);
-        jLabel_CampoObrigatorio.setBounds(100, 100, 130, 15);
+        jLabel_CampoObrigatorio.setBounds(30, 100, 130, 15);
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(247, 130, 50));
