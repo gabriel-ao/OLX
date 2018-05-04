@@ -35,7 +35,6 @@ public class Cadastro extends javax.swing.JFrame {
 
         jTextField11 = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
-        jtf_Estado = new javax.swing.JTextField();
         jtf_Nome = new javax.swing.JTextField();
         jtf_Cidade = new javax.swing.JTextField();
         jtfTelefone = new javax.swing.JFormattedTextField();
@@ -58,7 +57,6 @@ public class Cadastro extends javax.swing.JFrame {
         JlCidade = new javax.swing.JLabel();
         JlTelefone = new javax.swing.JLabel();
         JlUsuario = new javax.swing.JLabel();
-        JlEstado = new javax.swing.JLabel();
         JlEmail = new javax.swing.JLabel();
         JlSenha = new javax.swing.JLabel();
         jLabel_logo_OLX = new javax.swing.JLabel();
@@ -78,11 +76,6 @@ public class Cadastro extends javax.swing.JFrame {
         setResizable(false);
         setSize(new java.awt.Dimension(1025, 627));
         getContentPane().setLayout(null);
-
-        jtf_Estado.setBackground(new java.awt.Color(242, 242, 242));
-        jtf_Estado.setBorder(null);
-        getContentPane().add(jtf_Estado);
-        jtf_Estado.setBounds(110, 280, 310, 20);
 
         jtf_Nome.setBackground(new java.awt.Color(242, 242, 242));
         jtf_Nome.setBorder(null);
@@ -108,7 +101,7 @@ public class Cadastro extends javax.swing.JFrame {
         }
         jtfTelefone.setFont(new java.awt.Font("Cooper Black", 0, 14)); // NOI18N
         getContentPane().add(jtfTelefone);
-        jtfTelefone.setBounds(650, 220, 250, 20);
+        jtfTelefone.setBounds(650, 216, 250, 20);
 
         jtf_Email.setBackground(new java.awt.Color(242, 242, 242));
         jtf_Email.setBorder(null);
@@ -222,10 +215,6 @@ public class Cadastro extends javax.swing.JFrame {
         getContentPane().add(JlUsuario);
         JlUsuario.setBounds(650, 280, 230, 34);
 
-        JlEstado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Campo estado.png"))); // NOI18N
-        getContentPane().add(JlEstado);
-        JlEstado.setBounds(100, 270, 340, 40);
-
         JlEmail.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Campo Email.png"))); // NOI18N
         getContentPane().add(JlEmail);
         JlEmail.setBounds(640, 140, 350, 34);
@@ -236,7 +225,7 @@ public class Cadastro extends javax.swing.JFrame {
 
         jLabel_logo_OLX.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Logo novo.png"))); // NOI18N
         getContentPane().add(jLabel_logo_OLX);
-        jLabel_logo_OLX.setBounds(10, 0, 50, 41);
+        jLabel_logo_OLX.setBounds(7, 4, 50, 41);
 
         JlTopobackground.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Tela superior.png"))); // NOI18N
         getContentPane().add(JlTopobackground);
@@ -331,7 +320,6 @@ public class Cadastro extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel JlCidade;
     private javax.swing.JLabel JlEmail;
-    private javax.swing.JLabel JlEstado;
     private javax.swing.JLabel JlSenha;
     private javax.swing.JLabel JlTelefone;
     private javax.swing.JLabel JlTopobackground;
@@ -357,7 +345,6 @@ public class Cadastro extends javax.swing.JFrame {
     private javax.swing.JButton jtf_Cancelar;
     private javax.swing.JTextField jtf_Cidade;
     private javax.swing.JTextField jtf_Email;
-    private javax.swing.JTextField jtf_Estado;
     private javax.swing.JTextField jtf_Nome;
     private javax.swing.JTextField jtf_Senha;
     private javax.swing.JTextField jtf_Usuario;

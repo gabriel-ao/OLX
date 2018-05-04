@@ -120,7 +120,6 @@ public class Principal extends javax.swing.JFrame {
         jtf_Nome = new javax.swing.JTextField();
         jtf_Cidade = new javax.swing.JTextField();
         jtf_Bairro = new javax.swing.JTextField();
-        jtf_Estado = new javax.swing.JTextField();
         jtf_Email = new javax.swing.JTextField();
         jtf_Usuario = new javax.swing.JTextField();
         jtf_Senha = new javax.swing.JTextField();
@@ -132,7 +131,6 @@ public class Principal extends javax.swing.JFrame {
         JlCidade = new javax.swing.JLabel();
         JlTelefone = new javax.swing.JLabel();
         JlUsuario = new javax.swing.JLabel();
-        JlEstado = new javax.swing.JLabel();
         JlEmail = new javax.swing.JLabel();
         JlSenha = new javax.swing.JLabel();
         jl_MeuCadastro = new javax.swing.JLabel();
@@ -368,7 +366,7 @@ public class Principal extends javax.swing.JFrame {
         Desapego.add(btn_cancelar);
         btn_cancelar.setBounds(640, 570, 80, 80);
 
-        btn_limpar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/limpar button.png"))); // NOI18N
+        btn_limpar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Excluir.png"))); // NOI18N
         btn_limpar.setBorderPainted(false);
         btn_limpar.setContentAreaFilled(false);
         Desapego.add(btn_limpar);
@@ -581,12 +579,6 @@ public class Principal extends javax.swing.JFrame {
         MeuCadastro.add(jtf_Bairro);
         jtf_Bairro.setBounds(110, 230, 310, 20);
 
-        jtf_Estado.setEditable(false);
-        jtf_Estado.setBackground(new java.awt.Color(242, 242, 242));
-        jtf_Estado.setBorder(null);
-        MeuCadastro.add(jtf_Estado);
-        jtf_Estado.setBounds(110, 300, 320, 16);
-
         jtf_Email.setBackground(new java.awt.Color(242, 242, 242));
         jtf_Email.setBorder(null);
         MeuCadastro.add(jtf_Email);
@@ -608,7 +600,7 @@ public class Principal extends javax.swing.JFrame {
         MeuCadastro.add(btn_edit1);
         btn_edit1.setBounds(300, 551, 97, 73);
 
-        btn_limpar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/limpar button.png"))); // NOI18N
+        btn_limpar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Excluir.png"))); // NOI18N
         btn_limpar1.setBorderPainted(false);
         btn_limpar1.setContentAreaFilled(false);
         MeuCadastro.add(btn_limpar1);
@@ -646,10 +638,6 @@ public class Principal extends javax.swing.JFrame {
         JlUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Campo user.png"))); // NOI18N
         MeuCadastro.add(JlUsuario);
         JlUsuario.setBounds(660, 280, 220, 34);
-
-        JlEstado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Campo estado.png"))); // NOI18N
-        MeuCadastro.add(JlEstado);
-        JlEstado.setBounds(100, 290, 340, 40);
 
         JlEmail.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Campo Email.png"))); // NOI18N
         MeuCadastro.add(JlEmail);
@@ -1024,7 +1012,6 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JPanel Inicio_buscar;
     private javax.swing.JLabel JlCidade;
     private javax.swing.JLabel JlEmail;
-    private javax.swing.JLabel JlEstado;
     private javax.swing.JLabel JlSenha;
     private javax.swing.JLabel JlTelefone;
     private javax.swing.JLabel JlUsuario;
@@ -1122,7 +1109,6 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JButton jtf_Cancelar;
     private javax.swing.JTextField jtf_Cidade;
     private javax.swing.JTextField jtf_Email;
-    private javax.swing.JTextField jtf_Estado;
     private javax.swing.JTextField jtf_Nome;
     private javax.swing.JTextField jtf_Senha;
     private javax.swing.JTextField jtf_Usuario;
