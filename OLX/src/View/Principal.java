@@ -138,6 +138,7 @@ public class Principal extends javax.swing.JFrame {
         jc_estado = new javax.swing.JComboBox<>();
         Jlbackground = new javax.swing.JLabel();
         MeusAnuncios = new javax.swing.JPanel();
+        jTextField2 = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         btn_AlterarAnuncio = new javax.swing.JButton();
         btn_Excluir = new javax.swing.JButton();
@@ -673,40 +674,57 @@ public class Principal extends javax.swing.JFrame {
 
         MeusAnuncios.setLayout(null);
 
+        jTextField2.setBackground(new java.awt.Color(242, 242, 242));
+        jTextField2.setAutoscrolls(false);
+        jTextField2.setBorder(null);
+        MeusAnuncios.add(jTextField2);
+        jTextField2.setBounds(60, 82, 440, 30);
+
         jLabel6.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(250, 130, 50));
         jLabel6.setText("Meus Anuncios");
         MeusAnuncios.add(jLabel6);
         jLabel6.setBounds(400, 30, 190, 29);
 
-        btn_AlterarAnuncio.setText("Alternar");
+        btn_AlterarAnuncio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Cancelar icon.png"))); // NOI18N
+        btn_AlterarAnuncio.setBorderPainted(false);
+        btn_AlterarAnuncio.setContentAreaFilled(false);
         btn_AlterarAnuncio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_AlterarAnuncioActionPerformed(evt);
             }
         });
         MeusAnuncios.add(btn_AlterarAnuncio);
-        btn_AlterarAnuncio.setBounds(910, 230, 79, 25);
+        btn_AlterarAnuncio.setBounds(840, 210, 140, 35);
 
-        btn_Excluir.setText("Excluir");
+        btn_Excluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Excluir icon.png"))); // NOI18N
+        btn_Excluir.setBorderPainted(false);
+        btn_Excluir.setContentAreaFilled(false);
         MeusAnuncios.add(btn_Excluir);
-        btn_Excluir.setBounds(800, 230, 73, 25);
+        btn_Excluir.setBounds(880, 260, 73, 30);
 
         jLabel_Pesquisa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Campo Nome.png"))); // NOI18N
         MeusAnuncios.add(jLabel_Pesquisa);
         jLabel_Pesquisa.setBounds(40, 80, 480, 34);
 
-        btn_busca.setText("busca");
+        btn_busca.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Buscar/botao lupa.png"))); // NOI18N
+        btn_busca.setBorderPainted(false);
+        btn_busca.setContentAreaFilled(false);
         MeusAnuncios.add(btn_busca);
-        btn_busca.setBounds(520, 90, 73, 25);
+        btn_busca.setBounds(510, 75, 73, 40);
 
-        btn_Reservar.setText("Reservar");
+        btn_Reservar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Reservar icon.png"))); // NOI18N
+        btn_Reservar.setActionCommand("");
+        btn_Reservar.setBorderPainted(false);
+        btn_Reservar.setContentAreaFilled(false);
         MeusAnuncios.add(btn_Reservar);
-        btn_Reservar.setBounds(800, 190, 100, 25);
+        btn_Reservar.setBounds(800, 170, 80, 30);
 
-        btn_NaoReservar.setText("Não reservar");
+        btn_NaoReservar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Não reservar icon.png"))); // NOI18N
+        btn_NaoReservar.setBorderPainted(false);
+        btn_NaoReservar.setContentAreaFilled(false);
         MeusAnuncios.add(btn_NaoReservar);
-        btn_NaoReservar.setBounds(920, 190, 100, 25);
+        btn_NaoReservar.setBounds(900, 170, 110, 30);
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -1131,6 +1149,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JTable jTable3;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextFieldBuscar;
     private javax.swing.JComboBox<String> jc_estado;
     private javax.swing.JLabel jl_MeuCadastro;
