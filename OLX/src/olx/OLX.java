@@ -5,6 +5,7 @@
  */
 package olx;
 
+import Classes.Usuario;
 import View.Cadastro;
 import View.Principal;
 import View.Login;
@@ -21,15 +22,15 @@ public class OLX {
     public static void main(String[] args) {
         // TODO code application logic here
         
-        Login login = new Login();
-        login.setVisible(true);
+        //Login login = new Login();
+        //login.setVisible(true);
         
         
         //Cadastro cadastro = new Cadastro();
         //cadastro.setVisible(true);
         
-//        Principal cd = new Principal();
-//        cd.setVisible(true);
+        Principal cd = new Principal();
+        cd.setVisible(true);
 //        
         
         // TODAS AS TELAS TEM TAMANHO PADRÃO DE (1300,730)
