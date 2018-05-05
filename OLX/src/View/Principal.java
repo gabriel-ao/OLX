@@ -567,17 +567,17 @@ public class Principal extends javax.swing.JFrame {
         jLabelNomeCompleto.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabelNomeCompleto.setText("Nome:");
         MeuCadastro.add(jLabelNomeCompleto);
-        jLabelNomeCompleto.setBounds(100, 120, 50, 17);
+        jLabelNomeCompleto.setBounds(100, 120, 50, 30);
 
         jLabelCidade.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabelCidade.setText("Cidade:");
         MeuCadastro.add(jLabelCidade);
-        jLabelCidade.setBounds(100, 270, 46, 17);
+        jLabelCidade.setBounds(100, 270, 46, 20);
 
         jLabelBairro.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabelBairro.setText("Bairro:");
         MeuCadastro.add(jLabelBairro);
-        jLabelBairro.setBounds(100, 200, 50, 17);
+        jLabelBairro.setBounds(100, 200, 50, 30);
 
         jLabelEstado.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabelEstado.setText("Estado:");
@@ -704,11 +704,11 @@ public class Principal extends javax.swing.JFrame {
         MeuCadastro.add(JlSenha);
         JlSenha.setBounds(640, 340, 220, 34);
 
-        jl_MeuCadastro.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jl_MeuCadastro.setFont(new java.awt.Font("Tahoma", 0, 50)); // NOI18N
         jl_MeuCadastro.setForeground(new java.awt.Color(250, 130, 50));
         jl_MeuCadastro.setText("Meu Cadastro");
         MeuCadastro.add(jl_MeuCadastro);
-        jl_MeuCadastro.setBounds(420, 30, 150, 50);
+        jl_MeuCadastro.setBounds(420, 30, 330, 50);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Campo Bairro.png"))); // NOI18N
         MeuCadastro.add(jLabel2);
@@ -725,19 +725,19 @@ public class Principal extends javax.swing.JFrame {
         jLabel9.setForeground(new java.awt.Color(247, 130, 50));
         jLabel9.setText("*");
         MeuCadastro.add(jLabel9);
-        jLabel9.setBounds(90, 180, 10, 40);
+        jLabel9.setBounds(90, 200, 10, 20);
 
         jLabel12.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(247, 130, 50));
         jLabel12.setText("*");
         MeuCadastro.add(jLabel12);
-        jLabel12.setBounds(90, 260, 10, 17);
+        jLabel12.setBounds(90, 260, 10, 30);
 
         jLabel11.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(247, 130, 50));
         jLabel11.setText("*");
         MeuCadastro.add(jLabel11);
-        jLabel11.setBounds(90, 110, 10, 30);
+        jLabel11.setBounds(90, 120, 10, 20);
 
         jLabel13.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(247, 130, 50));
@@ -788,11 +788,11 @@ public class Principal extends javax.swing.JFrame {
         MeusAnuncios.add(jTextField2);
         jTextField2.setBounds(60, 82, 440, 30);
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 50)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(250, 130, 50));
         jLabel6.setText("Meus Anuncios");
         MeusAnuncios.add(jLabel6);
-        jLabel6.setBounds(400, 30, 190, 29);
+        jLabel6.setBounds(330, 10, 400, 61);
 
         btn_AlterarAnuncio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Cancelar icon.png"))); // NOI18N
         btn_AlterarAnuncio.setBorderPainted(false);
@@ -803,21 +803,13 @@ public class Principal extends javax.swing.JFrame {
             }
         });
         MeusAnuncios.add(btn_AlterarAnuncio);
-<<<<<<< HEAD
         btn_AlterarAnuncio.setBounds(840, 210, 140, 35);
-=======
-        btn_AlterarAnuncio.setBounds(910, 230, 71, 23);
->>>>>>> 06e88673156d5ce542d1cea0bbb7083e5ac4da9f
 
         btn_Excluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Excluir icon.png"))); // NOI18N
         btn_Excluir.setBorderPainted(false);
         btn_Excluir.setContentAreaFilled(false);
         MeusAnuncios.add(btn_Excluir);
-<<<<<<< HEAD
         btn_Excluir.setBounds(880, 260, 73, 30);
-=======
-        btn_Excluir.setBounds(800, 230, 73, 23);
->>>>>>> 06e88673156d5ce542d1cea0bbb7083e5ac4da9f
 
         jLabel_Pesquisa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Campo Nome.png"))); // NOI18N
         MeusAnuncios.add(jLabel_Pesquisa);
@@ -827,32 +819,19 @@ public class Principal extends javax.swing.JFrame {
         btn_busca.setBorderPainted(false);
         btn_busca.setContentAreaFilled(false);
         MeusAnuncios.add(btn_busca);
-<<<<<<< HEAD
         btn_busca.setBounds(510, 75, 73, 40);
-=======
-        btn_busca.setBounds(520, 90, 73, 23);
->>>>>>> 06e88673156d5ce542d1cea0bbb7083e5ac4da9f
 
         btn_Reservar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Reservar icon.png"))); // NOI18N
-        btn_Reservar.setActionCommand("");
         btn_Reservar.setBorderPainted(false);
         btn_Reservar.setContentAreaFilled(false);
         MeusAnuncios.add(btn_Reservar);
-<<<<<<< HEAD
         btn_Reservar.setBounds(800, 170, 80, 30);
-=======
-        btn_Reservar.setBounds(800, 190, 100, 23);
->>>>>>> 06e88673156d5ce542d1cea0bbb7083e5ac4da9f
 
         btn_NaoReservar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Não reservar icon.png"))); // NOI18N
         btn_NaoReservar.setBorderPainted(false);
         btn_NaoReservar.setContentAreaFilled(false);
         MeusAnuncios.add(btn_NaoReservar);
-<<<<<<< HEAD
         btn_NaoReservar.setBounds(900, 170, 110, 30);
-=======
-        btn_NaoReservar.setBounds(920, 190, 100, 23);
->>>>>>> 06e88673156d5ce542d1cea0bbb7083e5ac4da9f
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -896,11 +875,11 @@ public class Principal extends javax.swing.JFrame {
 
         MeusPedidos.setLayout(null);
 
-        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 50)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(250, 130, 50));
         jLabel7.setText("Meus Pedidos");
         MeusPedidos.add(jLabel7);
-        jLabel7.setBounds(400, 30, 190, 29);
+        jLabel7.setBounds(320, 10, 420, 61);
 
         jLabel_Pesquisa1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Campo Nome.png"))); // NOI18N
         MeusPedidos.add(jLabel_Pesquisa1);
@@ -935,7 +914,7 @@ public class Principal extends javax.swing.JFrame {
         ExibirAnuncio.setLayout(null);
 
         jLabelTitulo.setBackground(new java.awt.Color(250, 250, 250));
-        jLabelTitulo.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
+        jLabelTitulo.setFont(new java.awt.Font("Tahoma", 0, 50)); // NOI18N
         jLabelTitulo.setForeground(new java.awt.Color(247, 130, 50));
         jLabelTitulo.setText("Titulo AQUI");
         ExibirAnuncio.add(jLabelTitulo);
