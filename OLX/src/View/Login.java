@@ -184,7 +184,7 @@ public class Login extends javax.swing.JFrame {
                       usuario.setUF(rs.getString("UF"));
                       usuario.setUsuario(rs.getString("Usuario"));
                       usuario.setSenha(rs.getString("Senha"));
-                      Principal principal = new Principal(usuario);
+                      Principal principal = new Principal();
                       principal.setVisible(true);
                       this.setVisible(false); 
                     }

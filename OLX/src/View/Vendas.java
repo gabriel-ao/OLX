@@ -9,12 +9,12 @@ package View;
  *
  * @author Augusto Kalel
  */
-public class Reservas extends javax.swing.JFrame {
+public class Vendas extends javax.swing.JFrame {
 
     /**
      * Creates new form Reservas
      */
-    public Reservas() {
+    public Vendas() {
         initComponents();
     }
 
@@ -30,7 +30,6 @@ public class Reservas extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jButton4 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -38,10 +37,8 @@ public class Reservas extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(560, 456));
         setMinimumSize(new java.awt.Dimension(560, 456));
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(560, 456));
         setResizable(false);
         getContentPane().setLayout(null);
 
@@ -63,37 +60,31 @@ public class Reservas extends javax.swing.JFrame {
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 50)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(247, 130, 50));
-        jLabel2.setText("Reservas");
+        jLabel2.setText("Vendas");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(195, 60, 200, 50);
+        jLabel2.setBounds(210, 70, 170, 50);
 
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/CancelarReserva.png"))); // NOI18N
-        jButton4.setBorderPainted(false);
-        jButton4.setContentAreaFilled(false);
-        getContentPane().add(jButton4);
-        jButton4.setBounds(370, 410, 140, 30);
-
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Reservar icon.png"))); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Augusto Kalel\\Desktop\\olx imagens\\Meus pedidos\\Cancelar venda.png")); // NOI18N
         jButton1.setBorderPainted(false);
         jButton1.setContentAreaFilled(false);
         getContentPane().add(jButton1);
-        jButton1.setBounds(90, 410, 79, 30);
+        jButton1.setBounds(80, 410, 150, 30);
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Não reservar icon.png"))); // NOI18N
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Vender.png"))); // NOI18N
         jButton2.setToolTipText("");
         jButton2.setBorderPainted(false);
         jButton2.setContentAreaFilled(false);
         getContentPane().add(jButton2);
-        jButton2.setBounds(220, 410, 110, 30);
+        jButton2.setBounds(360, 410, 80, 30);
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null},
-                {null, null},
-                {null, null}
+                {null},
+                {null},
+                {null}
             },
             new String [] {
-                "Quem solicitou reserva.", "Status da reserva"
+                "Quem quer comprar."
             }
         ));
         jScrollPane1.setViewportView(jTable1);
@@ -130,20 +121,23 @@ public class Reservas extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Reservas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Vendas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Reservas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Vendas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Reservas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Vendas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Reservas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Vendas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Reservas().setVisible(true);
+                new Vendas().setVisible(true);
             }
         });
     }
@@ -152,7 +146,6 @@ public class Reservas extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

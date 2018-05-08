@@ -114,7 +114,7 @@ public class Cadastro extends javax.swing.JFrame {
         }
         jtfTelefone.setFont(new java.awt.Font("Cooper Black", 0, 14)); // NOI18N
         getContentPane().add(jtfTelefone);
-        jtfTelefone.setBounds(650, 300, 250, 20);
+        jtfTelefone.setBounds(650, 296, 250, 20);
 
         jtf_Email.setBackground(new java.awt.Color(242, 242, 242));
         jtf_Email.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -313,9 +313,9 @@ public class Cadastro extends javax.swing.JFrame {
         jLabel10.setBounds(370, 80, 290, 61);
 
         jc_estado.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jc_estado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jc_estado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA", "PB", "PR", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SP", "SE", "TO" }));
         getContentPane().add(jc_estado);
-        jc_estado.setBounds(180, 410, 80, 23);
+        jc_estado.setBounds(180, 410, 50, 23);
 
         Jlbackground.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         Jlbackground.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/background.jpeg"))); // NOI18N

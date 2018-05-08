@@ -9,12 +9,12 @@ package View;
  *
  * @author Augusto Kalel
  */
-public class Reservas extends javax.swing.JFrame {
+public class DadosUsuario extends javax.swing.JFrame {
 
     /**
      * Creates new form Reservas
      */
-    public Reservas() {
+    public DadosUsuario() {
         initComponents();
     }
 
@@ -27,15 +27,17 @@ public class Reservas extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        bt_ok = new javax.swing.JButton();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jButton4 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        jLabel1 = new javax.swing.JLabel();
+        Fundo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(560, 456));
@@ -44,6 +46,47 @@ public class Reservas extends javax.swing.JFrame {
         setPreferredSize(new java.awt.Dimension(560, 456));
         setResizable(false);
         getContentPane().setLayout(null);
+
+        bt_ok.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/OK.png"))); // NOI18N
+        bt_ok.setBorderPainted(false);
+        bt_ok.setContentAreaFilled(false);
+        bt_ok.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt_okActionPerformed(evt);
+            }
+        });
+        getContentPane().add(bt_ok);
+        bt_ok.setBounds(240, 400, 105, 30);
+
+        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 17)); // NOI18N
+        jLabel7.setText("Nome aqui!");
+        getContentPane().add(jLabel7);
+        jLabel7.setBounds(80, 210, 120, 21);
+
+        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 17)); // NOI18N
+        jLabel8.setText("Endereço aqui");
+        getContentPane().add(jLabel8);
+        jLabel8.setBounds(110, 310, 130, 21);
+
+        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 17)); // NOI18N
+        jLabel9.setText("Telefone aqui");
+        getContentPane().add(jLabel9);
+        jLabel9.setBounds(100, 260, 170, 21);
+
+        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 17)); // NOI18N
+        jLabel5.setText("Nome:");
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(20, 210, 70, 21);
+
+        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 17)); // NOI18N
+        jLabel6.setText("Telefone:");
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(20, 260, 90, 21);
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 17)); // NOI18N
+        jLabel4.setText("Endereço:");
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(20, 310, 90, 21);
 
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Botao fechar.png"))); // NOI18N
         jButton3.setBorderPainted(false);
@@ -63,48 +106,13 @@ public class Reservas extends javax.swing.JFrame {
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 50)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(247, 130, 50));
-        jLabel2.setText("Reservas");
+        jLabel2.setText("Dados do usuário");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(195, 60, 200, 50);
+        jLabel2.setBounds(80, 80, 390, 50);
 
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/CancelarReserva.png"))); // NOI18N
-        jButton4.setBorderPainted(false);
-        jButton4.setContentAreaFilled(false);
-        getContentPane().add(jButton4);
-        jButton4.setBounds(370, 410, 140, 30);
-
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Reservar icon.png"))); // NOI18N
-        jButton1.setBorderPainted(false);
-        jButton1.setContentAreaFilled(false);
-        getContentPane().add(jButton1);
-        jButton1.setBounds(90, 410, 79, 30);
-
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Não reservar icon.png"))); // NOI18N
-        jButton2.setToolTipText("");
-        jButton2.setBorderPainted(false);
-        jButton2.setContentAreaFilled(false);
-        getContentPane().add(jButton2);
-        jButton2.setBounds(220, 410, 110, 30);
-
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null},
-                {null, null},
-                {null, null}
-            },
-            new String [] {
-                "Quem solicitou reserva.", "Status da reserva"
-            }
-        ));
-        jScrollPane1.setViewportView(jTable1);
-
-        getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(20, 160, 520, 220);
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/background.jpeg"))); // NOI18N
-        jLabel1.setText("jLabel1");
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 560, 456);
+        Fundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/background.jpeg"))); // NOI18N
+        getContentPane().add(Fundo);
+        Fundo.setBounds(0, 0, 560, 456);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -112,6 +120,10 @@ public class Reservas extends javax.swing.JFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void bt_okActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_okActionPerformed
+        dispose();
+    }//GEN-LAST:event_bt_okActionPerformed
 
     /**
      * @param args the command line arguments
@@ -149,14 +161,16 @@ public class Reservas extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JLabel Fundo;
+    private javax.swing.JButton bt_ok;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     // End of variables declaration//GEN-END:variables
 }
