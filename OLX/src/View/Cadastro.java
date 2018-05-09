@@ -40,8 +40,8 @@ public class Cadastro extends javax.swing.JFrame {
         jtfTelefone = new javax.swing.JFormattedTextField();
         jtf_Email = new javax.swing.JTextField();
         jtf_Usuario = new javax.swing.JTextField();
-        jtf_Senha = new javax.swing.JTextField();
         jtf_Bairro = new javax.swing.JTextField();
+        jtf_Senha = new javax.swing.JPasswordField();
         jLabelNomeCompleto = new javax.swing.JLabel();
         jLabelCidade = new javax.swing.JLabel();
         jLabelBairro = new javax.swing.JLabel();
@@ -97,13 +97,13 @@ public class Cadastro extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jtf_Nome);
-        jtf_Nome.setBounds(110, 230, 460, 20);
+        jtf_Nome.setBounds(110, 225, 455, 30);
 
         jtf_Cidade.setBackground(new java.awt.Color(242, 242, 242));
         jtf_Cidade.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jtf_Cidade.setBorder(null);
         getContentPane().add(jtf_Cidade);
-        jtf_Cidade.setBounds(110, 370, 310, 20);
+        jtf_Cidade.setBounds(110, 362, 310, 30);
 
         jtfTelefone.setBackground(new java.awt.Color(242, 242, 242));
         jtfTelefone.setBorder(null);
@@ -112,38 +112,39 @@ public class Cadastro extends javax.swing.JFrame {
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
-        jtfTelefone.setFont(new java.awt.Font("Cooper Black", 0, 14)); // NOI18N
+        jtfTelefone.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         getContentPane().add(jtfTelefone);
-        jtfTelefone.setBounds(650, 296, 250, 20);
+        jtfTelefone.setBounds(650, 295, 250, 30);
 
         jtf_Email.setBackground(new java.awt.Color(242, 242, 242));
         jtf_Email.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jtf_Email.setBorder(null);
         getContentPane().add(jtf_Email);
-        jtf_Email.setBounds(650, 230, 320, 20);
+        jtf_Email.setBounds(650, 225, 316, 30);
 
         jtf_Usuario.setBackground(new java.awt.Color(242, 242, 242));
         jtf_Usuario.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jtf_Usuario.setBorder(null);
         getContentPane().add(jtf_Usuario);
-        jtf_Usuario.setBounds(650, 370, 200, 20);
-
-        jtf_Senha.setBackground(new java.awt.Color(242, 242, 242));
-        jtf_Senha.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jtf_Senha.setBorder(null);
-        getContentPane().add(jtf_Senha);
-        jtf_Senha.setBounds(650, 430, 200, 20);
+        jtf_Usuario.setBounds(650, 362, 200, 30);
 
         jtf_Bairro.setBackground(new java.awt.Color(242, 242, 242));
         jtf_Bairro.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jtf_Bairro.setBorder(null);
         getContentPane().add(jtf_Bairro);
-        jtf_Bairro.setBounds(110, 300, 310, 20);
+        jtf_Bairro.setBounds(110, 295, 310, 30);
+
+        jtf_Senha.setBackground(new java.awt.Color(242, 242, 242));
+        jtf_Senha.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jtf_Senha.setBorder(null);
+        jtf_Senha.setDoubleBuffered(true);
+        getContentPane().add(jtf_Senha);
+        jtf_Senha.setBounds(650, 425, 200, 30);
 
         jLabelNomeCompleto.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabelNomeCompleto.setText("Nome:");
         getContentPane().add(jLabelNomeCompleto);
-        jLabelNomeCompleto.setBounds(100, 200, 60, 30);
+        jLabelNomeCompleto.setBounds(100, 200, 60, 20);
 
         jLabelCidade.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabelCidade.setText("Cidade:");
@@ -158,7 +159,7 @@ public class Cadastro extends javax.swing.JFrame {
         jLabelEstado.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabelEstado.setText("Estado:");
         getContentPane().add(jLabelEstado);
-        jLabelEstado.setBounds(100, 410, 70, 17);
+        jLabelEstado.setBounds(100, 410, 60, 17);
 
         jLabelTelefone.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabelTelefone.setText("Telefone:");
@@ -184,6 +185,7 @@ public class Cadastro extends javax.swing.JFrame {
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Botao fechar.png"))); // NOI18N
         jButton1.setBorderPainted(false);
         jButton1.setContentAreaFilled(false);
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -196,6 +198,7 @@ public class Cadastro extends javax.swing.JFrame {
         btn_Cadastrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Save icon.png"))); // NOI18N
         btn_Cadastrar.setBorder(null);
         btn_Cadastrar.setContentAreaFilled(false);
+        btn_Cadastrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btn_Cadastrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_CadastrarActionPerformed(evt);
@@ -208,13 +211,14 @@ public class Cadastro extends javax.swing.JFrame {
         jtf_Cancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/cancel icon.png"))); // NOI18N
         jtf_Cancelar.setBorderPainted(false);
         jtf_Cancelar.setContentAreaFilled(false);
+        jtf_Cancelar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jtf_Cancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jtf_CancelarActionPerformed(evt);
             }
         });
         getContentPane().add(jtf_Cancelar);
-        jtf_Cancelar.setBounds(510, 530, 97, 70);
+        jtf_Cancelar.setBounds(510, 530, 70, 70);
 
         jLabelNome.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Campo Nome.png"))); // NOI18N
         getContentPane().add(jLabelNome);
@@ -226,7 +230,7 @@ public class Cadastro extends javax.swing.JFrame {
 
         JlTelefone.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Campo telefone.png"))); // NOI18N
         getContentPane().add(JlTelefone);
-        JlTelefone.setBounds(640, 290, 350, 34);
+        JlTelefone.setBounds(640, 290, 350, 40);
 
         JlUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Campo user.png"))); // NOI18N
         getContentPane().add(JlUsuario);
@@ -234,11 +238,11 @@ public class Cadastro extends javax.swing.JFrame {
 
         JlEmail.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Campo Email.png"))); // NOI18N
         getContentPane().add(JlEmail);
-        JlEmail.setBounds(640, 220, 350, 34);
+        JlEmail.setBounds(640, 220, 350, 40);
 
         JlSenha.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Campo Senha2.png"))); // NOI18N
         getContentPane().add(JlSenha);
-        JlSenha.setBounds(640, 420, 230, 34);
+        JlSenha.setBounds(640, 420, 230, 40);
 
         jLabel_logo_OLX.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Logo novo.png"))); // NOI18N
         getContentPane().add(jLabel_logo_OLX);
@@ -315,7 +319,7 @@ public class Cadastro extends javax.swing.JFrame {
         jc_estado.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jc_estado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA", "PB", "PR", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SP", "SE", "TO" }));
         getContentPane().add(jc_estado);
-        jc_estado.setBounds(180, 410, 50, 23);
+        jc_estado.setBounds(170, 410, 50, 23);
 
         Jlbackground.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         Jlbackground.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/background.jpeg"))); // NOI18N
@@ -439,7 +443,7 @@ public class Cadastro extends javax.swing.JFrame {
     private javax.swing.JTextField jtf_Cidade;
     private javax.swing.JTextField jtf_Email;
     private javax.swing.JTextField jtf_Nome;
-    private javax.swing.JTextField jtf_Senha;
+    private javax.swing.JPasswordField jtf_Senha;
     private javax.swing.JTextField jtf_Usuario;
     // End of variables declaration//GEN-END:variables
 }

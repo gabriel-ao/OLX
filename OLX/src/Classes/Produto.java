@@ -18,7 +18,7 @@ public class Produto extends Usuario{
  private String categoria;
  private String descricao;
  private double preco;
- private byte img;
+ private byte[] img;
  private String status;
  private Date dt_anuncio;
 
@@ -70,11 +70,11 @@ public class Produto extends Usuario{
         this.preco = preco;
     }
 
-    public byte getImg() {
+    public byte[] getImg() {
         return img;
     }
 
-    public void setImg(byte img) {
+    public void setImg(byte[] img) {
         this.img = img;
     }
 

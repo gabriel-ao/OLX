@@ -29,7 +29,7 @@ public class ProdutoBD {
         ps.setDouble(3, produto.getPreco());
         ps.setString(4, produto.getDescricao());
         ps.setString(5, produto.getCategoria());
-        ps.setByte(6, produto.getImg());
+        ps.setBytes(6, produto.getImg());
         ps.setString(7, produto.getStatus());
         
         ps.execute();
@@ -49,7 +49,7 @@ public class ProdutoBD {
         ps.setDouble(3, produto.getPreco());
         ps.setString(4, produto.getDescricao());
         ps.setString(5, produto.getCategoria());
-        ps.setByte(6, produto.getImg());
+        ps.setBytes(6, produto.getImg());
         ps.setString(7, produto.getStatus());
         ps.setInt(8, produto.getId_produto());
         
@@ -89,7 +89,7 @@ public class ProdutoBD {
             produto.setPreco(rs.getDouble("preco"));
             produto.setDescricao(rs.getString("descricao"));
             produto.setCategoria(rs.getString("categoria"));
-            produto.setImg(rs.getByte("img"));
+            produto.setImg(rs.getBytes("img"));
             produto.setStatus(rs.getString("status"));
             produto.setDt_anuncio(rs.getDate("dt_anuncio"));
             
@@ -97,6 +97,37 @@ public class ProdutoBD {
         }
         con.close();
         
+        return listaProduto;
+    }
+    
+    public ArrayList<Produto> listarTodosProdutos() throws Exception {
+        Connection con;
+        Conexao c = new Conexao();
+        con = c.conectar();
+
+        String sql = "SELECT * FROM produto WHERE status = 'Disponivel'";
+        PreparedStatement ps = con.prepareStatement(sql);
+        ResultSet rs = ps.executeQuery();
+
+        ArrayList<Produto> listaProduto = new ArrayList<>();
+
+        while (rs.next()) {
+            Produto produto = new Produto();
+
+            produto.setId_produto(rs.getInt("id_produto"));
+            produto.setNome(rs.getString("nome"));
+            produto.setEstadoConserv(rs.getString("estadoConserv"));
+            produto.setPreco(rs.getDouble("preco"));
+            produto.setDescricao(rs.getString("descricao"));
+            produto.setCategoria(rs.getString("categoria"));
+            produto.setImg(rs.getBytes("img"));
+            produto.setStatus(rs.getString("status"));
+            produto.setDt_anuncio(rs.getDate("dt_anuncio"));
+
+            listaProduto.add(produto);
+        }
+        con.close();
+
         return listaProduto;
     }
 }
