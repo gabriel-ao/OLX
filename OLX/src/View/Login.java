@@ -19,7 +19,9 @@ import javax.swing.JOptionPane;
  * @author gabri
  */
 public class Login extends javax.swing.JFrame {
-    Usuario usuario = new Usuario ();
+
+    Usuario usuario = new Usuario();
+
     /**
      * Creates new form Login
      */
@@ -151,53 +153,51 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_jtfUsuarioActionPerformed
 
     private void btn_fecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_fecharActionPerformed
-        System.exit(0);      
+        System.exit(0);
     }//GEN-LAST:event_btn_fecharActionPerformed
 
     private void btn_LogarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_LogarActionPerformed
         try {
-                String user, senha;
+            String user, senha;
+
+            Connection con;
+            Conexao conecta = new Conexao();
+            con = conecta.conectar();
+            ResultSet rs;
+
+            user = jtfUsuario.getText();
+            senha = String.valueOf(jpfSenha.getPassword());
+
+            String sql = "SELECT * FROM usuario WHERE usuario = '" + user + "' AND  senha = '" + senha + "'";
+
+            PreparedStatement statement = con.prepareStatement(sql);
+
+            rs = statement.executeQuery();
+
+            if(rs.next()){
+                usuario.setId_usuario(rs.getInt("id_usuario"));
+                usuario.setBairro(rs.getString("bairro"));
+                usuario.setCidade(rs.getString("Cidade"));
+                usuario.setNome(rs.getString("Nome"));
+                usuario.setEmail(rs.getString("Email"));
+                usuario.setTelefone(rs.getString("Telefone"));
+                usuario.setUF(rs.getString("UF"));
+                usuario.setUsuario(rs.getString("Usuario"));
+                usuario.setSenha(rs.getString("Senha"));
                 
-                Connection con;
-                Conexao conecta = new Conexao();
-                con  = conecta.conectar();
-                ResultSet rs;
-                
-                user = jtfUsuario.getText();
-                senha  = String.valueOf(jpfSenha.getPassword());
-                
-                String sql = "SELECT * FROM usuario WHERE usuario = '"+user+"' AND  senha = '"+senha+"'" ;
-                
-                PreparedStatement statement = con.prepareStatement(sql);
-               
-                rs = statement.executeQuery();
-                
-                
-                    
-                    if(user.equals(rs.getString("usuario")) && senha.equals(rs.getString("senha"))){
-                        
-                      usuario.setBairro(rs.getString("bairro"));
-                      usuario.setCidade(rs.getString("Cidade"));
-                      usuario.setNome(rs.getString("Nome"));
-                      usuario.setEmail(rs.getString("Email"));
-                      usuario.setTelefone(rs.getString("Telefone"));
-                      usuario.setUF(rs.getString("UF"));
-                      usuario.setUsuario(rs.getString("Usuario"));
-                      usuario.setSenha(rs.getString("Senha"));
-                      Principal principal = new Principal();
-                      principal.setVisible(true);
-                      this.setVisible(false); 
-                    }
-                else{
-                    JOptionPane.showMessageDialog(null, "Usuário ou Senha inválidos");
-                }
-              } catch (Exception ex) {
+                Principal principal = new Principal(usuario);
+                principal.setVisible(true);
+                this.setVisible(false);
+            } else {
+                JOptionPane.showMessageDialog(null, "Usuário ou Senha inválidos!!");
+            }
+        } catch (Exception ex) {
             Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_btn_LogarActionPerformed
 
     private void btn_CadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_CadastrarActionPerformed
-        Cadastro cadastro = new Cadastro ();
+        Cadastro cadastro = new Cadastro();
         cadastro.setVisible(true);
         dispose();
     }//GEN-LAST:event_btn_CadastrarActionPerformed

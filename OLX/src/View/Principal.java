@@ -8,6 +8,7 @@ package View;
 import Classes.Produto;
 import Classes.Usuario;
 import ConexaoBD.ProdutoBD;
+import ConexaoBD.UsuarioBD;
 import UTIL.ManipularImagem;
 import java.awt.CardLayout;
 import java.awt.Dimension;
@@ -34,8 +35,15 @@ public class Principal extends javax.swing.JFrame {
     /**
      * Creates new form Inicial
      */
-    public Principal() {
+    
+    Usuario usuario = new Usuario();
+    UsuarioBD usuarioBD = new UsuarioBD ();
+    
+    public Principal(Usuario usuario1) {
+        this.usuario = usuario1;
+        
         initComponents();
+        
         this.setLocationRelativeTo(null);
         btn_buscar.setIcon(BuscarSelected);
         
@@ -56,8 +64,8 @@ public class Principal extends javax.swing.JFrame {
     List<Produto> listaProduto;
     
     public void preencherMenuAnuncios() throws Exception {
+        nomeUser.setText(usuario.getNome());
         //Criando List para armazenar todos os anuncios do Banco de Dados
-
         listaProduto = produtoBD.listarTodosProdutos();
         
         int j = 0;
@@ -206,7 +214,7 @@ public class Principal extends javax.swing.JFrame {
         btn_novo = new javax.swing.JButton();
         btn_inserirFoto = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        bj_Categoria = new javax.swing.JComboBox<>();
+        jcb_Categoria = new javax.swing.JComboBox<>();
         jLabel_Desapego = new javax.swing.JLabel();
         lblImagemProd = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -265,7 +273,7 @@ public class Principal extends javax.swing.JFrame {
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
-        jc_estado = new javax.swing.JComboBox<>();
+        jcb_estado = new javax.swing.JComboBox<>();
         jLabel32 = new javax.swing.JLabel();
         Jlbackground = new javax.swing.JLabel();
         MeusAnuncios = new javax.swing.JPanel();
@@ -315,6 +323,8 @@ public class Principal extends javax.swing.JFrame {
         bt_fechar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Botao fechar.png"))); // NOI18N
         bt_fechar.setBorderPainted(false);
         bt_fechar.setContentAreaFilled(false);
+        bt_fechar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        bt_fechar.setFocusPainted(false);
         bt_fechar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bt_fecharActionPerformed(evt);
@@ -577,11 +587,11 @@ public class Principal extends javax.swing.JFrame {
         Desapego.add(jLabel1);
         jLabel1.setBounds(560, 480, 70, 17);
 
-        bj_Categoria.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        bj_Categoria.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Automóvel", "Eletrônicos", "Imóvel", "Pet", "Vestimentas" }));
-        bj_Categoria.setNextFocusableComponent(btn_inserirFoto);
-        Desapego.add(bj_Categoria);
-        bj_Categoria.setBounds(560, 500, 210, 20);
+        jcb_Categoria.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jcb_Categoria.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Automóvel", "Eletrônicos", "Imóvel", "Pet", "Vestimentas" }));
+        jcb_Categoria.setNextFocusableComponent(btn_inserirFoto);
+        Desapego.add(jcb_Categoria);
+        jcb_Categoria.setBounds(560, 500, 210, 20);
 
         jLabel_Desapego.setFont(new java.awt.Font("Tahoma", 0, 50)); // NOI18N
         jLabel_Desapego.setForeground(new java.awt.Color(247, 130, 50));
@@ -924,15 +934,15 @@ public class Principal extends javax.swing.JFrame {
         MeuCadastro.add(jLabel17);
         jLabel17.setBounds(620, 270, 10, 10);
 
-        jc_estado.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jc_estado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA", "PB", "PR", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SP", "SE", "TO" }));
-        jc_estado.addActionListener(new java.awt.event.ActionListener() {
+        jcb_estado.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jcb_estado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA", "PB", "PR", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SP", "SE", "TO" }));
+        jcb_estado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jc_estadoActionPerformed(evt);
+                jcb_estadoActionPerformed(evt);
             }
         });
-        MeuCadastro.add(jc_estado);
-        jc_estado.setBounds(170, 350, 50, 23);
+        MeuCadastro.add(jcb_estado);
+        jcb_estado.setBounds(170, 350, 50, 23);
 
         jLabel32.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel32.setForeground(new java.awt.Color(247, 130, 50));
@@ -1179,12 +1189,12 @@ public class Principal extends javax.swing.JFrame {
             bt_meusPedidos.setIcon(MeusPedidos2);
             bt_meusAnuncios.setIcon(MeusAnuncios2);
             bt_sair.setIcon(Sair2);
-            
         }
+        
+        carregarDadosUser();
         
         CardLayout card = (CardLayout) Principal.getLayout();
         card.show(Principal, "MeuCadastro");
-
     }//GEN-LAST:event_bt_meuCadastroActionPerformed
 
     private void bt_fecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_fecharActionPerformed
@@ -1325,9 +1335,9 @@ public class Principal extends javax.swing.JFrame {
             produto.setPreco(Double.parseDouble(jtf_preco.getText()));
             produto.setEstadoConserv(estadoProd);
             produto.setImg(ManipularImagem.getImgBytes(imagemBuffer));
-            produto.setCategoria("Teste");
+            produto.setCategoria(jcb_Categoria.getSelectedItem().toString());
             produto.setStatus("Disponivel");
-            produto.setId_usuario(1);
+            produto.setId_usuario(usuario.getId_usuario());
             
             if (produto.getId_produto() == 0) {
                 try {
@@ -1387,9 +1397,9 @@ public class Principal extends javax.swing.JFrame {
 
     }//GEN-LAST:event_btn_ReservasActionPerformed
 
-    private void jc_estadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jc_estadoActionPerformed
+    private void jcb_estadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcb_estadoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jc_estadoActionPerformed
+    }//GEN-LAST:event_jcb_estadoActionPerformed
 
     private void btn_vendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_vendaActionPerformed
         Vendas vendas = new Vendas();
@@ -1437,6 +1447,18 @@ public class Principal extends javax.swing.JFrame {
             limparCamposDesapegar();
         }
     }//GEN-LAST:event_btn_cancelarActionPerformed
+
+public void carregarDadosUser(){
+        jtf_Nome.setText(usuario.getNome());
+         jtf_Bairro.setText(usuario.getBairro());
+          jtf_Cidade.setText(usuario.getCidade());
+          jtf_Email.setText(usuario.getEmail());
+          jtfTelefone.setText(usuario.getTelefone());
+          jcb_estado.setSelectedItem(usuario.getUF());
+          jtf_Usuario.setText(usuario.getUsuario());
+          jtf_Senha.setText(usuario.getSenha());
+          nomeUser.setText(usuario.getNome());   
+    }
     
     private void exibirAnuncio(java.awt.event.MouseEvent evt, javax.swing.JPanel panel) {
         int indexAnuncio = Integer.parseInt(panel.getName());
@@ -1466,46 +1488,7 @@ public class Principal extends javax.swing.JFrame {
         btn_save.setEnabled(modo);
         btn_cancelar.setEnabled(modo);
         
-    }
-    
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                Usuario usuario = new Usuario();
-                new Principal().setVisible(true);
-            }
-        });
-    }
+    }   
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel BarraTop;
@@ -1531,7 +1514,6 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel background;
     private javax.swing.JLabel background1;
     private javax.swing.JLabel background3;
-    private javax.swing.JComboBox<String> bj_Categoria;
     private javax.swing.JButton bt_Lupa;
     private javax.swing.JButton bt_comprar;
     private javax.swing.JButton bt_desapegar;
@@ -1617,7 +1599,8 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextFieldBuscar;
-    private javax.swing.JComboBox<String> jc_estado;
+    private javax.swing.JComboBox<String> jcb_Categoria;
+    private javax.swing.JComboBox<String> jcb_estado;
     private javax.swing.JLabel jl_MeuCadastro;
     private javax.swing.JLabel jl_condicaoProduto;
     private javax.swing.JLabel jl_valor;

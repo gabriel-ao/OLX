@@ -14,8 +14,10 @@ import javax.swing.JOptionPane;
  * @author gabri
  */
 public class Cadastro extends javax.swing.JFrame {
-       Usuario usuario = new Usuario ();
-    UsuarioBD usuarioBD = new UsuarioBD ();
+
+    Usuario usuario = new Usuario();
+    UsuarioBD usuarioBD = new UsuarioBD();
+
     /**
      * Creates new form Cadastro
      */
@@ -50,7 +52,7 @@ public class Cadastro extends javax.swing.JFrame {
         jLabelEmail = new javax.swing.JLabel();
         jLabelUsuario = new javax.swing.JLabel();
         jLabelSenha = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        btn_Fechar = new javax.swing.JButton();
         btn_Cadastrar = new javax.swing.JButton();
         jtf_Cancelar = new javax.swing.JButton();
         jLabelNome = new javax.swing.JLabel();
@@ -72,7 +74,7 @@ public class Cadastro extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        jc_estado = new javax.swing.JComboBox<>();
+        jcb_estado = new javax.swing.JComboBox<>();
         Jlbackground = new javax.swing.JLabel();
 
         jTextField11.setText("jTextField11");
@@ -114,7 +116,7 @@ public class Cadastro extends javax.swing.JFrame {
         }
         jtfTelefone.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         getContentPane().add(jtfTelefone);
-        jtfTelefone.setBounds(650, 295, 250, 30);
+        jtfTelefone.setBounds(650, 295, 310, 30);
 
         jtf_Email.setBackground(new java.awt.Color(242, 242, 242));
         jtf_Email.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -182,17 +184,17 @@ public class Cadastro extends javax.swing.JFrame {
         getContentPane().add(jLabelSenha);
         jLabelSenha.setBounds(640, 400, 43, 17);
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Botao fechar.png"))); // NOI18N
-        jButton1.setBorderPainted(false);
-        jButton1.setContentAreaFilled(false);
-        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btn_Fechar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Botao fechar.png"))); // NOI18N
+        btn_Fechar.setBorderPainted(false);
+        btn_Fechar.setContentAreaFilled(false);
+        btn_Fechar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btn_Fechar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btn_FecharActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1);
-        jButton1.setBounds(970, 0, 40, 50);
+        getContentPane().add(btn_Fechar);
+        btn_Fechar.setBounds(970, 0, 40, 50);
 
         btn_Cadastrar.setBackground(new java.awt.Color(242, 242, 242));
         btn_Cadastrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Save icon.png"))); // NOI18N
@@ -314,12 +316,12 @@ public class Cadastro extends javax.swing.JFrame {
         jLabel10.setForeground(new java.awt.Color(247, 130, 50));
         jLabel10.setText("CADASTRAR");
         getContentPane().add(jLabel10);
-        jLabel10.setBounds(370, 80, 290, 61);
+        jLabel10.setBounds(400, 70, 290, 61);
 
-        jc_estado.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jc_estado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA", "PB", "PR", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SP", "SE", "TO" }));
-        getContentPane().add(jc_estado);
-        jc_estado.setBounds(170, 410, 50, 23);
+        jcb_estado.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jcb_estado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA", "PB", "PR", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SP", "SE", "TO" }));
+        getContentPane().add(jcb_estado);
+        jcb_estado.setBounds(170, 410, 50, 23);
 
         Jlbackground.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         Jlbackground.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/background.jpeg"))); // NOI18N
@@ -333,75 +335,48 @@ public class Cadastro extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jtf_NomeActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btn_FecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_FecharActionPerformed
         Login login = new Login();
         login.setVisible(true);
         dispose();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btn_FecharActionPerformed
 
     private void jtf_CancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtf_CancelarActionPerformed
-        Login login = new Login();
-        login.setVisible(true);
-        dispose();
+        int resposta = JOptionPane.showConfirmDialog(null, "Deseja Realmente cancelar o cadastro? ", "***Cancelar Cadastro***", JOptionPane.YES_NO_OPTION);
+
+        if (resposta == 0) {
+            Login login = new Login();
+            login.setVisible(true);
+            dispose();
+        }
     }//GEN-LAST:event_jtf_CancelarActionPerformed
 
     private void btn_CadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_CadastrarActionPerformed
-          usuario.setBairro(jtf_Bairro.getText());
-          usuario.setCidade(jtf_Cidade.getText());
-          usuario.setNome(jtf_Nome.getText());
-          usuario.setEmail(jtf_Email.getText());
-          usuario.setTelefone(jtfTelefone.getText());
-          // ALTERAR PARA COMBOBOX usuario.setUF(jc_estado.getText());
-          usuario.setUsuario(jtf_Usuario.getText());
-          usuario.setSenha(jtf_Senha.getText());
-                   
-          try {
-                            usuarioBD.inserir(usuario);
-                        } catch (Exception ex) {
-                            JOptionPane.showMessageDialog(this, "Erro ao inserir Usuário.\n" + ex.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
-                        }
-            JOptionPane.showMessageDialog(null, "Usuário Cadastrado com Sucesso");
-        
-        Login login = new Login();
-        login.setVisible(true);
-        dispose();
+        if (jtf_Bairro.getText().isEmpty() || jtf_Cidade.getText().isEmpty() || jtf_Nome.getText().isEmpty() || (jtf_Email.getText().isEmpty())
+                || (jtfTelefone.getText().isEmpty() || jtf_Usuario.getText().isEmpty() || jtf_Senha.getText().isEmpty())) {
+            JOptionPane.showMessageDialog(null, "PREENCHA TODOS OS CAMPOS!!");
+        } else {
+            usuario.setBairro(jtf_Bairro.getText());
+            usuario.setCidade(jtf_Cidade.getText());
+            usuario.setNome(jtf_Nome.getText());
+            usuario.setEmail(jtf_Email.getText());
+            usuario.setTelefone(jtfTelefone.getText());
+            usuario.setUF(jcb_estado.getSelectedItem().toString());
+            usuario.setUsuario(jtf_Usuario.getText());
+            usuario.setSenha(jtf_Senha.getText());
 
-    }//GEN-LAST:event_btn_CadastrarActionPerformed
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
+            try {
+                usuarioBD.inserir(usuario);
+                JOptionPane.showMessageDialog(null, "Usuário Cadastrado com Sucesso");
+            } catch (Exception ex) {
+                JOptionPane.showMessageDialog(this, "Erro ao inserir Usuário.\n" + ex.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
             }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Cadastro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Cadastro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Cadastro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Cadastro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+
+            Login login = new Login();
+            login.setVisible(true);
+            dispose();
         }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Cadastro().setVisible(true);
-            }
-        });
-    }
+    }//GEN-LAST:event_btn_CadastrarActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel JlCidade;
@@ -412,7 +387,7 @@ public class Cadastro extends javax.swing.JFrame {
     private javax.swing.JLabel JlUsuario;
     private javax.swing.JLabel Jlbackground;
     private javax.swing.JButton btn_Cadastrar;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btn_Fechar;
     private javax.swing.JLabel jLBairro;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -436,7 +411,7 @@ public class Cadastro extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel_CampoObrigatorio;
     private javax.swing.JLabel jLabel_logo_OLX;
     private javax.swing.JTextField jTextField11;
-    private javax.swing.JComboBox<String> jc_estado;
+    private javax.swing.JComboBox<String> jcb_estado;
     private javax.swing.JFormattedTextField jtfTelefone;
     private javax.swing.JTextField jtf_Bairro;
     private javax.swing.JButton jtf_Cancelar;
