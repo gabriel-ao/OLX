@@ -46,6 +46,7 @@ public class Principal extends javax.swing.JFrame {
 
     List<Produto> listaProduto;
     List<Produto> listaMeusProduto;
+    List<Produto> listaMeusPedidos;
 
     int indexAnuncio;
     int indexMeuAnuncio;
@@ -103,7 +104,7 @@ public class Principal extends javax.swing.JFrame {
             anuncio.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
             anuncio.addMouseListener(new java.awt.event.MouseAdapter() {
                 public void mouseClicked(java.awt.event.MouseEvent evt) {
-                    exibirAnuncio(evt, anuncio);
+                    exibirAnuncio(evt, anuncio, listaProduto);
                 }
             });
             anuncio.setLayout(null);
@@ -168,9 +169,8 @@ public class Principal extends javax.swing.JFrame {
 
     public void preencherMeusAnuncios() throws Exception {
         //Criando List para armazenar todos os anuncios do Banco de Dados
-        listaMeusProduto = produtoBD.listarMeusProdutos(usuario);
-
-        JOptionPane.showMessageDialog(null, listaMeusProduto.size());
+        listaMeusProduto = produtoBD.listarMeusProdutos(usuario, 2);
+        
         int j = 0;
 
         for (int i = 0; i < listaMeusProduto.size(); i++) {
@@ -275,6 +275,99 @@ public class Principal extends javax.swing.JFrame {
 
             //adicionando o anuncio no painel 
             PainelMeusAnuncios.add(anuncio);
+
+            if (((3 * j) + 1) == (i + 1)) {
+                anuncio.setBounds(10, 10 + (140 * j), 318, 110);
+            } else if (((3 * j) + 2) == (i + 1)) {
+                anuncio.setBounds(335, 10 + (140 * j), 318, 110);
+            } else if (((3 * j) + 3) == (i + 1)) {
+                anuncio.setBounds(660, 10 + (140 * j), 318, 110);
+                j++;
+            }
+        }
+        PainelMeusAnuncios.setPreferredSize(new Dimension(940, 180 * j));
+    }
+
+    public void preencherMeusPedidos() throws Exception {
+        //Criando List para armazenar todos os anuncios do Banco de Dados
+        listaMeusPedidos = produtoBD.listarMeusProdutos(usuario,1);
+
+        int j = 0;
+
+        for (int i = 0; i < listaMeusPedidos.size(); i++) {
+            JPanel anuncio = new JPanel();
+
+            anuncio.setName("" + i);
+            anuncio.setBackground(new java.awt.Color(255, 255, 255));
+            anuncio.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+            anuncio.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+            anuncio.addMouseListener(new java.awt.event.MouseAdapter() {
+                public void mouseClicked(java.awt.event.MouseEvent evt) {
+                    exibirAnuncio(evt, anuncio, listaMeusPedidos);
+                }
+            });
+            anuncio.setLayout(null);
+
+            //Criando label que ficará a imagem do anuncio
+            JLabel lblImgAnuncio = new JLabel();
+            ManipularImagem.exibiImagemLabel(listaMeusPedidos.get(i).getImg(), lblImgAnuncio);
+            lblImgAnuncio.setBackground(new java.awt.Color(255, 255, 255));
+            lblImgAnuncio.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+            lblImgAnuncio.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+            anuncio.add(lblImgAnuncio);
+            lblImgAnuncio.setBounds(0, 0, 120, 110);
+
+            //Criando label do preço do anuncio 
+            JLabel lblPreco = new JLabel();
+
+            //Coversão de Double para formato de dinheiro real
+            double preco = listaMeusPedidos.get(i).getPreco();
+            Locale ptBr = new Locale("pt", "BR");
+            String valorString = NumberFormat.getCurrencyInstance(ptBr).format(preco);
+
+            lblPreco.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+            lblPreco.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+            lblPreco.setText(valorString);
+            anuncio.add(lblPreco);
+            lblPreco.setBounds(130, 25, 150, 20);
+
+            //criando titulo do anuncio
+            JLabel lblTitulo = new JLabel();
+            lblTitulo.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+            lblTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+            lblTitulo.setText(listaMeusPedidos.get(i).getNome());
+            anuncio.add(lblTitulo);
+            lblTitulo.setBounds(120, 0, 170, 20);
+
+            Date data = listaMeusPedidos.get(i).getDt_anuncio();
+            Locale local = new Locale("pt", "BR");
+            DateFormat formato = new SimpleDateFormat("dd 'de' MMMM 'de' yyyy", local);
+            String dataFormatada = formato.format(data);
+
+            JLabel lblData = new JLabel();
+            lblData.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+            lblData.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+            lblData.setText(dataFormatada);
+            anuncio.add(lblData);
+            lblData.setBounds(120, 55, 170, 20);
+
+            JButton btn_cancelar = new JButton();
+            btn_cancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ExibirAnuncio/Reservas.png"))); // NOI18N
+            btn_cancelar.setBorder(null);
+            btn_cancelar.setBorderPainted(false);
+            btn_cancelar.setContentAreaFilled(false);
+            btn_cancelar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+            btn_cancelar.setFocusPainted(false);
+            btn_cancelar.addActionListener(new java.awt.event.ActionListener() {
+                public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    btn_reservasActionPerformed(evt);
+                }
+            });
+            anuncio.add(btn_cancelar);
+            btn_cancelar.setBounds(123, 75, 95, 30);
+
+            //adicionando o anuncio no painel 
+            PainelMeusPedidos.add(anuncio);
 
             if (((3 * j) + 1) == (i + 1)) {
                 anuncio.setBounds(10, 10 + (140 * j), 318, 110);
@@ -408,14 +501,9 @@ public class Principal extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jTextField3 = new javax.swing.JTextField();
         jLabel_Pesquisa1 = new javax.swing.JLabel();
-        btn_Reservas1 = new javax.swing.JButton();
         btn_venda1 = new javax.swing.JButton();
-        jLabel28 = new javax.swing.JLabel();
-        jLabel29 = new javax.swing.JLabel();
-        jLabel30 = new javax.swing.JLabel();
-        jLabel31 = new javax.swing.JLabel();
-        fundoExibiranuncio1 = new javax.swing.JLabel();
         btn_busca2 = new javax.swing.JButton();
+        PainelMeusPedidos = new javax.swing.JPanel();
         background3 = new javax.swing.JLabel();
         ExibirAnuncio = new javax.swing.JPanel();
         lblEndereco1 = new javax.swing.JLabel();
@@ -1199,17 +1287,6 @@ public class Principal extends javax.swing.JFrame {
         MeusPedidos.add(jLabel_Pesquisa1);
         jLabel_Pesquisa1.setBounds(30, 110, 480, 34);
 
-        btn_Reservas1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/CancelarReserva.png"))); // NOI18N
-        btn_Reservas1.setBorderPainted(false);
-        btn_Reservas1.setContentAreaFilled(false);
-        btn_Reservas1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_Reservas1ActionPerformed(evt);
-            }
-        });
-        MeusPedidos.add(btn_Reservas1);
-        btn_Reservas1.setBounds(200, 280, 140, 30);
-
         btn_venda1.setBorderPainted(false);
         btn_venda1.setContentAreaFilled(false);
         btn_venda1.addActionListener(new java.awt.event.ActionListener() {
@@ -1220,33 +1297,17 @@ public class Principal extends javax.swing.JFrame {
         MeusPedidos.add(btn_venda1);
         btn_venda1.setBounds(350, 280, 79, 30);
 
-        jLabel28.setText("Data do anuncio aqui");
-        MeusPedidos.add(jLabel28);
-        jLabel28.setBounds(300, 260, 130, 20);
-
-        jLabel29.setText("status da reserva/aguardar confirmacao de venda");
-        MeusPedidos.add(jLabel29);
-        jLabel29.setBounds(210, 220, 300, 14);
-
-        jLabel30.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel30.setText("Preço");
-        MeusPedidos.add(jLabel30);
-        jLabel30.setBounds(210, 240, 120, 22);
-
-        jLabel31.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel31.setText("Titulo aqui");
-        MeusPedidos.add(jLabel31);
-        jLabel31.setBounds(210, 190, 120, 22);
-
-        fundoExibiranuncio1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fundo meus anuncios.png"))); // NOI18N
-        MeusPedidos.add(fundoExibiranuncio1);
-        fundoExibiranuncio1.setBounds(30, 190, 402, 125);
-
         btn_busca2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Buscar/botao lupa.png"))); // NOI18N
         btn_busca2.setBorderPainted(false);
         btn_busca2.setContentAreaFilled(false);
         MeusPedidos.add(btn_busca2);
         btn_busca2.setBounds(510, 107, 50, 40);
+
+        PainelMeusPedidos.setBackground(new java.awt.Color(223, 223, 223));
+        PainelMeusPedidos.setPreferredSize(new java.awt.Dimension(940, 1000));
+        PainelMeusPedidos.setLayout(null);
+        MeusPedidos.add(PainelMeusPedidos);
+        PainelMeusPedidos.setBounds(20, 160, 990, 500);
 
         background3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Íco-Imovel copiar 6.png"))); // NOI18N
         MeusPedidos.add(background3);
@@ -1445,6 +1506,8 @@ public class Principal extends javax.swing.JFrame {
         }
 
         try {
+            PainelAnuncios.removeAll();
+            PainelAnuncios.repaint();
             preencherMenuAnuncios(1);
         } catch (Exception ex) {
             Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
@@ -1461,6 +1524,12 @@ public class Principal extends javax.swing.JFrame {
             btn_meusPedidos.setIcon(MeusPedidosSelected);
             btn_meusAnuncios.setIcon(MeusAnuncios2);
             btn_sair.setIcon(Sair2);
+        }
+        
+        try {
+            preencherMeusPedidos();
+        } catch (Exception ex) {
+            Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
         }
 
         CardLayout card = (CardLayout) Principal.getLayout();
@@ -1546,10 +1615,6 @@ public class Principal extends javax.swing.JFrame {
     private void jcb_estadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcb_estadoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jcb_estadoActionPerformed
-
-    private void btn_Reservas1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Reservas1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btn_Reservas1ActionPerformed
 
     private void btn_venda1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_venda1ActionPerformed
         // TODO add your handling code here:
@@ -1637,14 +1702,14 @@ public class Principal extends javax.swing.JFrame {
             int resposta = JOptionPane.showConfirmDialog(null, "Deseja realmente RESERVAR esse Produto? ", "**Reservar Produto**", JOptionPane.YES_NO_OPTION);
 
             if (resposta == 0) {
-                Acao acao = new Acao();
+                Acao reserva = new Acao();
                 AcaoBD acaoBD = new AcaoBD();
 
-                acao.setId_produto(produto.getId_produto());
-                acao.setId_usuario(produto.getId_usuario());
-                acao.setTipo("Reserva");
-                acao.setStatus("Aguardando Anunciante aceitar");
-                acaoBD.inserir(acao);
+                reserva.setId_produto(produto.getId_produto());
+                reserva.setId_usuario(produto.getId_usuario());
+                reserva.setTipo("Reserva");
+                reserva.setStatus("Aguardando resposta anunciante");
+                acaoBD.inserir(reserva);
                 JOptionPane.showMessageDialog(null, "Reserva solicitada com sucesso!! \nAguarde anuncioante aceitar");
             }
         } catch (Exception ex) {
@@ -1690,9 +1755,9 @@ public class Principal extends javax.swing.JFrame {
         card.show(Principal, "Desapegar");
     }
 
-    private void exibirAnuncio(java.awt.event.MouseEvent evt, javax.swing.JPanel panel) {
+    private void exibirAnuncio(java.awt.event.MouseEvent evt, javax.swing.JPanel panel, List<Produto> lista) {
         indexAnuncio = Integer.parseInt(panel.getName());
-        produto = listaProduto.get(indexAnuncio);
+        produto = lista.get(indexAnuncio);
 
         if (produto.getId_usuario() == usuario.getId_usuario()) {
             carregarDadosAnuncio();
@@ -1787,7 +1852,6 @@ public class Principal extends javax.swing.JFrame {
                 break;
         }
     }
-
 // <editor-fold defaultstate="collapsed" desc="Elementos">                          
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel BarraTop;
@@ -1810,6 +1874,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JPanel MeusPedidos;
     private javax.swing.JPanel PainelAnuncios;
     private javax.swing.JPanel PainelMeusAnuncios;
+    private javax.swing.JPanel PainelMeusPedidos;
     private javax.swing.JPanel Principal;
     private javax.swing.JLabel background;
     private javax.swing.JLabel background1;
@@ -1819,7 +1884,6 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JButton bt_fechar;
     private javax.swing.JButton bt_reservar;
     private javax.swing.JButton btn_Alterar;
-    private javax.swing.JButton btn_Reservas1;
     private javax.swing.JButton btn_SalvarMC;
     private javax.swing.JButton btn_busca;
     private javax.swing.JButton btn_busca2;
@@ -1838,7 +1902,6 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JButton btn_sair;
     private javax.swing.JButton btn_save;
     private javax.swing.JButton btn_venda1;
-    private javax.swing.JLabel fundoExibiranuncio1;
     private javax.swing.ButtonGroup groupEstadoProd;
     private javax.swing.JComboBox<String> jComboBoxCategoria;
     private javax.swing.JComboBox<String> jComboBoxRegiao;
@@ -1858,11 +1921,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel28;
-    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel30;
-    private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel6;

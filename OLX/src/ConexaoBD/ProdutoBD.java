@@ -93,15 +93,26 @@ public class ProdutoBD {
         con.close();
     }
 
-    public ArrayList<Produto> listarMeusProdutos(Usuario usuario) throws Exception {
+    public ArrayList<Produto> listarMeusProdutos(Usuario usuario,int opcao) throws Exception {
+        String sql = "";
+        switch (opcao){
+            case 1:
+                sql = "select prod.*, usuario.*, acao.status, acao.tipo from Acao as acao\n"
+                + "inner join usuario as usuario  on (acao.id_usuario = usuario.id_usuario)\n"
+                + "inner join Produto as prod on (acao.Id_produto = prod.id_produto)  "
+                + "where usuario.id_usuario ="+ usuario.getId_usuario() + " and acao.tipo = 'Reserva' or acao.tipo = 'Compra' order by prod.dt_anuncio desc;";
+               break;
+            case 2: 
+                sql = "select prod.*, usuario.*, acao.status, acao.tipo from Acao as acao\n"
+                + "inner join usuario as usuario  on (acao.id_usuario = usuario.id_usuario)\n"
+                + "inner join Produto as prod on (acao.Id_produto = prod.id_produto)  "
+                + "where acao.tipo = 'Venda' and usuario.id_usuario =" + usuario.getId_usuario() + " order by prod.dt_anuncio desc";
+        }
+        
         Connection con;
         Conexao c = new Conexao();
         con = c.conectar();
 
-        String sql = "select prod.*, usuario.*, acao.status, acao.tipo from Acao as acao\n"
-                + "inner join usuario as usuario  on (acao.id_usuario = usuario.id_usuario)\n"
-                + "inner join Produto as prod on (acao.Id_produto = prod.id_produto)  "
-                + "where acao.tipo = 'Venda' and usuario.id_usuario =" + usuario.getId_usuario() + " order by prod.dt_anuncio desc";
         PreparedStatement ps = con.prepareStatement(sql);
 
         ResultSet rs = ps.executeQuery();
@@ -120,6 +131,9 @@ public class ProdutoBD {
             produto.setImg(rs.getBytes("img"));
             produto.setStatus(rs.getString("status"));
             produto.setDt_anuncio(rs.getDate("dt_anuncio"));
+            produto.setBairro(rs.getString("bairro"));
+            produto.setCidade(rs.getString("cidade"));
+            produto.setUF(rs.getString("uf"));
 
             listaProduto.add(produto);
         }
@@ -134,7 +148,8 @@ public class ProdutoBD {
             case 1:
                 sql = "select prod.*, usuario.*, acao.status from Acao as acao\n"
                 + "inner join usuario as usuario  on (acao.id_usuario = usuario.id_usuario)\n"
-                + "inner join Produto as prod on (acao.Id_produto = prod.id_produto) order by prod.dt_anuncio desc\n";
+                + "inner join Produto as prod on (acao.Id_produto = prod.id_produto) "
+                + "where prod.status = 'Disponivel' and acao.tipo= 'Venda' order by prod.dt_anuncio desc\n";
                break;
             case 2: 
                 sql = "select prod.*, usuario.*, acao.status, acao.tipo from Acao as acao\n"

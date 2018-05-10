@@ -49,15 +49,25 @@ create table acao (
 
 select * from  usuario;
 select * from acao;
-
+select * from produto;
 
 select prod.*, usuario.*, acao.status, acao.tipo from Acao as acao
 inner join usuario as usuario  on (acao.id_usuario = usuario.id_usuario)
 inner join Produto as prod on (acao.Id_produto = prod.id_produto)  
-where acao.tipo = 'Venda' and usuario.id_usuario = 2 order by prod.dt_anuncio desc;
+where acao.tipo = 'Venda' and usuario.id_usuario = 3 order by prod.dt_anuncio desc;
 
 select prod.*, usuario.*, acao.status, acao.tipo from Acao as acao
 inner join usuario as usuario  on (acao.id_usuario = usuario.id_usuario)
 inner join Produto as prod on (acao.Id_produto = prod.id_produto)  
 where prod.status = 'Disponivel' order by prod.dt_anuncio desc;
+
+select prod.*, usuario.*, acao.status, acao.tipo from Acao as acao
+inner join usuario as usuario  on (acao.id_usuario = usuario.id_usuario)
+inner join Produto as prod on (acao.Id_produto = prod.id_produto)  
+where prod.nome LIKE '%te%' and prod.status = 'Disponivel' order by prod.dt_anuncio desc;
+
+select prod.*, usuario.*, acao.status, acao.tipo from Acao as acao
+inner join usuario as usuario  on (acao.id_usuario = usuario.id_usuario)
+inner join Produto as prod on (acao.Id_produto = prod.id_produto)  
+where usuario.id_usuario = 2 and acao.tipo = 'Reserva' or acao.tipo = 'Compra' order by prod.dt_anuncio desc;
 
