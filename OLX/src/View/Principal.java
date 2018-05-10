@@ -1456,6 +1456,7 @@ public class Principal extends javax.swing.JFrame {
             btn_meusAnuncios.setIcon(MeusAnuncios2);
             btn_sair.setIcon(Sair2);
         }
+        limparCamposDesapegar();
         manipularInterfaceDesapegar(1);
         CardLayout card = (CardLayout) Principal.getLayout();
         card.show(Principal, "Desapegar");
@@ -1656,7 +1657,7 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_cancelarActionPerformed
 
     private void btn_comprasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_comprasActionPerformed
-        Vendas vendas = new Vendas();
+        Vendas vendas = new Vendas(usuario);
         vendas.setVisible(true);
     }//GEN-LAST:event_btn_comprasActionPerformed
 
@@ -1729,27 +1730,27 @@ public class Principal extends javax.swing.JFrame {
         nomeUser.setText(usuario.getNome());
     }
 
-    public void carregarDadosAnuncio() {
-        jtf_titulo.setText(listaProduto.get(indexAnuncio).getNome());
-        jta_descricao.setText(listaProduto.get(indexAnuncio).getDescricao());
-        jtf_preco.setText(String.valueOf(listaProduto.get(indexAnuncio).getPreco()));
+    public void carregarDadosAnuncio(Produto produto) {
+        jtf_titulo.setText(produto.getNome());
+        jta_descricao.setText(produto.getDescricao());
+        jtf_preco.setText(String.valueOf(produto.getPreco()));
 
-        String estadoConserv = listaProduto.get(indexAnuncio).getEstadoConserv();
+        String estadoConserv = produto.getEstadoConserv();
         if (estadoConserv.equals("Novo")) {
             jrb_Novo.setSelected(true);
         }
         if (estadoConserv.equals("Usado")) {
             jrb_Usado.setSelected(true);
         }
-        jcb_Categoria.setSelectedItem(listaProduto.get(indexAnuncio).getCategoria());
-        ManipularImagem.exibiImagemLabel(listaProduto.get(indexAnuncio).getImg(), lblImagemProd);
+        jcb_Categoria.setSelectedItem(produto.getCategoria());
+        ManipularImagem.exibiImagemLabel(produto.getImg(), lblImagemProd);
 
     }
 
     private void exibirMeuAnuncio(java.awt.event.MouseEvent evt, javax.swing.JPanel panel) {
         indexMeuAnuncio = Integer.parseInt(panel.getName());
         produto = listaMeusProduto.get(indexMeuAnuncio);
-        carregarDadosAnuncio();
+        carregarDadosAnuncio(produto);
         manipularInterfaceDesapegar(3);
         CardLayout card = (CardLayout) Principal.getLayout();
         card.show(Principal, "Desapegar");
@@ -1760,7 +1761,7 @@ public class Principal extends javax.swing.JFrame {
         produto = lista.get(indexAnuncio);
 
         if (produto.getId_usuario() == usuario.getId_usuario()) {
-            carregarDadosAnuncio();
+            carregarDadosAnuncio(produto);
             manipularInterfaceDesapegar(3);
             CardLayout card = (CardLayout) Principal.getLayout();
             card.show(Principal, "Desapegar");

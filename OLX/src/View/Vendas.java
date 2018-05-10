@@ -5,16 +5,31 @@
  */
 package View;
 
+import Classes.Acao;
+import Classes.Produto;
+import Classes.Usuario;
+import ConexaoBD.ProdutoBD;
+import TableModel.TableModel;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Augusto Kalel
  */
 public class Vendas extends javax.swing.JFrame {
 
+    TableModel tmUsuario = new TableModel();
+    ProdutoBD produtobd = new ProdutoBD ();           
+    Usuario usuario = new Usuario();
+            
+            
     /**
      * Creates new form Reservas
      */
-    public Vendas() {
+    public Vendas(Usuario usuario) {
+        this.usuario = usuario;
+//        jtCompradores.setModel(tmUsuario);
+carregarTableCli();
         initComponents();
         this.setLocationRelativeTo(null);
     }
@@ -28,25 +43,100 @@ public class Vendas extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton3 = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        btnVender = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        jLabel1 = new javax.swing.JLabel();
+        jtCompradores = new javax.swing.JTable();
+        jButton3 = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(255, 153, 255));
         setMinimumSize(new java.awt.Dimension(560, 456));
         setUndecorated(true);
         setResizable(false);
         getContentPane().setLayout(null);
 
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+
+        btnVender.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Vender.png"))); // NOI18N
+        btnVender.setToolTipText("");
+        btnVender.setBorder(null);
+        btnVender.setBorderPainted(false);
+        btnVender.setContentAreaFilled(false);
+        btnVender.setFocusPainted(false);
+        btnVender.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVenderActionPerformed(evt);
+            }
+        });
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 50)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(247, 130, 50));
+        jLabel2.setText("Vendas");
+
+        jButton1.setBorderPainted(false);
+        jButton1.setContentAreaFilled(false);
+
+        jtCompradores.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null},
+                {null},
+                {null}
+            },
+            new String [] {
+                "Quem quer comprar."
+            }
+        ));
+        jScrollPane1.setViewportView(jtCompradores);
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(191, 191, 191)
+                        .addComponent(jLabel2)
+                        .addGap(48, 48, 48)
+                        .addComponent(jButton1))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(54, 54, 54)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnVender)))
+                .addGap(54, 54, 54))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(31, 31, 31)
+                        .addComponent(jButton1))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel2)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btnVender)
+                .addGap(73, 73, 73))
+        );
+
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(0, 50, 560, 450);
+
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Botao fechar.png"))); // NOI18N
+        jButton3.setBorder(null);
         jButton3.setBorderPainted(false);
         jButton3.setContentAreaFilled(false);
         jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jButton3.setFocusPainted(false);
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -59,44 +149,6 @@ public class Vendas extends javax.swing.JFrame {
         getContentPane().add(jLabel3);
         jLabel3.setBounds(0, 0, 560, 50);
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 50)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(247, 130, 50));
-        jLabel2.setText("Vendas");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(210, 70, 170, 50);
-
-        jButton1.setBorderPainted(false);
-        jButton1.setContentAreaFilled(false);
-        getContentPane().add(jButton1);
-        jButton1.setBounds(80, 410, 150, 30);
-
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Vender.png"))); // NOI18N
-        jButton2.setToolTipText("");
-        jButton2.setBorderPainted(false);
-        jButton2.setContentAreaFilled(false);
-        getContentPane().add(jButton2);
-        jButton2.setBounds(360, 410, 80, 30);
-
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null},
-                {null},
-                {null}
-            },
-            new String [] {
-                "Quem quer comprar."
-            }
-        ));
-        jScrollPane1.setViewportView(jTable1);
-
-        getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(20, 160, 520, 220);
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/background.jpeg"))); // NOI18N
-        jLabel1.setText("jLabel1");
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 560, 456);
-
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -104,14 +156,27 @@ public class Vendas extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
 
+    private void btnVenderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVenderActionPerformed
+        
+    }//GEN-LAST:event_btnVenderActionPerformed
+
+    
+    private void carregarTableCli() {
+        TableModel tm = (TableModel) jtCompradores.getModel();
+        try {
+            tm.setDados(produtobd.listarMeusProdutos(usuario, 1));
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(this, "Erro ao carregar grade.\n" + ex.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
+        }
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnVender;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JTable jtCompradores;
     // End of variables declaration//GEN-END:variables
 }
