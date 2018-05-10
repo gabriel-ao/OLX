@@ -371,7 +371,6 @@ public class Principal extends javax.swing.JFrame {
         jtf_Email = new javax.swing.JTextField();
         jtf_Usuario = new javax.swing.JTextField();
         btn_editMC = new javax.swing.JButton();
-        btn_excluirMC = new javax.swing.JButton();
         btn_SalvarMC = new javax.swing.JButton();
         jtf_CancelarMC = new javax.swing.JButton();
         jLabelNome = new javax.swing.JLabel();
@@ -772,6 +771,7 @@ public class Principal extends javax.swing.JFrame {
 
         jtf_titulo.setBackground(new java.awt.Color(242, 242, 242));
         jtf_titulo.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jtf_titulo.setBorder(null);
         jtf_titulo.setNextFocusableComponent(jta_descricao);
         Desapego.add(jtf_titulo);
         jtf_titulo.setBounds(568, 142, 360, 30);
@@ -782,6 +782,7 @@ public class Principal extends javax.swing.JFrame {
 
         jtf_preco.setBackground(new java.awt.Color(242, 242, 242));
         jtf_preco.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jtf_preco.setBorder(null);
         jtf_preco.setNextFocusableComponent(jRadioButtonNovo);
         Desapego.add(jtf_preco);
         jtf_preco.setBounds(605, 442, 140, 30);
@@ -959,15 +960,6 @@ public class Principal extends javax.swing.JFrame {
         MeuCadastro.add(btn_editMC);
         btn_editMC.setBounds(360, 550, 70, 65);
 
-        btn_excluirMC.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Excluir.png"))); // NOI18N
-        btn_excluirMC.setBorder(null);
-        btn_excluirMC.setBorderPainted(false);
-        btn_excluirMC.setContentAreaFilled(false);
-        btn_excluirMC.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btn_excluirMC.setFocusPainted(false);
-        MeuCadastro.add(btn_excluirMC);
-        btn_excluirMC.setBounds(520, 550, 70, 70);
-
         btn_SalvarMC.setBackground(new java.awt.Color(242, 242, 242));
         btn_SalvarMC.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Save icon.png"))); // NOI18N
         btn_SalvarMC.setBorder(null);
@@ -991,7 +983,7 @@ public class Principal extends javax.swing.JFrame {
         jtf_CancelarMC.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jtf_CancelarMC.setFocusPainted(false);
         MeuCadastro.add(jtf_CancelarMC);
-        jtf_CancelarMC.setBounds(600, 550, 70, 70);
+        jtf_CancelarMC.setBounds(520, 550, 70, 70);
 
         jLabelNome.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Campo Nome.png"))); // NOI18N
         MeuCadastro.add(jLabelNome);
@@ -1194,6 +1186,7 @@ public class Principal extends javax.swing.JFrame {
 
         jTextField3.setBackground(new java.awt.Color(242, 242, 242));
         jTextField3.setAutoscrolls(false);
+        jTextField3.setBorder(null);
         MeusPedidos.add(jTextField3);
         jTextField3.setBounds(50, 112, 440, 30);
 
@@ -1458,12 +1451,6 @@ public class Principal extends javax.swing.JFrame {
             btn_meusPedidos.setIcon(MeusPedidosSelected);
             btn_meusAnuncios.setIcon(MeusAnuncios2);
             btn_sair.setIcon(Sair2);
-        }
-
-        try {
-            preencherMeusAnuncios();
-        } catch (Exception ex) {
-            Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
         }
 
         CardLayout card = (CardLayout) Principal.getLayout();
@@ -1800,7 +1787,6 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JButton btn_desapegar;
     private javax.swing.JButton btn_editMC;
     private javax.swing.JButton btn_excluir;
-    private javax.swing.JButton btn_excluirMC;
     private javax.swing.JButton btn_inserirFoto;
     private javax.swing.JButton btn_meuCadastro;
     private javax.swing.JButton btn_meusAnuncios;

@@ -97,8 +97,6 @@ public class ProdutoBD {
         Connection con;
         Conexao c = new Conexao();
         con = c.conectar();
-
-        JOptionPane.showMessageDialog(null, "ID: " + usuario.getId_usuario());
         
         String sql = "select prod.*, usuario.*, acao.status, acao.tipo from Acao as acao\n"
                 + "inner join usuario as usuario  on (acao.id_usuario = usuario.id_usuario)\n"
