@@ -67,12 +67,13 @@ public class Login extends javax.swing.JFrame {
         btn_fechar.setBorder(null);
         btn_fechar.setBorderPainted(false);
         btn_fechar.setContentAreaFilled(false);
+        btn_fechar.setFocusPainted(false);
         btn_fechar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_fecharActionPerformed(evt);
             }
         });
-        getContentPane().add(btn_fechar, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 8, 60, -1));
+        getContentPane().add(btn_fechar, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 10, 50, -1));
 
         btn_Logar.setBackground(new java.awt.Color(169, 45, 215));
         btn_Logar.setForeground(new java.awt.Color(255, 255, 255));
@@ -81,6 +82,7 @@ public class Login extends javax.swing.JFrame {
         btn_Logar.setBorderPainted(false);
         btn_Logar.setContentAreaFilled(false);
         btn_Logar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btn_Logar.setFocusPainted(false);
         btn_Logar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btn_Logar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -95,6 +97,7 @@ public class Login extends javax.swing.JFrame {
         btn_Cadastrar.setBorder(null);
         btn_Cadastrar.setBorderPainted(false);
         btn_Cadastrar.setContentAreaFilled(false);
+        btn_Cadastrar.setFocusPainted(false);
         btn_Cadastrar.setMaximumSize(new java.awt.Dimension(345, 25));
         btn_Cadastrar.setMinimumSize(new java.awt.Dimension(345, 25));
         btn_Cadastrar.addActionListener(new java.awt.event.ActionListener() {

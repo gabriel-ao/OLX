@@ -16,6 +16,7 @@ public class Vendas extends javax.swing.JFrame {
      */
     public Vendas() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -64,7 +65,6 @@ public class Vendas extends javax.swing.JFrame {
         getContentPane().add(jLabel2);
         jLabel2.setBounds(210, 70, 170, 50);
 
-        jButton1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Augusto Kalel\\Desktop\\olx imagens\\Meus pedidos\\Cancelar venda.png")); // NOI18N
         jButton1.setBorderPainted(false);
         jButton1.setContentAreaFilled(false);
         getContentPane().add(jButton1);

@@ -37,8 +37,6 @@ BEGIN
 END;
 $$ language 'plpgsql';
 
-
-
 create table acao (
 	id_acao serial PRIMARY KEY not null,
     tipo varchar (20) not null,
@@ -49,9 +47,17 @@ create table acao (
     FOREIGN KEY (id_produto) REFERENCES produto (id_produto)
 );
 
-select * from  produto;
 select * from  usuario;
+select * from acao;
 
-select prod.*, usuario.*, acao.status from Acao as acao
+
+select prod.*, usuario.*, acao.status, acao.tipo from Acao as acao
 inner join usuario as usuario  on (acao.id_usuario = usuario.id_usuario)
-inner join Produto as prod on (acao.Id_produto = prod.id_produto);
+inner join Produto as prod on (acao.Id_produto = prod.id_produto)  
+where acao.tipo = 'Venda' and usuario.id_usuario = 2 order by prod.dt_anuncio desc;
+
+select prod.*, usuario.*, acao.status, acao.tipo from Acao as acao
+inner join usuario as usuario  on (acao.id_usuario = usuario.id_usuario)
+inner join Produto as prod on (acao.Id_produto = prod.id_produto)  
+where prod.status = 'Disponivel' order by prod.dt_anuncio desc;
+
