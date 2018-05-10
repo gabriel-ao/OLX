@@ -80,17 +80,17 @@ public class Principal extends javax.swing.JFrame {
         btn_buscar.setIcon(BuscarSelected);
 
         try {
-            preencherMenuAnuncios();
+            preencherMenuAnuncios(1);
             preencherMeusAnuncios();
         } catch (Exception ex) {
             Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
-    public void preencherMenuAnuncios() throws Exception {
+    public void preencherMenuAnuncios(int opcao) throws Exception {
         nomeUser.setText(usuario.getNome());
         //Criando List para armazenar todos os anuncios do Banco de Dados
-        listaProduto = produtoBD.listarTodosProdutos();
+        listaProduto = produtoBD.listarTodosProdutos(opcao, jtf_Buscar.getText());
 
         int j = 0;
 
@@ -318,7 +318,7 @@ public class Principal extends javax.swing.JFrame {
         jComboBoxRegiao = new javax.swing.JComboBox<>();
         jRadioButtonNovo = new javax.swing.JRadioButton();
         jRadioButtonUsado = new javax.swing.JRadioButton();
-        jTextFieldBuscar = new javax.swing.JTextField();
+        jtf_Buscar = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
         bt_Lupa = new javax.swing.JButton();
         PainelAnuncios = new javax.swing.JPanel();
@@ -598,10 +598,10 @@ public class Principal extends javax.swing.JFrame {
         Inicio_buscar.add(jRadioButtonUsado);
         jRadioButtonUsado.setBounds(860, 30, 70, 25);
 
-        jTextFieldBuscar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jTextFieldBuscar.setBorder(null);
-        Inicio_buscar.add(jTextFieldBuscar);
-        jTextFieldBuscar.setBounds(50, 30, 590, 30);
+        jtf_Buscar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jtf_Buscar.setBorder(null);
+        Inicio_buscar.add(jtf_Buscar);
+        jtf_Buscar.setBounds(50, 30, 590, 30);
 
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Buscar/CAMPO BUSCA.png"))); // NOI18N
         Inicio_buscar.add(jLabel10);
@@ -610,6 +610,11 @@ public class Principal extends javax.swing.JFrame {
         bt_Lupa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Buscar/botao lupa.png"))); // NOI18N
         bt_Lupa.setBorderPainted(false);
         bt_Lupa.setContentAreaFilled(false);
+        bt_Lupa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt_LupaActionPerformed(evt);
+            }
+        });
         Inicio_buscar.add(bt_Lupa);
         bt_Lupa.setBounds(940, 20, 60, 43);
 
@@ -1435,7 +1440,7 @@ public class Principal extends javax.swing.JFrame {
         }
 
         try {
-            preencherMenuAnuncios();
+            preencherMenuAnuncios(1);
         } catch (Exception ex) {
             Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -1609,6 +1614,16 @@ public class Principal extends javax.swing.JFrame {
     private void btn_reservasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_reservasActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btn_reservasActionPerformed
+
+    private void bt_LupaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_LupaActionPerformed
+        try {
+            PainelAnuncios.removeAll();
+            PainelAnuncios.repaint();
+            preencherMenuAnuncios(2);
+        } catch (Exception ex) {
+            Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_bt_LupaActionPerformed
 
     public void carregarDadosUser() {
         jtf_Nome.setText(usuario.getNome());
@@ -1849,7 +1864,6 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextFieldBuscar;
     private javax.swing.JComboBox<String> jcb_Categoria;
     private javax.swing.JComboBox<String> jcb_estado;
     private javax.swing.JLabel jl_MeuCadastro;
@@ -1862,6 +1876,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JTextArea jta_descricao;
     private javax.swing.JFormattedTextField jtfTelefone;
     private javax.swing.JTextField jtf_Bairro;
+    private javax.swing.JTextField jtf_Buscar;
     private javax.swing.JButton jtf_CancelarMC;
     private javax.swing.JTextField jtf_Cidade;
     private javax.swing.JTextField jtf_Email;

@@ -97,20 +97,20 @@ public class ProdutoBD {
         Connection con;
         Conexao c = new Conexao();
         con = c.conectar();
-        
+
         String sql = "select prod.*, usuario.*, acao.status, acao.tipo from Acao as acao\n"
                 + "inner join usuario as usuario  on (acao.id_usuario = usuario.id_usuario)\n"
                 + "inner join Produto as prod on (acao.Id_produto = prod.id_produto)  "
-                + "where acao.tipo = 'Venda' and usuario.id_usuario ="+ usuario.getId_usuario() + " order by prod.dt_anuncio desc";
+                + "where acao.tipo = 'Venda' and usuario.id_usuario =" + usuario.getId_usuario() + " order by prod.dt_anuncio desc";
         PreparedStatement ps = con.prepareStatement(sql);
-                
+
         ResultSet rs = ps.executeQuery();
 
         ArrayList<Produto> listaProduto = new ArrayList<>();
 
         while (rs.next()) {
             Produto produto = new Produto();
-            
+
             produto.setId_produto(rs.getInt("id_produto"));
             produto.setNome(rs.getString("nome"));
             produto.setEstadoConserv(rs.getString("estadoConserv"));
@@ -128,14 +128,25 @@ public class ProdutoBD {
         return listaProduto;
     }
 
-    public ArrayList<Produto> listarTodosProdutos() throws Exception {
+    public ArrayList<Produto> listarTodosProdutos(int opcao, String busca) throws Exception {
+        String sql = "";
+        switch (opcao){
+            case 1:
+                sql = "select prod.*, usuario.*, acao.status from Acao as acao\n"
+                + "inner join usuario as usuario  on (acao.id_usuario = usuario.id_usuario)\n"
+                + "inner join Produto as prod on (acao.Id_produto = prod.id_produto) order by prod.dt_anuncio desc\n";
+               break;
+            case 2: 
+                sql = "select prod.*, usuario.*, acao.status, acao.tipo from Acao as acao\n"
+                + "inner join usuario as usuario  on (acao.id_usuario = usuario.id_usuario)\n"
+                + "inner join Produto as prod on (acao.Id_produto = prod.id_produto)  \n"
+                + "where prod.nome LIKE '%"+ busca +"%' and prod.status = 'Disponivel' order by prod.dt_anuncio desc;";
+        }
+        
         Connection con;
         Conexao c = new Conexao();
         con = c.conectar();
 
-        String sql = "select prod.*, usuario.*, acao.status from Acao as acao\n"
-                + "inner join usuario as usuario  on (acao.id_usuario = usuario.id_usuario)\n"
-                + "inner join Produto as prod on (acao.Id_produto = prod.id_produto) order by prod.dt_anuncio desc\n";
 
         PreparedStatement ps = con.prepareStatement(sql);
         ResultSet rs = ps.executeQuery();
