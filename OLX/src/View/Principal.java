@@ -1318,6 +1318,11 @@ public class Principal extends javax.swing.JFrame {
         bt_reservar.setContentAreaFilled(false);
         bt_reservar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         bt_reservar.setFocusPainted(false);
+        bt_reservar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt_reservarActionPerformed(evt);
+            }
+        });
         ExibirAnuncio.add(bt_reservar);
         bt_reservar.setBounds(570, 600, 230, 46);
 
@@ -1471,19 +1476,21 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jComboBoxCategoriaActionPerformed
 
     private void bt_comprarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_comprarActionPerformed
-        Acao compra = new Acao();
+        int resposta = JOptionPane.showConfirmDialog(null, "Deseja realmente COMPRAR esse Produto? ", "**Comprar Produto**", JOptionPane.YES_NO_OPTION);
+        if (resposta == 0) {
+            try {
+                Acao compra = new Acao();
+                AcaoBD acaobd = new AcaoBD();
 
-        compra.setId_produto(listaProduto.get(indexAnuncio).getId_produto());
-        compra.setId_usuario(usuario.getId_usuario());
-        compra.setTipo("Compra");
-        compra.setStatus("Aguardando resposta anunciante");
-
-        AcaoBD acaobd = new AcaoBD();
-        try {
-            acaobd.inserir(compra);
-            JOptionPane.showMessageDialog(null, "Solicitação de compra enviada ao Anunciante!\nAguarde ele aceitar.");
-        } catch (Exception ex) {
-            Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
+                compra.setId_produto(listaProduto.get(indexAnuncio).getId_produto());
+                compra.setId_usuario(usuario.getId_usuario());
+                compra.setTipo("Compra");
+                compra.setStatus("Aguardando resposta anunciante");
+                acaobd.inserir(compra);
+                JOptionPane.showMessageDialog(null, "Solicitação de compra enviada ao Anunciante!\nAguarde ele aceitar.");
+            } catch (Exception ex) {
+                Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
     }//GEN-LAST:event_bt_comprarActionPerformed
 
@@ -1624,6 +1631,26 @@ public class Principal extends javax.swing.JFrame {
             Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_bt_LupaActionPerformed
+
+    private void bt_reservarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_reservarActionPerformed
+        try {
+            int resposta = JOptionPane.showConfirmDialog(null, "Deseja realmente RESERVAR esse Produto? ", "**Reservar Produto**", JOptionPane.YES_NO_OPTION);
+
+            if (resposta == 0) {
+                Acao acao = new Acao();
+                AcaoBD acaoBD = new AcaoBD();
+
+                acao.setId_produto(produto.getId_produto());
+                acao.setId_usuario(produto.getId_usuario());
+                acao.setTipo("Reserva");
+                acao.setStatus("Aguardando Anunciante aceitar");
+                acaoBD.inserir(acao);
+                JOptionPane.showMessageDialog(null, "Reserva solicitada com sucesso!! \nAguarde anuncioante aceitar");
+            }
+        } catch (Exception ex) {
+            Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_bt_reservarActionPerformed
 
     public void carregarDadosUser() {
         jtf_Nome.setText(usuario.getNome());
