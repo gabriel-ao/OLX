@@ -170,7 +170,7 @@ public class Principal extends javax.swing.JFrame {
     public void preencherMeusAnuncios() throws Exception {
         //Criando List para armazenar todos os anuncios do Banco de Dados
         listaMeusProduto = produtoBD.listarMeusProdutos(usuario, 2);
-        
+
         int j = 0;
 
         for (int i = 0; i < listaMeusProduto.size(); i++) {
@@ -233,14 +233,14 @@ public class Principal extends javax.swing.JFrame {
             JLabel lblNumCompras = new JLabel();
             lblNumCompras.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
             lblNumCompras.setForeground(new java.awt.Color(255, 255, 255));
-            lblNumCompras.setText("55");
+            lblNumCompras.setText("");
             anuncio.add(lblNumCompras);
             lblNumCompras.setBounds(224, 80, 23, 20);
 
             JLabel lblNumReservas = new JLabel();
             lblNumReservas.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
             lblNumReservas.setForeground(new java.awt.Color(255, 255, 255));
-            lblNumReservas.setText("55");
+            lblNumReservas.setText("");
             anuncio.add(lblNumReservas);
             lblNumReservas.setBounds(127, 80, 23, 20);
 
@@ -290,7 +290,7 @@ public class Principal extends javax.swing.JFrame {
 
     public void preencherMeusPedidos() throws Exception {
         //Criando List para armazenar todos os anuncios do Banco de Dados
-        listaMeusPedidos = produtoBD.listarMeusProdutos(usuario,1);
+        listaMeusPedidos = produtoBD.listarMeusProdutos(usuario, 1);
 
         int j = 0;
 
@@ -404,13 +404,6 @@ public class Principal extends javax.swing.JFrame {
         Fundo = new javax.swing.JLabel();
         Principal = new javax.swing.JPanel();
         Inicio_buscar = new javax.swing.JPanel();
-        jLabelB_Categoria = new javax.swing.JLabel();
-        jLabelB_Regiao = new javax.swing.JLabel();
-        jLabelB_Estado = new javax.swing.JLabel();
-        jComboBoxCategoria = new javax.swing.JComboBox<>();
-        jComboBoxRegiao = new javax.swing.JComboBox<>();
-        jRadioButtonNovo = new javax.swing.JRadioButton();
-        jRadioButtonUsado = new javax.swing.JRadioButton();
         jtf_Buscar = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
         bt_Lupa = new javax.swing.JButton();
@@ -487,15 +480,8 @@ public class Principal extends javax.swing.JFrame {
         jLabel32 = new javax.swing.JLabel();
         Jlbackground = new javax.swing.JLabel();
         MeusAnuncios = new javax.swing.JPanel();
-        jTextField2 = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
-        jLabel_Pesquisa = new javax.swing.JLabel();
-        btn_busca = new javax.swing.JButton();
         PainelMeusAnuncios = new javax.swing.JPanel();
-        lblNumCompras = new javax.swing.JLabel();
-        lblNumReservas = new javax.swing.JLabel();
-        btn_compras = new javax.swing.JButton();
-        btn_reservas = new javax.swing.JButton();
         background = new javax.swing.JLabel();
         MeusPedidos = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
@@ -519,10 +505,8 @@ public class Principal extends javax.swing.JFrame {
         jta_Descricao_EA = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(1369, 730));
         setMinimumSize(new java.awt.Dimension(1369, 730));
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(1369, 730));
         getContentPane().setLayout(null);
 
         bt_fechar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Botao fechar.png"))); // NOI18N
@@ -639,53 +623,6 @@ public class Principal extends javax.swing.JFrame {
 
         Inicio_buscar.setLayout(null);
 
-        jLabelB_Categoria.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabelB_Categoria.setText("Categoria:");
-        Inicio_buscar.add(jLabelB_Categoria);
-        jLabelB_Categoria.setBounds(650, 50, 63, 20);
-
-        jLabelB_Regiao.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabelB_Regiao.setText("Região:");
-        Inicio_buscar.add(jLabelB_Regiao);
-        jLabelB_Regiao.setBounds(670, 20, 46, 17);
-
-        jLabelB_Estado.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabelB_Estado.setText("Estado:");
-        Inicio_buscar.add(jLabelB_Estado);
-        jLabelB_Estado.setBounds(810, 20, 48, 17);
-
-        jComboBoxCategoria.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jComboBoxCategoria.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBoxCategoria.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBoxCategoriaActionPerformed(evt);
-            }
-        });
-        Inicio_buscar.add(jComboBoxCategoria);
-        jComboBoxCategoria.setBounds(721, 50, 70, 23);
-
-        jComboBoxRegiao.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jComboBoxRegiao.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        Inicio_buscar.add(jComboBoxRegiao);
-        jComboBoxRegiao.setBounds(721, 18, 70, 23);
-
-        jRadioButtonNovo.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jRadioButtonNovo.setText("Novo");
-        jRadioButtonNovo.setContentAreaFilled(false);
-        Inicio_buscar.add(jRadioButtonNovo);
-        jRadioButtonNovo.setBounds(860, 10, 70, 25);
-
-        jRadioButtonUsado.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jRadioButtonUsado.setText("Usado");
-        jRadioButtonUsado.setContentAreaFilled(false);
-        jRadioButtonUsado.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButtonUsadoActionPerformed(evt);
-            }
-        });
-        Inicio_buscar.add(jRadioButtonUsado);
-        jRadioButtonUsado.setBounds(860, 30, 70, 25);
-
         jtf_Buscar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jtf_Buscar.setBorder(null);
         Inicio_buscar.add(jtf_Buscar);
@@ -704,7 +641,7 @@ public class Principal extends javax.swing.JFrame {
             }
         });
         Inicio_buscar.add(bt_Lupa);
-        bt_Lupa.setBounds(940, 20, 60, 43);
+        bt_Lupa.setBounds(660, 20, 60, 43);
 
         PainelAnuncios.setBackground(new java.awt.Color(223, 223, 223));
         PainelAnuncios.setPreferredSize(new java.awt.Dimension(940, 1000));
@@ -876,7 +813,6 @@ public class Principal extends javax.swing.JFrame {
         jtf_preco.setBackground(new java.awt.Color(242, 242, 242));
         jtf_preco.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jtf_preco.setBorder(null);
-        jtf_preco.setNextFocusableComponent(jRadioButtonNovo);
         Desapego.add(jtf_preco);
         jtf_preco.setBounds(605, 442, 140, 30);
 
@@ -888,7 +824,6 @@ public class Principal extends javax.swing.JFrame {
         jrb_Novo.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jrb_Novo.setText("Novo");
         jrb_Novo.setContentAreaFilled(false);
-        jrb_Novo.setNextFocusableComponent(jRadioButtonUsado);
         Desapego.add(jrb_Novo);
         jrb_Novo.setBounds(800, 460, 59, 25);
 
@@ -896,7 +831,6 @@ public class Principal extends javax.swing.JFrame {
         jrb_Usado.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jrb_Usado.setText("Usado");
         jrb_Usado.setContentAreaFilled(false);
-        jrb_Usado.setNextFocusableComponent(jComboBoxCategoria);
         Desapego.add(jrb_Usado);
         jrb_Usado.setBounds(870, 460, 80, 25);
 
@@ -1192,75 +1126,17 @@ public class Principal extends javax.swing.JFrame {
 
         MeusAnuncios.setLayout(null);
 
-        jTextField2.setBackground(new java.awt.Color(242, 242, 242));
-        jTextField2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField2.setAutoscrolls(false);
-        jTextField2.setBorder(null);
-        MeusAnuncios.add(jTextField2);
-        jTextField2.setBounds(100, 116, 450, 30);
-
         jLabel6.setFont(new java.awt.Font("Tahoma", 0, 50)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(250, 130, 50));
         jLabel6.setText("Meus Anuncios");
         MeusAnuncios.add(jLabel6);
         jLabel6.setBounds(330, 30, 400, 61);
 
-        jLabel_Pesquisa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Campo Nome.png"))); // NOI18N
-        MeusAnuncios.add(jLabel_Pesquisa);
-        jLabel_Pesquisa.setBounds(90, 114, 480, 34);
-
-        btn_busca.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Buscar/botao lupa.png"))); // NOI18N
-        btn_busca.setBorderPainted(false);
-        btn_busca.setContentAreaFilled(false);
-        MeusAnuncios.add(btn_busca);
-        btn_busca.setBounds(570, 110, 50, 40);
-
         PainelMeusAnuncios.setBackground(new java.awt.Color(223, 223, 223));
         PainelMeusAnuncios.setPreferredSize(new java.awt.Dimension(940, 1000));
         PainelMeusAnuncios.setLayout(null);
-
-        lblNumCompras.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        lblNumCompras.setForeground(new java.awt.Color(255, 255, 255));
-        lblNumCompras.setText("55");
-        PainelMeusAnuncios.add(lblNumCompras);
-        lblNumCompras.setBounds(234, 90, 23, 20);
-
-        lblNumReservas.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        lblNumReservas.setForeground(new java.awt.Color(255, 255, 255));
-        lblNumReservas.setText("55");
-        PainelMeusAnuncios.add(lblNumReservas);
-        lblNumReservas.setBounds(137, 90, 23, 20);
-
-        btn_compras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ExibirAnuncio/compras.png"))); // NOI18N
-        btn_compras.setBorder(null);
-        btn_compras.setBorderPainted(false);
-        btn_compras.setContentAreaFilled(false);
-        btn_compras.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btn_compras.setFocusPainted(false);
-        btn_compras.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_comprasActionPerformed(evt);
-            }
-        });
-        PainelMeusAnuncios.add(btn_compras);
-        btn_compras.setBounds(230, 85, 95, 30);
-
-        btn_reservas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ExibirAnuncio/Reservas.png"))); // NOI18N
-        btn_reservas.setBorder(null);
-        btn_reservas.setBorderPainted(false);
-        btn_reservas.setContentAreaFilled(false);
-        btn_reservas.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btn_reservas.setFocusPainted(false);
-        btn_reservas.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_reservasActionPerformed(evt);
-            }
-        });
-        PainelMeusAnuncios.add(btn_reservas);
-        btn_reservas.setBounds(133, 85, 95, 30);
-
         MeusAnuncios.add(PainelMeusAnuncios);
-        PainelMeusAnuncios.setBounds(20, 160, 990, 500);
+        PainelMeusAnuncios.setBounds(20, 100, 990, 560);
 
         background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Íco-Imovel copiar 6.png"))); // NOI18N
         MeusAnuncios.add(background);
@@ -1415,8 +1291,8 @@ public class Principal extends javax.swing.JFrame {
             btn_meusAnuncios.setIcon(MeusAnuncios2);
             btn_sair.setIcon(Sair2);
         }
-
         carregarDadosUser();
+        ManipularInterfaceCad("MeuCadastro");
 
         CardLayout card = (CardLayout) Principal.getLayout();
         card.show(Principal, "MeuCadastro");
@@ -1526,7 +1402,7 @@ public class Principal extends javax.swing.JFrame {
             btn_meusAnuncios.setIcon(MeusAnuncios2);
             btn_sair.setIcon(Sair2);
         }
-        
+
         try {
             preencherMeusPedidos();
         } catch (Exception ex) {
@@ -1536,14 +1412,6 @@ public class Principal extends javax.swing.JFrame {
         CardLayout card = (CardLayout) Principal.getLayout();
         card.show(Principal, "MeusPedidos");
     }//GEN-LAST:event_btn_meusPedidosActionPerformed
-
-    private void jRadioButtonUsadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonUsadoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButtonUsadoActionPerformed
-
-    private void jComboBoxCategoriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxCategoriaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBoxCategoriaActionPerformed
 
     private void bt_comprarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_comprarActionPerformed
         int resposta = JOptionPane.showConfirmDialog(null, "Deseja realmente COMPRAR esse Produto? ", "**Comprar Produto**", JOptionPane.YES_NO_OPTION);
@@ -1563,54 +1431,28 @@ public class Principal extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_bt_comprarActionPerformed
-
-    private void btn_saveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_saveActionPerformed
-        String estadoProd = "";
-
-        if (jrb_Novo.isSelected()) {
-            estadoProd = "Novo";
-        }
-        if (jrb_Usado.isSelected()) {
-            estadoProd = "Usado";
-        }
-
-        //Verificando se todos os dados obrigatórios foram preenchidos 
-        if (jtf_titulo.getText().isEmpty() || jta_descricao.getText().isEmpty() || jtf_preco.getText().isEmpty() || (estadoProd.isEmpty()) || (lblImagemProd.getIcon() == null)) {
-            JOptionPane.showMessageDialog(null, "PREENCHA TODOS OS CAMPOS!!");
-        } else {
-            //Se tiver tudo preenchido encapsula os dados do produto
-            produto.setNome(jtf_titulo.getText());
-            produto.setDescricao(jta_descricao.getText());
-            produto.setPreco(Double.parseDouble(jtf_preco.getText()));
-            produto.setEstadoConserv(estadoProd);
-            produto.setImg(ManipularImagem.getImgBytes(imagemBuffer));
-            produto.setCategoria(jcb_Categoria.getSelectedItem().toString());
-            produto.setStatus("Disponivel");
-            produto.setId_usuario(usuario.getId_usuario());
-
-            if (produto.getId_produto() == 0) {
-                try {
-                    //inserindo no banco de dados
-                    produtoBD.inserir(produto);
-                    JOptionPane.showMessageDialog(null, "Anuncio realizado com sucesso!");
-                    limparCamposDesapegar();
-                    manipularInterfaceDesapegar(1);
-                } catch (Exception ex) {
-                    Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
-                }
-            } else {
-                try {
-                    produtoBD.alterar(produto);
-                    JOptionPane.showMessageDialog(null, "Anuncio alterado com sucesso!");
-                } catch (Exception ex) {
-                    Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
-                }
-            }
-        }
-    }//GEN-LAST:event_btn_saveActionPerformed
-
+    
     private void btn_SalvarMCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_SalvarMCActionPerformed
-        // TODO add your handling code here:
+        usuario.setBairro(jtf_Bairro.getText());
+        usuario.setCidade(jtf_Cidade.getText());
+        usuario.setNome(jtf_Nome.getText());
+        usuario.setEmail(jtf_Email.getText());
+        usuario.setTelefone(jtfTelefone.getText());
+        usuario.setUF(jcb_estado.getSelectedItem().toString());
+        usuario.setUsuario(jtf_Usuario.getText());
+        usuario.setSenha(jtf_Senha.getText());
+        usuario.getId_usuario();
+
+        try {
+            usuarioBD.alterar(usuario);
+            JOptionPane.showMessageDialog(null, "Cadastro atualizado com Sucesso");
+
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(this, "Erro ao alterar Usuário.\n" + ex.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
+        }
+
+        ManipularInterfaceCad("Salvar");
+        ManipularInterfaceCad("MeuCadastro");
     }//GEN-LAST:event_btn_SalvarMCActionPerformed
 
     private void jcb_estadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcb_estadoActionPerformed
@@ -1656,11 +1498,6 @@ public class Principal extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btn_cancelarActionPerformed
 
-    private void btn_comprasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_comprasActionPerformed
-        Vendas vendas = new Vendas(usuario);
-        vendas.setVisible(true);
-    }//GEN-LAST:event_btn_comprasActionPerformed
-
     private void btn_excluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_excluirActionPerformed
         int resposta = JOptionPane.showConfirmDialog(null, "Deseja realmente excluir esse anuncio?", "***Excluir Anuncio***", JOptionPane.YES_NO_OPTION);
 
@@ -1683,10 +1520,6 @@ public class Principal extends javax.swing.JFrame {
     private void btn_AlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_AlterarActionPerformed
         manipularInterfaceDesapegar(2);
     }//GEN-LAST:event_btn_AlterarActionPerformed
-
-    private void btn_reservasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_reservasActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btn_reservasActionPerformed
 
     private void bt_LupaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_LupaActionPerformed
         try {
@@ -1717,6 +1550,52 @@ public class Principal extends javax.swing.JFrame {
             Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_bt_reservarActionPerformed
+
+    private void btn_saveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_saveActionPerformed
+        String estadoProd = "";
+
+        if (jrb_Novo.isSelected()) {
+            estadoProd = "Novo";
+        }
+        if (jrb_Usado.isSelected()) {
+            estadoProd = "Usado";
+        }
+
+        //Verificando se todos os dados obrigatórios foram preenchidos 
+        if (jtf_titulo.getText().isEmpty() || jta_descricao.getText().isEmpty() || jtf_preco.getText().isEmpty() || (estadoProd.isEmpty()) || (lblImagemProd.getIcon() == null)) {
+            JOptionPane.showMessageDialog(null, "PREENCHA TODOS OS CAMPOS!!");
+        } else {
+            //Se tiver tudo preenchido encapsula os dados do produto
+            produto = new  Produto();
+            produto.setNome(jtf_titulo.getText());
+            produto.setDescricao(jta_descricao.getText());
+            produto.setPreco(Double.parseDouble(jtf_preco.getText()));
+            produto.setEstadoConserv(estadoProd);
+            produto.setImg(ManipularImagem.getImgBytes(imagemBuffer));
+            produto.setCategoria(jcb_Categoria.getSelectedItem().toString());
+            produto.setStatus("Disponivel");
+            produto.setId_usuario(usuario.getId_usuario());
+
+            if (produto.getId_produto() == 0) {
+                try {
+                    //inserindo no banco de dados
+                    produtoBD.inserir(produto);
+                    JOptionPane.showMessageDialog(null, "Anuncio realizado com sucesso!");
+                    limparCamposDesapegar();
+                    manipularInterfaceDesapegar(1);
+                } catch (Exception ex) {
+                    Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            } else {
+                try {
+                    produtoBD.alterar(produto);
+                    JOptionPane.showMessageDialog(null, "Anuncio alterado com sucesso!");
+                } catch (Exception ex) {
+                    Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+        }
+    }//GEN-LAST:event_btn_saveActionPerformed
 
     public void carregarDadosUser() {
         jtf_Nome.setText(usuario.getNome());
@@ -1853,7 +1732,49 @@ public class Principal extends javax.swing.JFrame {
                 break;
         }
     }
-// <editor-fold defaultstate="collapsed" desc="Elementos">                          
+
+    private void habilitarFormularioUser(boolean modo) {
+        jtf_Nome.setEnabled(modo);
+        jtf_Bairro.setEnabled(modo);
+        jtf_Cidade.setEnabled(modo);
+        jtf_Email.setEnabled(modo);
+        jtfTelefone.setEnabled(modo);
+        jcb_estado.setEnabled(modo);
+        jtf_Usuario.setEnabled(modo);
+        jtf_Senha.setEnabled(modo);
+    }
+
+    private void ManipularInterfaceCad(String modo) {
+        switch (modo) {
+            case "MeuCadastro":
+                btn_editMC.setEnabled(true);
+                btn_SalvarMC.setEnabled(false);
+                jtf_CancelarMC.setEnabled(false);
+                habilitarFormularioUser(false);
+                break;
+
+            case "Salvar":
+                btn_editMC.setEnabled(false);
+                btn_SalvarMC.setEnabled(true);
+                jtf_CancelarMC.setEnabled(true);
+                habilitarFormularioUser(true);
+                break;
+
+        }
+    }
+    
+    
+     private void btn_reservasActionPerformed(java.awt.event.ActionEvent evt) {                                             
+        Reservas reservas = new Reservas();
+        reservas.setVisible(true);
+    }                                            
+
+    private void btn_comprasActionPerformed(java.awt.event.ActionEvent evt) {                                            
+        Vendas vendas = new Vendas(usuario);
+        vendas.setVisible(true);
+    }    
+    
+    // <editor-fold defaultstate="collapsed" desc="Elementos">                          
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel BarraTop;
     private javax.swing.JLabel CampoPreco;
@@ -1886,11 +1807,9 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JButton bt_reservar;
     private javax.swing.JButton btn_Alterar;
     private javax.swing.JButton btn_SalvarMC;
-    private javax.swing.JButton btn_busca;
     private javax.swing.JButton btn_busca2;
     private javax.swing.JButton btn_buscar;
     private javax.swing.JButton btn_cancelar;
-    private javax.swing.JButton btn_compras;
     private javax.swing.JButton btn_desapegar;
     private javax.swing.JButton btn_editMC;
     private javax.swing.JButton btn_excluir;
@@ -1899,13 +1818,10 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JButton btn_meusAnuncios;
     private javax.swing.JButton btn_meusPedidos;
     private javax.swing.JButton btn_novo;
-    private javax.swing.JButton btn_reservas;
     private javax.swing.JButton btn_sair;
     private javax.swing.JButton btn_save;
     private javax.swing.JButton btn_venda1;
     private javax.swing.ButtonGroup groupEstadoProd;
-    private javax.swing.JComboBox<String> jComboBoxCategoria;
-    private javax.swing.JComboBox<String> jComboBoxRegiao;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1929,9 +1845,6 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JLabel jLabelB_Categoria;
-    private javax.swing.JLabel jLabelB_Estado;
-    private javax.swing.JLabel jLabelB_Regiao;
     private javax.swing.JLabel jLabelBairro;
     private javax.swing.JLabel jLabelCidade;
     private javax.swing.JLabel jLabelEmail;
@@ -1943,13 +1856,9 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelTelefone;
     private javax.swing.JLabel jLabelUsuario;
     private javax.swing.JLabel jLabel_Desapego;
-    private javax.swing.JLabel jLabel_Pesquisa;
     private javax.swing.JLabel jLabel_Pesquisa1;
-    private javax.swing.JRadioButton jRadioButtonNovo;
-    private javax.swing.JRadioButton jRadioButtonUsado;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JComboBox<String> jcb_Categoria;
     private javax.swing.JComboBox<String> jcb_estado;
@@ -1977,8 +1886,6 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel lblEndereco1;
     private javax.swing.JLabel lblImagemProd;
     private javax.swing.JLabel lblNovo_Usado;
-    private javax.swing.JLabel lblNumCompras;
-    private javax.swing.JLabel lblNumReservas;
     private javax.swing.JLabel lblPreco_EA;
     private javax.swing.JLabel lblTitulo_EA;
     private javax.swing.JLabel nomeUser;

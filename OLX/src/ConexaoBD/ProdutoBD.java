@@ -83,7 +83,7 @@ public class ProdutoBD {
         Conexao c = new Conexao();
         con = c.conectar();
 
-        String sql = "DELETE produto WHERE id_produto=?";
+        String sql = "DELETE FROM produto WHERE id_produto=?";
         PreparedStatement ps = con.prepareStatement(sql);
 
         ps.setInt(1, produto.getId_produto());
