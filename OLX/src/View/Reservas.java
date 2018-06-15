@@ -5,17 +5,31 @@
  */
 package View;
 
+import Classes.Acao;
+import Classes.Produto;
+import ConexaoBD.AcaoBD;
+import TableModel.TableModel;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author Augusto Kalel
  */
 public class Reservas extends javax.swing.JFrame {
 
+    AcaoBD acaoBD = new AcaoBD();
+    Produto prod = new Produto();
+    TableModel tmReservas = new TableModel();    
     /**
      * Creates new form Reservas
      */
-    public Reservas() {
+    public Reservas(Produto produto) {
+        this.prod = produto;
+        
         initComponents();
+        jtReservas.setModel(tmReservas);
+        carregarTable();
         this.setLocationRelativeTo(null);
     }
 
@@ -34,9 +48,9 @@ public class Reservas extends javax.swing.JFrame {
         jButton4 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
         jPanel1 = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jtReservas = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(560, 456));
@@ -50,7 +64,7 @@ public class Reservas extends javax.swing.JFrame {
         jButton3.setBorder(null);
         jButton3.setBorderPainted(false);
         jButton3.setContentAreaFilled(false);
-        jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton3.setFocusPainted(false);
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -71,40 +85,52 @@ public class Reservas extends javax.swing.JFrame {
         jLabel2.setBounds(195, 60, 200, 50);
 
         jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/CancelarReserva.png"))); // NOI18N
+        jButton4.setBorder(null);
         jButton4.setBorderPainted(false);
         jButton4.setContentAreaFilled(false);
+        jButton4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton4.setFocusPainted(false);
         getContentPane().add(jButton4);
         jButton4.setBounds(370, 410, 140, 30);
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Reservar icon.png"))); // NOI18N
+        jButton1.setBorder(null);
         jButton1.setBorderPainted(false);
         jButton1.setContentAreaFilled(false);
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton1.setFocusPainted(false);
         getContentPane().add(jButton1);
         jButton1.setBounds(90, 410, 79, 30);
 
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Não reservar icon.png"))); // NOI18N
         jButton2.setToolTipText("");
+        jButton2.setBorder(null);
         jButton2.setBorderPainted(false);
         jButton2.setContentAreaFilled(false);
+        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton2.setFocusPainted(false);
         getContentPane().add(jButton2);
         jButton2.setBounds(220, 410, 110, 30);
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setLayout(null);
+
+        jtReservas.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null},
-                {null, null},
-                {null, null}
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
             },
             new String [] {
-                "Quem solicitou reserva.", "Status da reserva"
+                "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane2.setViewportView(jtReservas);
 
-        getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(20, 160, 520, 220);
+        jPanel1.add(jScrollPane2);
+        jScrollPane2.setBounds(54, 75, 452, 240);
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 50, 560, 410);
 
@@ -115,6 +141,14 @@ public class Reservas extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
 
+    private void carregarTable(){
+        try {
+//            tmReservas.setDados(acaoBD.listar(prod, "Reserva"));
+        } catch (Exception ex) {
+            Logger.getLogger(Reservas.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
@@ -123,7 +157,7 @@ public class Reservas extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTable jtReservas;
     // End of variables declaration//GEN-END:variables
 }

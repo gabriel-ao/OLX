@@ -181,7 +181,7 @@ public class Login extends javax.swing.JFrame {
                 usuario.setId_usuario(rs.getInt("id_usuario"));
                 usuario.setBairro(rs.getString("bairro"));
                 usuario.setCidade(rs.getString("Cidade"));
-                usuario.setNome(rs.getString("Nome"));
+                usuario.setNomeUser(rs.getString("Nome"));
                 usuario.setEmail(rs.getString("Email"));
                 usuario.setTelefone(rs.getString("Telefone"));
                 usuario.setUF(rs.getString("UF"));

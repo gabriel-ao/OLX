@@ -358,7 +358,7 @@ public class Cadastro extends javax.swing.JFrame {
         } else {
             usuario.setBairro(jtf_Bairro.getText());
             usuario.setCidade(jtf_Cidade.getText());
-            usuario.setNome(jtf_Nome.getText());
+            usuario.setNomeUser(jtf_Nome.getText());
             usuario.setEmail(jtf_Email.getText());
             usuario.setTelefone(jtfTelefone.getText());
             usuario.setUF(jcb_estado.getSelectedItem().toString());

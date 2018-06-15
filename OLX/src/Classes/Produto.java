@@ -78,11 +78,11 @@ public class Produto extends Usuario{
         this.img = img;
     }
 
-    public String getStatus() {
+    public String getStatusProd() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatusProd(String status) {
         this.status = status;
     }
 

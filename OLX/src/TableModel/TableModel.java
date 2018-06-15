@@ -5,7 +5,8 @@
  */
 package TableModel;
 
-import Classes.Produto;
+import Classes.Acao;
+import java.util.ArrayList;
 import java.util.List;
 import javax.swing.table.AbstractTableModel;
 
@@ -14,8 +15,8 @@ import javax.swing.table.AbstractTableModel;
  * @author Thais
  */
 public class TableModel extends AbstractTableModel{
-    private List<Produto> dados;
-    private String[] colunas = {"Nome", "Bairro","Cidade","UF"};
+    private List<Acao> dados = new ArrayList<>();
+    private String[] colunas = {"Nome", "Bairro","Cidade","UF","Telefone", "Status"};
     
     @Override
     public String getColumnName(int c) {
@@ -38,26 +39,29 @@ public class TableModel extends AbstractTableModel{
 
     @Override
     public Object getValueAt(int linha, int coluna) {
-        switch(coluna){
-            
+        switch(coluna){            
             case 0:
-                return dados.get(linha).getNome();
+                return dados.get(linha).getNomeUser();
             case 1:
                 return dados.get(linha).getBairro();
             case 2:
                 return dados.get(linha).getCidade();
             case 3:
                 return dados.get(linha).getUF();
+            case 4:
+                return dados.get(linha).getTelefone();
+            case 5:
+                return dados.get(linha).getStatus();
             default:
                 throw new IndexOutOfBoundsException("Coluna inexistente!");
         }
     }
     
-    public Produto getRowValue(int l) {
+    public Acao getRowValue(int l) {
         return dados.get(l);
     }
     
-    public void setDados(List<Produto> dados) {
+    public void setDados(List<Acao> dados) {
         this.dados = dados;
         fireTableDataChanged();
     }

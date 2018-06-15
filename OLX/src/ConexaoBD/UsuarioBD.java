@@ -24,7 +24,7 @@ public class UsuarioBD {
         String sql = "INSERT INTO usuario (nome, bairro, cidade,uf,email,telefone,usuario,senha) VALUES (?,?,?,?,?,?,?,?)";
         PreparedStatement ps = con.prepareStatement(sql);
         
-        ps.setString(1, usuario.getNome());
+        ps.setString(1, usuario.getNomeUser());
         ps.setString(2, usuario.getBairro());
         ps.setString(3, usuario.getCidade());
         ps.setString(4, usuario.getUF());
@@ -45,7 +45,7 @@ public class UsuarioBD {
         String sql = "UPDATE usuario SET nome=?, bairro=?, cidade=?, uf=?, email=?, telefone=?, usuario=?, senha=? WHERE id_usuario =?";
         PreparedStatement ps = con.prepareStatement(sql);
         
-        ps.setString(1, usuario.getNome());
+        ps.setString(1, usuario.getNomeUser());
         ps.setString(2, usuario.getBairro());
         ps.setString(3, usuario.getCidade());
         ps.setString(4, usuario.getUF());
@@ -72,7 +72,7 @@ public class UsuarioBD {
         ResultSet rs = ps.executeQuery();
         
         if(rs.next()){
-            usuario.setNome(rs.getString("nome"));
+            usuario.setNomeUser(rs.getString("nome"));
             usuario.setBairro(rs.getString("bairro"));
             usuario.setCidade(rs.getString("cidade"));
             usuario.setUF(rs.getString("uf"));

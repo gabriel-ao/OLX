@@ -5,6 +5,7 @@
  */
 package ConexaoBD;
 
+import Classes.Acao;
 import Classes.Produto;
 import Classes.Usuario;
 import java.sql.Connection;
@@ -33,7 +34,7 @@ public class ProdutoBD {
         ps.setString(4, produto.getDescricao());
         ps.setString(5, produto.getCategoria());
         ps.setBytes(6, produto.getImg());
-        ps.setString(7, produto.getStatus());
+        ps.setString(7, produto.getStatusProd());
 
         ps.execute();
 
@@ -71,7 +72,7 @@ public class ProdutoBD {
         ps.setString(4, produto.getDescricao());
         ps.setString(5, produto.getCategoria());
         ps.setBytes(6, produto.getImg());
-        ps.setString(7, produto.getStatus());
+        ps.setString(7, produto.getStatusProd());
         ps.setInt(8, produto.getId_produto());
 
         ps.execute();
@@ -83,7 +84,7 @@ public class ProdutoBD {
         Conexao c = new Conexao();
         con = c.conectar();
 
-        String sql = "DELETE FROM produto WHERE id_produto=?";
+        String sql = "DELETE FROM acao WHERE id_produto=?";
         PreparedStatement ps = con.prepareStatement(sql);
 
         ps.setInt(1, produto.getId_produto());
@@ -93,7 +94,7 @@ public class ProdutoBD {
         con.close();
     }
 
-    public ArrayList<Produto> listarMeusProdutos(Usuario usuario,int opcao) throws Exception {
+    public ArrayList<Acao> listarMeusProdutos(Usuario usuario,int opcao) throws Exception {
         String sql = "";
         switch (opcao){
             case 1:
@@ -117,10 +118,10 @@ public class ProdutoBD {
 
         ResultSet rs = ps.executeQuery();
 
-        ArrayList<Produto> listaProduto = new ArrayList<>();
+        ArrayList<Acao> listaProduto = new ArrayList<>();
 
         while (rs.next()) {
-            Produto produto = new Produto();
+            Acao produto = new Acao();
 
             produto.setId_produto(rs.getInt("id_produto"));
             produto.setNome(rs.getString("nome"));
@@ -129,7 +130,7 @@ public class ProdutoBD {
             produto.setDescricao(rs.getString("descricao"));
             produto.setCategoria(rs.getString("categoria"));
             produto.setImg(rs.getBytes("img"));
-            produto.setStatus(rs.getString("status"));
+            produto.setStatusProd(rs.getString("status"));
             produto.setDt_anuncio(rs.getDate("dt_anuncio"));
             produto.setBairro(rs.getString("bairro"));
             produto.setCidade(rs.getString("cidade"));
@@ -142,7 +143,7 @@ public class ProdutoBD {
         return listaProduto;
     }
 
-    public ArrayList<Produto> listarTodosProdutos(int opcao, String busca) throws Exception {
+    public ArrayList<Acao> listarTodosProdutos(int opcao, String busca) throws Exception {
         String sql = "";
         switch (opcao){
             case 1:
@@ -166,10 +167,10 @@ public class ProdutoBD {
         PreparedStatement ps = con.prepareStatement(sql);
         ResultSet rs = ps.executeQuery();
 
-        ArrayList<Produto> listaProduto = new ArrayList<>();
+        ArrayList<Acao> listaProduto = new ArrayList<>();
 
         while (rs.next()) {
-            Produto produto = new Produto();
+            Acao produto = new Acao();
 
             produto.setId_produto(rs.getInt("id_produto"));
             produto.setNome(rs.getString("nome"));
@@ -178,7 +179,7 @@ public class ProdutoBD {
             produto.setDescricao(rs.getString("descricao"));
             produto.setCategoria(rs.getString("categoria"));
             produto.setImg(rs.getBytes("img"));
-            produto.setStatus(rs.getString("status"));
+            produto.setStatusProd(rs.getString("status"));
             produto.setDt_anuncio(rs.getDate("dt_anuncio"));
             produto.setBairro(rs.getString("bairro"));
             produto.setCidade(rs.getString("cidade"));

@@ -32,11 +32,11 @@ public class Usuario {
         return id_usuario;
     }
 
-    public String getNome() {
+    public String getNomeUser() {
         return nome;
     }
 
-    public void setNome(String nome) {
+    public void setNomeUser(String nome) {
         this.nome = nome;
     }
     

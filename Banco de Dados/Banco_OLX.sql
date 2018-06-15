@@ -1,6 +1,6 @@
+drop table acao;
 drop table usuario;
 drop table produto;
-drop table acao;
 
 create table usuario (
 	id_usuario serial PRIMARY KEY not null,
@@ -61,8 +61,6 @@ inner join usuario as usuario  on (acao.id_usuario = usuario.id_usuario)
 inner join Produto as prod on (acao.Id_produto = prod.id_produto)  
 where prod.status = 'Disponivel' and acao.tipo= 'Venda' order by prod.dt_anuncio desc;
 
-
-
 select prod.*, usuario.*, acao.status, acao.tipo from Acao as acao
 inner join usuario as usuario  on (acao.id_usuario = usuario.id_usuario)
 inner join Produto as prod on (acao.Id_produto = prod.id_produto)  
@@ -72,3 +70,10 @@ select prod.*, usuario.*, acao.status, acao.tipo from Acao as acao
 inner join usuario as usuario  on (acao.id_usuario = usuario.id_usuario)
 inner join Produto as prod on (acao.Id_produto = prod.id_produto)  
 where usuario.id_usuario = 2 and acao.tipo = 'Reserva' or acao.tipo = 'Compra' order by prod.dt_anuncio desc;
+
+select usuario.nome, usuario.bairro, usuario.cidade, usuario.uf, usuario.telefone, acao.status, acao.tipo 
+from Acao as acao inner join usuario as usuario  on (acao.id_usuario = usuario.id_usuario)
+inner join Produto as prod on (acao.Id_produto = prod.id_produto)
+where prod.status = 'Disponivel' and acao.tipo= 'Reserva' and prod.id_produto = 5 order by prod.dt_anuncio desc;
+
+SELECT * from usuario;
